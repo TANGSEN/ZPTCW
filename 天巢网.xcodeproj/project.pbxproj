@@ -11,7 +11,6 @@
 		8774FC651BFB78FD001EEF0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC601BFB78FD001EEF0B /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		8774FC661BFB78FD001EEF0B /* Color_Process.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC621BFB78FD001EEF0B /* Color_Process.m */; settings = {ASSET_TAGS = (); }; };
 		8774FC671BFB78FD001EEF0B /* CustomerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC641BFB78FD001EEF0B /* CustomerView.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC791BFB7A50001EEF0B /* TCProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC751BFB7A50001EEF0B /* TCProfileController.m */; settings = {ASSET_TAGS = (); }; };
 		8774FC851BFB7AB1001EEF0B /* ProfileViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC7D1BFB7AB1001EEF0B /* ProfileViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		8774FC861BFB7AB1001EEF0B /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC7E1BFB7AB1001EEF0B /* ProfileViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		8774FC871BFB7AB1001EEF0B /* TCOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC801BFB7AB1001EEF0B /* TCOrderCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -20,8 +19,6 @@
 		8774FC8F1BFB7B79001EEF0B /* TCDetailOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC8B1BFB7B79001EEF0B /* TCDetailOrderController.m */; settings = {ASSET_TAGS = (); }; };
 		8774FC901BFB7B79001EEF0B /* TCDetailOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC8C1BFB7B79001EEF0B /* TCDetailOrderController.xib */; settings = {ASSET_TAGS = (); }; };
 		8774FC911BFB7B79001EEF0B /* TCOrderManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC8E1BFB7B79001EEF0B /* TCOrderManagerController.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC971BFB7BC5001EEF0B /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC931BFB7BC5001EEF0B /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC981BFB7BC5001EEF0B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC961BFB7BC5001EEF0B /* UIView+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		AA1A53DB1BF9A88400EE98FB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A52FE1BF9A88400EE98FB /* AFHTTPRequestOperation.m */; };
 		AA1A53DC1BF9A88400EE98FB /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53001BF9A88400EE98FB /* AFHTTPRequestOperationManager.m */; };
 		AA1A53DD1BF9A88400EE98FB /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53021BF9A88400EE98FB /* AFHTTPSessionManager.m */; };
@@ -170,8 +167,6 @@
 		8774FC621BFB78FD001EEF0B /* Color_Process.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color_Process.m; sourceTree = "<group>"; };
 		8774FC631BFB78FD001EEF0B /* CustomerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerView.h; sourceTree = "<group>"; };
 		8774FC641BFB78FD001EEF0B /* CustomerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerView.m; sourceTree = "<group>"; };
-		8774FC741BFB7A50001EEF0B /* TCProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProfileController.h; sourceTree = "<group>"; };
-		8774FC751BFB7A50001EEF0B /* TCProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProfileController.m; sourceTree = "<group>"; };
 		8774FC7C1BFB7AB1001EEF0B /* ProfileViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewCell.h; sourceTree = "<group>"; };
 		8774FC7D1BFB7AB1001EEF0B /* ProfileViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewCell.m; sourceTree = "<group>"; };
 		8774FC7E1BFB7AB1001EEF0B /* ProfileViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
@@ -185,10 +180,6 @@
 		8774FC8C1BFB7B79001EEF0B /* TCDetailOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCDetailOrderController.xib; sourceTree = "<group>"; };
 		8774FC8D1BFB7B79001EEF0B /* TCOrderManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCOrderManagerController.h; sourceTree = "<group>"; };
 		8774FC8E1BFB7B79001EEF0B /* TCOrderManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCOrderManagerController.m; sourceTree = "<group>"; };
-		8774FC921BFB7BC5001EEF0B /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
-		8774FC931BFB7BC5001EEF0B /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
-		8774FC951BFB7BC5001EEF0B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		8774FC961BFB7BC5001EEF0B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		AA1A52FD1BF9A88400EE98FB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		AA1A52FE1BF9A88400EE98FB /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		AA1A52FF1BF9A88400EE98FB /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -513,15 +504,6 @@
 			children = (
 			);
 			path = viewModel;
-			sourceTree = "<group>";
-		};
-		8774FC941BFB7BC5001EEF0B /* UIView+Extension */ = {
-			isa = PBXGroup;
-			children = (
-				8774FC951BFB7BC5001EEF0B /* UIView+Extension.h */,
-				8774FC961BFB7BC5001EEF0B /* UIView+Extension.m */,
-			);
-			path = "UIView+Extension";
 			sourceTree = "<group>";
 		};
 		AA1A52FB1BF9A88400EE98FB /* Lib */ = {
@@ -890,9 +872,6 @@
 		AA1A543C1BF9A8B700EE98FB /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				8774FC921BFB7BC5001EEF0B /* UIBarButtonItem+Extension.h */,
-				8774FC931BFB7BC5001EEF0B /* UIBarButtonItem+Extension.m */,
-				8774FC941BFB7BC5001EEF0B /* UIView+Extension */,
 				AA1A543D1BF9A8B700EE98FB /* Factory.h */,
 				AA1A543E1BF9A8B700EE98FB /* Factory.m */,
 			);
@@ -1099,8 +1078,6 @@
 				8774FC8C1BFB7B79001EEF0B /* TCDetailOrderController.xib */,
 				8774FC8D1BFB7B79001EEF0B /* TCOrderManagerController.h */,
 				8774FC8E1BFB7B79001EEF0B /* TCOrderManagerController.m */,
-				8774FC741BFB7A50001EEF0B /* TCProfileController.h */,
-				8774FC751BFB7A50001EEF0B /* TCProfileController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1373,7 +1350,6 @@
 				8774FC911BFB7B79001EEF0B /* TCOrderManagerController.m in Sources */,
 				AA1A541D1BF9A88400EE98FB /* MJPhoto.m in Sources */,
 				AA1A54241BF9A88400EE98FB /* SDWebImageManager+MJ.m in Sources */,
-				8774FC971BFB7BC5001EEF0B /* UIBarButtonItem+Extension.m in Sources */,
 				AA1A54381BF9A88400EE98FB /* SWLongPressGestureRecognizer.m in Sources */,
 				AA1A53F71BF9A88400EE98FB /* ViewController+MASAdditions.m in Sources */,
 				AA1A54341BF9A88400EE98FB /* UIImageView+WebCache.m in Sources */,
@@ -1418,7 +1394,6 @@
 				AAECEEAC1BF596CF004B79AB /* ChannelView.m in Sources */,
 				AAAD3EEE1BF2DD8300082CBC /* TCTabBarController.m in Sources */,
 				AA1A54321BF9A88400EE98FB /* UIImage+MultiFormat.m in Sources */,
-				8774FC791BFB7A50001EEF0B /* TCProfileController.m in Sources */,
 				AA1A543B1BF9A88400EE98FB /* SWUtilityButtonView.m in Sources */,
 				AA1A54051BF9A88400EE98FB /* NSObject+MJProperty.m in Sources */,
 				AA1A53E91BF9A88400EE98FB /* UIProgressView+AFNetworking.m in Sources */,
@@ -1465,7 +1440,6 @@
 				AA1A53F11BF9A88400EE98FB /* MASLayoutConstraint.m in Sources */,
 				AA1A54151BF9A88400EE98FB /* MJRefreshGifHeader.m in Sources */,
 				AA1A53FC1BF9A88400EE98FB /* MJExtensionConst.m in Sources */,
-				8774FC981BFB7BC5001EEF0B /* UIView+Extension.m in Sources */,
 				AA1A53F51BF9A88400EE98FB /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				AA1A542F1BF9A88400EE98FB /* SDWebImagePrefetcher.m in Sources */,
 				AA1A53E41BF9A88400EE98FB /* AFNetworkActivityIndicatorManager.m in Sources */,
