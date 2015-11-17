@@ -88,7 +88,6 @@ static NSString * const reuseIdentifier = @"Cell";
     NSLog(@"点击了第%ld个item",indexPath.item);
     self.collectionView.userInteractionEnabled = YES;
     TCDetailTableController *vc = [[TCDetailTableController alloc]init];
-    vc.view.backgroundColor = RandomColor;
     [self.navigationController pushViewController:vc animated:YES];
     NSLog(@"%@",self.navigationController);
 }
