@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="闪屏1" translatesAutoresizingMaskIntoConstraints="NO" id="woZ-aO-6i5">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="woZ-aO-6i5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="as3-vR-QJ6"/>
+                            <constraint firstItem="woZ-aO-6i5" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="f7k-S0-vgb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="woZ-aO-6i5" secondAttribute="trailing" id="jsT-T7-uRw"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="woZ-aO-6i5" secondAttribute="bottom" id="n3D-J7-qCv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Mh5-4Q-wfK" id="lx1-ge-uv5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Mh5-4Q-wfK">
+                    <connections>
+                        <outlet property="delegate" destination="01J-lp-oVM" id="2CR-XJ-Tnr"/>
+                        <outlet property="searchContentsController" destination="01J-lp-oVM" id="lGg-ho-8PW"/>
+                        <outlet property="searchResultsDataSource" destination="01J-lp-oVM" id="4kw-Yo-uic"/>
+                        <outlet property="searchResultsDelegate" destination="01J-lp-oVM" id="UOL-xH-GWn"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="286" y="371"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="闪屏1" width="200" height="411"/>
+    </resources>
+</document>
