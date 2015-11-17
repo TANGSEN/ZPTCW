@@ -1,5 +1,5 @@
 //
-//  TCNavigationController.h
+//  TCProfileController.h
 //  天巢网
 //
 //  Created by tangjp on 15/11/10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TCNavigationController : UINavigationController
+@interface TCProfileController : UITableViewController
 
 @end
