@@ -108,8 +108,6 @@
 
 #import "SWTableViewCell.h"     //Cell滑动，出现多个功能按钮
 
-
-
 #import "Color_Process.h"      //颜色工具
 #define  Color_Hex16(C_String) [Color_Process colorWithHexString:C_String]
 #define View_BgColor Color_Hex16(@"#f2f2f2")//全局背景色
@@ -139,5 +137,7 @@
 
 #import "Factory.h"
 #import "UIView+Extension.h"
+
+
 
 #endif /* TCW_pch */

@@ -98,10 +98,6 @@
  * 能拦截所有的自控制器。如果现在push的不是栈底控制器(最先push进来的那个控制器)
  */
 
-
-
-/**全局推出的导航的navigationItem*/
-
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     
@@ -129,5 +125,9 @@
     [self popViewControllerAnimated:YES];
     
 }
+
+
+/**全局推出的导航的navigationItem*/
+
 
 @end

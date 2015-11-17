@@ -36,7 +36,7 @@
         _sectionsImages = @[@"1-个人中心_03",@"1-个人中心_07",@"1-个人中心_11",@"1-个人中心_15",@"1-个人中心_19",@"1-个人中心_23"];
     }
     return _sectionsImages;
-    
+
 }
 
 
@@ -46,18 +46,18 @@
         _sectionsTitles = @[@"订单管理",@"财富流水",@"我的购物车",@"我的收藏",@"信息管理",@"投诉建议"];
     }
     return _sectionsTitles;
-    
+
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
+
     return [self.sectionsImages count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+
     return 1;
 }
 
@@ -79,19 +79,19 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
-    
+
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    
+
     return 20.0f;
-    
+
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
     return 55.0f;
-    
+
 }
 
 
@@ -100,13 +100,13 @@
 {
     TCOrderManagerController *order = [[TCOrderManagerController alloc] init];
     order.hidesBottomBarWhenPushed = YES;
-    
+  
     
     [self.navigationController pushViewController:order animated:YES];
     
     
     NSLog(@"%@",self.sectionsTitles[indexPath.section]);
-    
+
 }
 
 
