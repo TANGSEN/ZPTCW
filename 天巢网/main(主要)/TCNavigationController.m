@@ -7,6 +7,7 @@
 //
 
 #import "TCNavigationController.h"
+#import "UIBarButtonItem+Extension.h"
 
 @interface TCNavigationController ()
 
@@ -30,7 +31,9 @@
     [self setupNavigationBarTheme];
     
     // 设置UIBarButtonItem的主题
-    [self setupBarButtonItemTheme];
+    
+    /**这个没有必要了 */
+//    [self setupBarButtonItemTheme];
 }
 
 /**
@@ -44,12 +47,16 @@
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbar_background"] forBarMetrics:UIBarMetricsDefault];
     // 设置文字属性
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
-    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    textAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:18];
     // UIOffsetZero是结构体, 只要包装成NSValue对象, 才能放进字典\数组中
 //    textAttrs[NSShadowAttributeName] = [NSValue valueWithUIOffset:UIOffsetZero];
     [appearance setTitleTextAttributes:textAttrs];
-    [appearance setTintColor:[UIColor whiteColor]];
+    
+    
+    
+    /**这个也没必要了*/
+//    [appearance setTintColor:[UIColor whiteColor]];
 }
 
 /**
@@ -87,19 +94,40 @@
 //    self.navigationBar.barTintColor = Color(24, 10, 4);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ * 能拦截所有的自控制器。如果现在push的不是栈底控制器(最先push进来的那个控制器)
+ */
+
+
+
+/**全局推出的导航的navigationItem*/
+
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"注册-1_03"] forState:UIControlStateNormal];
+    [button setTitle:@"返回" forState:UIControlStateNormal];
+    button.frame = CGRectMake(-20, 0, 100, 44);
+    [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpOutside];
+    
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithBg:@"注册-1_03" title:@"返回" size:CGSizeMake(55, 23) target:self action:@selector(back)];
+        
+    }
+    
+    [super pushViewController:viewController animated:YES];
+    
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)back
+{
+    
+    [self popViewControllerAnimated:YES];
+    
 }
-*/
 
 @end

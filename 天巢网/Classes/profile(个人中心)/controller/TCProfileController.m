@@ -7,92 +7,107 @@
 //
 
 #import "TCProfileController.h"
-
+#import "ProfileViewCell.h"
+#import "TCOrderManagerController.h"
+#import "TCNavigationController.h"
 @interface TCProfileController ()
-
+/**分区文字*/
+@property (nonatomic,strong)NSArray *sectionsTitles;
+/**分区图片*/
+@property (nonatomic,strong)NSArray *sectionsImages;
 @end
 
 @implementation TCProfileController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"个人中心";
+    self.view.backgroundColor = View_BgColor;
+    self.tableView.bounces = NO;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(NSArray *)sectionsImages
+{
+    if (!_sectionsImages) {
+        _sectionsImages = @[@"1-个人中心_03",@"1-个人中心_07",@"1-个人中心_11",@"1-个人中心_15",@"1-个人中心_19",@"1-个人中心_23"];
+    }
+    return _sectionsImages;
+    
+}
+
+
+-(NSArray *)sectionsTitles
+{
+    if (!_sectionsTitles) {
+        _sectionsTitles = @[@"订单管理",@"财富流水",@"我的购物车",@"我的收藏",@"信息管理",@"投诉建议"];
+    }
+    return _sectionsTitles;
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    
+    return [self.sectionsImages count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    
+    return 1;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifier = @"cell";
+    ProfileViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell  = [[[NSBundle mainBundle] loadNibNamed:@"ProfileViewCell" owner:self options:nil] lastObject];
+    }
+    cell.CellLabel.text = self.sectionsTitles[indexPath.section];
     
-    // Configure the cell...
-    
+    cell.CellLabel.font = AppFont(text_size_little_2);
+    cell.CellLabel.textColor = Color_Common;
+    cell.ImageView.image = [UIImage imageNamed:self.sectionsImages[indexPath.section]];
+    cell.ImageView.contentMode = UIViewContentModeScaleAspectFill;
+    cell.RightImage.image  = [UIImage imageNamed:@"信息管理-1_03"];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+    
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    
+    return 20.0f;
+    
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 55.0f;
+    
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TCOrderManagerController *order = [[TCOrderManagerController alloc] init];
+    order.hidesBottomBarWhenPushed = YES;
+    
+    
+    [self.navigationController pushViewController:order animated:YES];
+    
+    
+    NSLog(@"%@",self.sectionsTitles[indexPath.section]);
+    
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

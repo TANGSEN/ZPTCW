@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7860908704E879C4782B21E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB47D8B14A5E3D3C6DA61B6 /* libPods.a */; };
+		87CCE0281BFB6D1300B7314A /* Color_Process.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CCE0251BFB6D1300B7314A /* Color_Process.m */; settings = {ASSET_TAGS = (); }; };
+		87CCE0291BFB6D1300B7314A /* CustomerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CCE0271BFB6D1300B7314A /* CustomerView.m */; settings = {ASSET_TAGS = (); }; };
+		87CCE02F1BFB6D3C00B7314A /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CCE02B1BFB6D3C00B7314A /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		87CCE0301BFB6D3C00B7314A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CCE02E1BFB6D3C00B7314A /* UIView+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		87CCE0361BFB6D6B00B7314A /* TCDetailOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CCE0321BFB6D6B00B7314A /* TCDetailOrderController.m */; settings = {ASSET_TAGS = (); }; };
+		87CCE0371BFB6D6B00B7314A /* TCDetailOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87CCE0331BFB6D6B00B7314A /* TCDetailOrderController.xib */; settings = {ASSET_TAGS = (); }; };
+		87CCE0381BFB6D6B00B7314A /* TCOrderManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CCE0351BFB6D6B00B7314A /* TCOrderManagerController.m */; settings = {ASSET_TAGS = (); }; };
+		87CCE0411BFB6D7C00B7314A /* ProfileViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CCE03A1BFB6D7C00B7314A /* ProfileViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		87CCE0421BFB6D7C00B7314A /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87CCE03B1BFB6D7C00B7314A /* ProfileViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		87CCE0431BFB6D7C00B7314A /* TCOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CCE03D1BFB6D7C00B7314A /* TCOrderCell.m */; settings = {ASSET_TAGS = (); }; };
+		87CCE0441BFB6D7C00B7314A /* TCOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87CCE03E1BFB6D7C00B7314A /* TCOrderCell.xib */; settings = {ASSET_TAGS = (); }; };
+		87CCE0451BFB6D7C00B7314A /* TCOrderTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CCE0401BFB6D7C00B7314A /* TCOrderTable.m */; settings = {ASSET_TAGS = (); }; };
 		AA1A53DB1BF9A88400EE98FB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A52FE1BF9A88400EE98FB /* AFHTTPRequestOperation.m */; };
 		AA1A53DC1BF9A88400EE98FB /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53001BF9A88400EE98FB /* AFHTTPRequestOperationManager.m */; };
 		AA1A53DD1BF9A88400EE98FB /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53021BF9A88400EE98FB /* AFHTTPSessionManager.m */; };
@@ -152,6 +164,27 @@
 
 /* Begin PBXFileReference section */
 		82D20F8980E8FC5CE83CC6EB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		87CCE0241BFB6D1300B7314A /* Color_Process.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Color_Process.h; path = "../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/other(其它)/Color_Process.h"; sourceTree = "<group>"; };
+		87CCE0251BFB6D1300B7314A /* Color_Process.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Color_Process.m; path = "../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/other(其它)/Color_Process.m"; sourceTree = "<group>"; };
+		87CCE0261BFB6D1300B7314A /* CustomerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerView.h; path = "../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/other(其它)/CustomerView.h"; sourceTree = "<group>"; };
+		87CCE0271BFB6D1300B7314A /* CustomerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerView.m; path = "../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/other(其它)/CustomerView.m"; sourceTree = "<group>"; };
+		87CCE02A1BFB6D3C00B7314A /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		87CCE02B1BFB6D3C00B7314A /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		87CCE02D1BFB6D3C00B7314A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		87CCE02E1BFB6D3C00B7314A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		87CCE0311BFB6D6B00B7314A /* TCDetailOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDetailOrderController.h; sourceTree = "<group>"; };
+		87CCE0321BFB6D6B00B7314A /* TCDetailOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDetailOrderController.m; sourceTree = "<group>"; };
+		87CCE0331BFB6D6B00B7314A /* TCDetailOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCDetailOrderController.xib; sourceTree = "<group>"; };
+		87CCE0341BFB6D6B00B7314A /* TCOrderManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCOrderManagerController.h; sourceTree = "<group>"; };
+		87CCE0351BFB6D6B00B7314A /* TCOrderManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCOrderManagerController.m; sourceTree = "<group>"; };
+		87CCE0391BFB6D7C00B7314A /* ProfileViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewCell.h; path = "../../../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/Classes/profile(个人中心)/view/ProfileViewCell.h"; sourceTree = "<group>"; };
+		87CCE03A1BFB6D7C00B7314A /* ProfileViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewCell.m; path = "../../../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/Classes/profile(个人中心)/view/ProfileViewCell.m"; sourceTree = "<group>"; };
+		87CCE03B1BFB6D7C00B7314A /* ProfileViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewCell.xib; path = "../../../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/Classes/profile(个人中心)/view/ProfileViewCell.xib"; sourceTree = "<group>"; };
+		87CCE03C1BFB6D7C00B7314A /* TCOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCOrderCell.h; path = "../../../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/Classes/profile(个人中心)/view/TCOrderCell.h"; sourceTree = "<group>"; };
+		87CCE03D1BFB6D7C00B7314A /* TCOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCOrderCell.m; path = "../../../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/Classes/profile(个人中心)/view/TCOrderCell.m"; sourceTree = "<group>"; };
+		87CCE03E1BFB6D7C00B7314A /* TCOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TCOrderCell.xib; path = "../../../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/Classes/profile(个人中心)/view/TCOrderCell.xib"; sourceTree = "<group>"; };
+		87CCE03F1BFB6D7C00B7314A /* TCOrderTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCOrderTable.h; path = "../../../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/Classes/profile(个人中心)/view/TCOrderTable.h"; sourceTree = "<group>"; };
+		87CCE0401BFB6D7C00B7314A /* TCOrderTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCOrderTable.m; path = "../../../../../../../../Volumes/赵贺/宅品基地/天巢网 3期/天巢网/天巢网/Classes/profile(个人中心)/view/TCOrderTable.m"; sourceTree = "<group>"; };
 		AA1A52FD1BF9A88400EE98FB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		AA1A52FE1BF9A88400EE98FB /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		AA1A52FF1BF9A88400EE98FB /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -439,6 +472,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87CCE02C1BFB6D3C00B7314A /* UIView+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				87CCE02D1BFB6D3C00B7314A /* UIView+Extension.h */,
+				87CCE02E1BFB6D3C00B7314A /* UIView+Extension.m */,
+			);
+			path = "UIView+Extension";
+			sourceTree = "<group>";
+		};
 		AA1A52FB1BF9A88400EE98FB /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -805,6 +847,9 @@
 		AA1A543C1BF9A8B700EE98FB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				87CCE02A1BFB6D3C00B7314A /* UIBarButtonItem+Extension.h */,
+				87CCE02B1BFB6D3C00B7314A /* UIBarButtonItem+Extension.m */,
+				87CCE02C1BFB6D3C00B7314A /* UIView+Extension */,
 				AA1A543D1BF9A8B700EE98FB /* Factory.h */,
 				AA1A543E1BF9A8B700EE98FB /* Factory.m */,
 			);
@@ -1008,6 +1053,11 @@
 			children = (
 				AAAD31971BF2DD5100082CBC /* TCProfileController.h */,
 				AAAD31981BF2DD5100082CBC /* TCProfileController.m */,
+				87CCE0311BFB6D6B00B7314A /* TCDetailOrderController.h */,
+				87CCE0321BFB6D6B00B7314A /* TCDetailOrderController.m */,
+				87CCE0331BFB6D6B00B7314A /* TCDetailOrderController.xib */,
+				87CCE0341BFB6D6B00B7314A /* TCOrderManagerController.h */,
+				87CCE0351BFB6D6B00B7314A /* TCOrderManagerController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1022,6 +1072,14 @@
 		AAAD319A1BF2DD5100082CBC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				87CCE0391BFB6D7C00B7314A /* ProfileViewCell.h */,
+				87CCE03A1BFB6D7C00B7314A /* ProfileViewCell.m */,
+				87CCE03B1BFB6D7C00B7314A /* ProfileViewCell.xib */,
+				87CCE03C1BFB6D7C00B7314A /* TCOrderCell.h */,
+				87CCE03D1BFB6D7C00B7314A /* TCOrderCell.m */,
+				87CCE03E1BFB6D7C00B7314A /* TCOrderCell.xib */,
+				87CCE03F1BFB6D7C00B7314A /* TCOrderTable.h */,
+				87CCE0401BFB6D7C00B7314A /* TCOrderTable.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1088,6 +1146,10 @@
 		AAAD3EEF1BF2DD8C00082CBC /* other(其它) */ = {
 			isa = PBXGroup;
 			children = (
+				87CCE0241BFB6D1300B7314A /* Color_Process.h */,
+				87CCE0251BFB6D1300B7314A /* Color_Process.m */,
+				87CCE0261BFB6D1300B7314A /* CustomerView.h */,
+				87CCE0271BFB6D1300B7314A /* CustomerView.m */,
 				AAAD31561BF2DCFE00082CBC /* AppDelegate.h */,
 				AAAD31571BF2DCFE00082CBC /* AppDelegate.m */,
 			);
@@ -1219,8 +1281,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87CCE0421BFB6D7C00B7314A /* ProfileViewCell.xib in Resources */,
+				87CCE0441BFB6D7C00B7314A /* TCOrderCell.xib in Resources */,
 				AA1A541E1BF9A88400EE98FB /* MJPhotoBrowser.bundle in Resources */,
 				AAAD31631BF2DCFE00082CBC /* LaunchScreen.storyboard in Resources */,
+				87CCE0371BFB6D6B00B7314A /* TCDetailOrderController.xib in Resources */,
 				AA1A53F91BF9A88400EE98FB /* MBProgressHUD.bundle in Resources */,
 				AAAD31601BF2DCFE00082CBC /* Assets.xcassets in Resources */,
 				AA1A54181BF9A88400EE98FB /* MJRefresh.bundle in Resources */,
@@ -1304,6 +1369,7 @@
 				AA1A540F1BF9A88400EE98FB /* MJRefreshAutoGifFooter.m in Sources */,
 				AA1A54231BF9A88400EE98FB /* MJPhotoView.m in Sources */,
 				AA1A540D1BF9A88400EE98FB /* MJRefreshFooter.m in Sources */,
+				87CCE0381BFB6D6B00B7314A /* TCOrderManagerController.m in Sources */,
 				AA1A541D1BF9A88400EE98FB /* MJPhoto.m in Sources */,
 				AA1A54241BF9A88400EE98FB /* SDWebImageManager+MJ.m in Sources */,
 				AA1A54381BF9A88400EE98FB /* SWLongPressGestureRecognizer.m in Sources */,
@@ -1319,6 +1385,7 @@
 				AA1A53EA1BF9A88400EE98FB /* UIRefreshControl+AFNetworking.m in Sources */,
 				AAF04FD31BFAF513006BEAC6 /* GGCSView.m in Sources */,
 				AA1A54141BF9A88400EE98FB /* MJRefreshBackStateFooter.m in Sources */,
+				87CCE0411BFB6D7C00B7314A /* ProfileViewCell.m in Sources */,
 				AA1A54331BF9A88400EE98FB /* UIImageView+HighlightedWebCache.m in Sources */,
 				AA1A53E71BF9A88400EE98FB /* UIButton+AFNetworking.m in Sources */,
 				AA1A54291BF9A88400EE98FB /* SDImageCache.m in Sources */,
@@ -1331,6 +1398,7 @@
 				AA1A53F21BF9A88400EE98FB /* MASViewAttribute.m in Sources */,
 				AA1A54121BF9A88400EE98FB /* MJRefreshBackGifFooter.m in Sources */,
 				AA1A542B1BF9A88400EE98FB /* SDWebImageDecoder.m in Sources */,
+				87CCE0291BFB6D1300B7314A /* CustomerView.m in Sources */,
 				AAACD4B51BF5D58B00FC4603 /* RXCollectionController.m in Sources */,
 				AA1A53F41BF9A88400EE98FB /* NSArray+MASAdditions.m in Sources */,
 				AA1A54371BF9A88400EE98FB /* SWCellScrollView.m in Sources */,
@@ -1346,7 +1414,9 @@
 				AA1A53E01BF9A88400EE98FB /* AFURLConnectionOperation.m in Sources */,
 				AA1A53FB1BF9A88400EE98FB /* MJDictionaryCache.m in Sources */,
 				AAECEEAC1BF596CF004B79AB /* ChannelView.m in Sources */,
+				87CCE0301BFB6D3C00B7314A /* UIView+Extension.m in Sources */,
 				AAAD3EEE1BF2DD8300082CBC /* TCTabBarController.m in Sources */,
+				87CCE0361BFB6D6B00B7314A /* TCDetailOrderController.m in Sources */,
 				AA1A54321BF9A88400EE98FB /* UIImage+MultiFormat.m in Sources */,
 				AA1A543B1BF9A88400EE98FB /* SWUtilityButtonView.m in Sources */,
 				AA1A54051BF9A88400EE98FB /* NSObject+MJProperty.m in Sources */,
@@ -1363,6 +1433,7 @@
 				AA1A53DC1BF9A88400EE98FB /* AFHTTPRequestOperationManager.m in Sources */,
 				AA1A54311BF9A88400EE98FB /* UIImage+GIF.m in Sources */,
 				AA1A53DF1BF9A88400EE98FB /* AFSecurityPolicy.m in Sources */,
+				87CCE0451BFB6D7C00B7314A /* TCOrderTable.m in Sources */,
 				AA1A542D1BF9A88400EE98FB /* SDWebImageDownloaderOperation.m in Sources */,
 				AA1A543F1BF9A8B700EE98FB /* Factory.m in Sources */,
 				AA1A54091BF9A88400EE98FB /* UIView+Extnesion.m in Sources */,
@@ -1375,6 +1446,7 @@
 				AA1A53DE1BF9A88400EE98FB /* AFNetworkReachabilityManager.m in Sources */,
 				AA1A54261BF9A88400EE98FB /* RESideMenu.m in Sources */,
 				AAAD31581BF2DCFE00082CBC /* AppDelegate.m in Sources */,
+				87CCE0431BFB6D7C00B7314A /* TCOrderCell.m in Sources */,
 				AA1A53E81BF9A88400EE98FB /* UIImageView+AFNetworking.m in Sources */,
 				AAAD36CA1BF2DD5300082CBC /* TCProfileController.m in Sources */,
 				AA1A540A1BF9A88400EE98FB /* MJRefreshAutoFooter.m in Sources */,
@@ -1401,6 +1473,7 @@
 				AAF04FC71BFAF356006BEAC6 /* DetailView.m in Sources */,
 				AA1A53DD1BF9A88400EE98FB /* AFHTTPSessionManager.m in Sources */,
 				AA1A542A1BF9A88400EE98FB /* SDWebImageCompat.m in Sources */,
+				87CCE0281BFB6D1300B7314A /* Color_Process.m in Sources */,
 				AA1A53EB1BF9A88400EE98FB /* UIWebView+AFNetworking.m in Sources */,
 				AA1A540E1BF9A88400EE98FB /* MJRefreshHeader.m in Sources */,
 				AA1A54031BF9A88400EE98FB /* NSObject+MJCoding.m in Sources */,
@@ -1409,6 +1482,7 @@
 				AA1A54361BF9A88400EE98FB /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				AA1A53FF1BF9A88400EE98FB /* MJPropertyKey.m in Sources */,
 				AAAD3EED1BF2DD8300082CBC /* TCNavigationController.m in Sources */,
+				87CCE02F1BFB6D3C00B7314A /* UIBarButtonItem+Extension.m in Sources */,
 				AA1A53E31BF9A88400EE98FB /* AFURLSessionManager.m in Sources */,
 				AA1A54191BF9A88400EE98FB /* MJRefreshConst.m in Sources */,
 			);
@@ -1493,7 +1567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1531,7 +1605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1548,6 +1622,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "天巢网/TCW.pch";
 				INFOPLIST_FILE = "天巢网/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1556,6 +1631,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ZP.TCW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1568,6 +1644,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "天巢网/TCW.pch";
 				INFOPLIST_FILE = "天巢网/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1576,6 +1653,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ZP.TCW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

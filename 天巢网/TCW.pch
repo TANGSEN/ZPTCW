@@ -109,4 +109,35 @@
 #import "SWTableViewCell.h"     //Cell滑动，出现多个功能按钮
 
 
+
+#import "Color_Process.h"      //颜色工具
+#define  Color_Hex16(C_String) [Color_Process colorWithHexString:C_String]
+#define View_BgColor Color_Hex16(@"#f2f2f2")//全局背景色
+/**浅色*/
+#define  Color_LightGray Color_Hex16(@"9a9f92")//浅色
+/**普通色*/
+#define  Color_Common Color_Hex16(@"555555")//普通色
+
+
+/*   <!-- 应用规范字体大小 -->*/
+#define  text_size_big_1    21
+#define  text_size_big_2    20
+#define  text_size_big_3    19
+#define  text_size_middle_1 18
+#define  text_size_middle_2 17
+#define  text_size_middle_3 15
+#define  text_size_little_1 14
+#define  text_size_little_2 13
+#define  text_size_little_3 12
+#define  text_size_little_4 10
+#define  text_size_other    16
+
+#define  AppFont(c_font) [UIFont systemFontOfSize:c_font]
+/**屏幕大小*/
+#define ApplicationframeValue [[UIScreen mainScreen]bounds]
+
+
+#import "Factory.h"
+#import "UIView+Extension.h"
+
 #endif /* TCW_pch */
