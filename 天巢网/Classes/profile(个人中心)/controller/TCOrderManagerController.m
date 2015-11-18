@@ -7,6 +7,8 @@
 //
 
 #import "TCOrderManagerController.h"
+#import "TCDetailOrderController.h"
+
 @interface TCOrderManagerController ()
 @property (nonatomic,strong)CustomerView *topView;
 @property (nonatomic,strong)TCOrderTable *tableView1;
@@ -72,6 +74,10 @@
 -(void)TC_tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
+    
+    TCDetailOrderController *detail = [[TCDetailOrderController alloc] initWithNibName:@"TCDetailOrderController" bundle:nil];
+    
+    [self.navigationController pushViewController:detail animated:YES];
 
 
 }

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CustomerView.h"
 #import "TCOrderTable.h"
-@interface TCOrderManagerController : UIViewController<CustomerDelegate,UITableViewDataSource,UITableViewDelegate,TCOrderTableDelegate>
+@interface TCOrderManagerController : UIViewController<CustomerDelegate,TCOrderTableDelegate>
 
 @end
