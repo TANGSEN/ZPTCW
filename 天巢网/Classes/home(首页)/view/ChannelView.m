@@ -48,6 +48,7 @@
         // 添加所有子控件
         for (int i = 0; i<count; i++) {
             Channel *channel = [[Channel alloc]init];
+            
             channel.btnImageName = self.btnImages[i];
             channel.labelText = self.names[i];
             [self addSubview:channel];
@@ -56,7 +57,6 @@
     }
     return self;
 }
-
 
 
 - (void)layoutSubviews

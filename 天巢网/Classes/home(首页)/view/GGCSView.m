@@ -10,12 +10,13 @@
 
 @implementation GGCSView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (GGCSView *)view{
+    
+    GGCSView *view = [[GGCSView alloc]init];
+    view.backgroundColor = RandomColor;
+    return view;
 }
-*/
-
++ (CGFloat)height{
+    return 300;
+}
 @end

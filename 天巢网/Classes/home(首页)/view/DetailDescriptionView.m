@@ -9,6 +9,8 @@
 #import "DetailDescriptionView.h"
 
 @interface DetailDescriptionView ()
+@property (nonatomic ,strong) UIButton *titleBtn;
+@property (nonatomic ,strong) UIButton *btn;
 @end
 
 static CGFloat _height;
@@ -31,12 +33,11 @@ static CGFloat _height;
     UIButton *title  = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, JPScreenW - 60, 40)];
     [title setTitle:@"源氏木语 北欧简约纯实木白橡木三人特价木架沙发 客厅组合家具" forState:UIControlStateNormal];
     title.titleLabel.numberOfLines = 2;
+    title.backgroundColor = RandomColor;
     title.titleLabel.font = [UIFont boldSystemFontOfSize:12];
     [title setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [title bk_addEventHandler:^(id sender) {
-        NSLog(@"hahah");
-    } forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:title];
+    self.titleBtn = title;
     
     // 商品标题和分享按钮之间的分割线
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 10, 10, 0.5, 25)];
@@ -47,6 +48,7 @@ static CGFloat _height;
     // 分享按钮
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 20, 10, 20, 40)];
     UIImage *image = [UIImage imageNamed:@"1-详情页_16"];
+    btn.backgroundColor = RandomColor;
     btn.contentMode = UIViewContentModeScaleAspectFit;
     [btn setImage:image forState:UIControlStateNormal];
     [btn setTitle:@"分享" forState:UIControlStateNormal];
@@ -55,12 +57,8 @@ static CGFloat _height;
     btn.imageView.contentMode = UIViewContentModeScaleToFill;
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 20, 0)];
     [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    
-    [btn bk_addEventHandler:^(id sender) {
-        NSLog(@"分享给你的朋友");
-    } forControlEvents:UIControlEventTouchUpInside];
-    
     [self addSubview:btn];
+    self.btn = btn;
     
     // 价格标签是一个有属性的字符串
     UILabel *priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(title.frame), JPScreenW / 2, 40)];
@@ -96,6 +94,10 @@ static CGFloat _height;
     preferentialLabel.font = [UIFont boldSystemFontOfSize:12];
     [self addSubview:preferentialLabel];
     _height = CGRectGetMaxY(preferentialLabel.frame);
+}
+
+- (void)click{
+    NSLog(@"hahahahhah");
 }
 
 + (CGFloat)height{

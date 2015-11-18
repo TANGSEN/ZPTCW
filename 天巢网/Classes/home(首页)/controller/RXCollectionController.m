@@ -16,6 +16,7 @@
 
 @interface RXCollectionController ()
 @property (nonatomic ,strong) NSArray *titles;
+@property (nonatomic ,strong) TCDetailTableController *detailController;
 @end
 
 @implementation RXCollectionController
@@ -24,6 +25,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 + (CGFloat)height{
     return ((10 / 2) + (10 % 2)) * ItemH + (((10 / 2) + (10 % 2)) * JPMargin);
+}
+
+- (TCDetailTableController *)detailController{
+    if (!_detailController){
+        _detailController = [[TCDetailTableController alloc]init];
+    }
+    return _detailController;
 }
 
 - (NSArray *)titles{
@@ -88,6 +96,8 @@ static NSString * const reuseIdentifier = @"Cell";
     NSLog(@"点击了第%ld个item",indexPath.item);
     self.collectionView.userInteractionEnabled = YES;
     TCDetailTableController *vc = [[TCDetailTableController alloc]init];
+    vc.view.userInteractionEnabled = YES;
+    self.detailController = vc;
     [self.navigationController pushViewController:vc animated:YES];
     NSLog(@"%@",self.navigationController);
 }

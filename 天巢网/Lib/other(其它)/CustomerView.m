@@ -9,7 +9,7 @@
 
 
 
-- (id)initWithFrame:(CGRect)frame  initButWithArray:(NSArray*)subjects
+- (id)initWithFrame:(CGRect)frame  initButWithArray:(NSArray*)subjects butFont:(NSInteger)font
 {
     self=[super initWithFrame:frame];
     
@@ -57,8 +57,8 @@
             }
             
             
-            butTitle.titleLabel.font =AppFont(text_size_middle_2);
-            [butTitle setFrame:CGRectMake(i*cel+cel/3, 0, cel/3, rct.size.height-1)];
+            butTitle.titleLabel.font =AppFont(font);
+            [butTitle setFrame:CGRectMake(i*cel+cel/4, 0, cel/2, rct.size.height-1)];
 
             
             [butTitle addTarget:self action:@selector(Onclick:) forControlEvents:UIControlEventTouchUpInside];

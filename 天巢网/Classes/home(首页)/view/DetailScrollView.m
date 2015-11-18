@@ -15,6 +15,7 @@
 
 + (DetailScrollView *)scrollViewWithImages:(NSArray *)images {
     DetailScrollView *scrollView = [[self alloc]init];
+    scrollView.userInteractionEnabled = YES;
     scrollView.width = JPScreenW;
     scrollView.height = 200;
     scrollView.x = 0;
@@ -24,6 +25,7 @@
     NSInteger count = images.count;
     for (int i = 0; i < count; i ++) {
         UIImageView *imageView = [[UIImageView alloc]init];
+        imageView.userInteractionEnabled = YES;
         NSString *imageName = images[i];
         imageView.image = [UIImage imageNamed:imageName];
         [scrollView addSubview:imageView];

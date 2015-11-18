@@ -14,7 +14,7 @@
 @property (nonatomic ,weak) DetailScrollView *scrollView;
 @property (nonatomic ,strong) NSArray *images;
 @property (nonatomic, weak) UIPageControl *pageControl;
-
+@property (nonatomic ,strong) DetailDescriptionView *descriptionView;
 @end
 
 static CGFloat _height;
@@ -31,8 +31,8 @@ static CGFloat _height;
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self setupScrollView];
-        [self setupPageControl];
         [self setupDescriptionView];
+        [self setupPageControl];
     }
     return self;
 }
@@ -41,8 +41,13 @@ static CGFloat _height;
     DetailScrollView *scrollView = [DetailScrollView scrollViewWithImages:self.images];
     scrollView.images = self.images;
     scrollView.delegate = self;
+    scrollView.width = JPScreenW;
+    scrollView.height = 200;
+    scrollView.x = 0;
+    scrollView.y = 0;
     [self addSubview:scrollView];
     self.scrollView = scrollView;
+    NSLog(@"scrollViewF--%@",NSStringFromCGRect(scrollView.frame));
 }
 
 - (void)setupDescriptionView{

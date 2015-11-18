@@ -10,6 +10,8 @@
 #import "RXCollectionController.h"
 #import "ChannelView.h"
 #import "LoadMoreFooter.h"
+#import "Channel.h"
+@import AVFoundation;
 
 #define CellIdentifier @"Cell"
 #define MaxSections 20
@@ -29,7 +31,9 @@
 @property (nonatomic, strong) NSMutableArray *visableArray;
 @property (nonatomic, strong) NSMutableArray *filterArray;
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
-@property (nonatomic, strong) UISearchController *mySearchController;@end
+@property (nonatomic, strong) UISearchController *mySearchController;
+
+@end
 
 @implementation TCHomeViewController
 
@@ -209,9 +213,21 @@
 - (void)addChannelView{
     CGRect rect = CGRectMake(0, CGRectGetMaxY(self.pageControl.frame), JPScreenW, 150);
     ChannelView *channelView = [[ChannelView alloc]initWithFrame:rect];
+    for (Channel *channel in channelView.subviews) {
+        UIButton *btn = channel.subviews[0];
+        [btn bk_addEventHandler:^(id sender) {
+            NSLog(@"点击了频道分类按钮");
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        } forControlEvents:UIControlEventTouchUpInside];
+    }
     [self.scrollView addSubview:channelView];
     self.channelView = channelView;
 }
+
+- (void)btnClick{
+    NSLog(@"channel");
+}
+
 
 - (void)addCollectionView{
     self.collectionVC = [[RXCollectionController alloc]init];

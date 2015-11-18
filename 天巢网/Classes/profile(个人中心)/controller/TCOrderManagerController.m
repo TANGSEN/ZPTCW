@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"全部订单";
-    self.topView = [[CustomerView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.size.width, 47) initButWithArray:[NSArray arrayWithObjects:@"未付款",@"已完成",nil]];
+    self.topView = [[CustomerView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.size.width, 47) initButWithArray:[NSArray arrayWithObjects:@"未付款",@"已完成",nil]butFont:(NSInteger)16];
     [self.view addSubview:self.topView];
     self.view.frame = CGRectMake(0,64, ApplicationframeValue.size.width, ApplicationframeValue.size.height-64);
     self.topView.delegate = self;
