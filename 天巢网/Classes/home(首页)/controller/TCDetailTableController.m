@@ -7,7 +7,7 @@
 //  商品详情
 
 #import "TCDetailTableController.h"
-#import "DetailView.h"
+#import "DetailViewController.h"
 #import "CustomerView.h"
 #import "GGCSView.h"
 #import "TWXQView.h"
@@ -20,7 +20,7 @@
 /** 规格参数视图 */
 @property (nonatomic ,strong) GGCSView *ggcsView;
 /** 滚动图加标题的视图 */
-@property (nonatomic ,strong) DetailView *detailView;
+@property (nonatomic ,strong) DetailViewController *detailView;
 
 @property (nonatomic ,strong) NSIndexPath *indexpath;
 
@@ -37,11 +37,10 @@
     return _twxqView;
 }
 
-- (DetailView *)detailView{
+- (DetailViewController *)detailView{
     if (!_detailView){
-        _detailView = [[DetailView alloc]initWithFrame:CGRectMake(0, 0, JPScreenW, [DetailView height])];
-        _detailView.hidden = NO;
-        _detailView.userInteractionEnabled = YES;
+//        _detailView = [[DetailView alloc]initWithFrame:CGRectMake(0, 0, JPScreenW, [DetailView height])];
+        _detailView = [[DetailViewController alloc]init];
     }
     return _detailView;
 }
@@ -73,7 +72,11 @@
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.bounces = NO;
     self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
+    NSLog(@"%@",NSStringFromCGRect(self.tableView.frame));
+    self.tableView.frame = CGRectMake(0, 20, 320, 300);
 }
+
+
 
 
 #pragma mark - CustomerDelegate
@@ -106,10 +109,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     return 1;
 }
 
@@ -122,7 +126,8 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.userInteractionEnabled = YES;
     if (indexPath.section == 0) {
-        [cell.contentView addSubview:self.detailView];
+        self.detailView.view.frame = CGRectMake(0, 0, JPScreenW, [DetailViewController height]);
+        [cell.contentView addSubview:self.detailView.view];
         cell.contentView.userInteractionEnabled = YES;
     }else if (indexPath.section == 3){
         [cell.contentView addSubview:self.topView];
@@ -130,6 +135,22 @@
         self.indexpath = indexPath;
         [cell.contentView addSubview:self.twxqView];
         [cell.contentView addSubview:self.ggcsView];
+    }else if (indexPath.section == 5){
+        UIButton *phoneBtn = [[UIButton alloc]init];
+        phoneBtn.x = 0;
+        phoneBtn.height = 50;
+        phoneBtn.width = JPScreenW / 2;
+        phoneBtn.y = 0;
+        [phoneBtn setTitle:@"电话" forState:UIControlStateNormal];
+        phoneBtn.backgroundColor = RandomColor;
+        
+        UIButton *gouBtn = [[UIButton alloc]init];
+        gouBtn.backgroundColor = RandomColor;
+        [gouBtn setTitle:@"加入购物车" forState:UIControlStateNormal];
+        gouBtn.frame = phoneBtn.frame;
+        gouBtn.x = JPScreenW / 2;
+        [cell.contentView addSubview:phoneBtn];
+        [cell.contentView addSubview:gouBtn];
     }else {
         NSArray *array = [[NSArray alloc]initWithObjects:@"类型\\规格\\颜色",@"附近出售该商品的商家",@"", nil];
         cell.textLabel.text = array[indexPath.section - 1];
@@ -143,7 +164,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return [DetailView height];
+        return [DetailViewController height];
     }
     if (indexPath.section == 3) {
         return 47;
@@ -155,6 +176,9 @@
             return [GGCSView height];
         }
     }
+    if (indexPath.section == 5) {
+        return 50;
+    }
     return 44;
 }
 
@@ -164,6 +188,9 @@
         return 0;
     }
     if (section == 4) {
+        return 0;
+    }
+    if (section == 5) {
         return 0;
     }
     return 20;

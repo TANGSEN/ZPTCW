@@ -6,11 +6,11 @@
 //  Copyright © 2015年 tangjp. All rights reserved.
 //
 
-#import "DetailView.h"
+#import "DetailViewController.h"
 #import "DetailScrollView.h"
 #import "DetailDescriptionView.h"
 
-@interface DetailView () <UIScrollViewDelegate>
+@interface DetailViewController () <UIScrollViewDelegate>
 @property (nonatomic ,weak) DetailScrollView *scrollView;
 @property (nonatomic ,strong) NSArray *images;
 @property (nonatomic, weak) UIPageControl *pageControl;
@@ -19,7 +19,7 @@
 
 static CGFloat _height;
 
-@implementation DetailView
+@implementation DetailViewController
 
 - (NSArray *)images{
     if (!_images){
@@ -28,15 +28,13 @@ static CGFloat _height;
     return _images;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]) {
+- (void)viewDidLoad{
         [self setupScrollView];
         [self setupDescriptionView];
         [self setupPageControl];
-    }
-    return self;
-}
 
+}
+         
 - (void)setupScrollView{
     DetailScrollView *scrollView = [DetailScrollView scrollViewWithImages:self.images];
     scrollView.images = self.images;
@@ -45,9 +43,8 @@ static CGFloat _height;
     scrollView.height = 200;
     scrollView.x = 0;
     scrollView.y = 0;
-    [self addSubview:scrollView];
+    [self.view addSubview:scrollView];
     self.scrollView = scrollView;
-    NSLog(@"scrollViewF--%@",NSStringFromCGRect(scrollView.frame));
 }
 
 - (void)setupDescriptionView{
@@ -56,7 +53,7 @@ static CGFloat _height;
     descriptionView.y = CGRectGetMaxY(self.scrollView.frame);
     descriptionView.width = JPScreenW;
     descriptionView.height = [DetailDescriptionView height];
-    [self addSubview:descriptionView];
+    [self.view addSubview:descriptionView];
     _height = CGRectGetMaxY(descriptionView.frame);
 }
 
@@ -69,9 +66,9 @@ static CGFloat _height;
     UIPageControl *pageControl = [[UIPageControl alloc] init];
     NSInteger count = self.images.count;
     pageControl.numberOfPages = count;
-    pageControl.centerX = self.width * 0.5;
+    pageControl.centerX = self.view.width * 0.5;
     pageControl.centerY = self.scrollView.height - 10;
-    [self addSubview:pageControl];
+    [self.view addSubview:pageControl];
     
     // 2.设置圆点的颜色
     pageControl.currentPageIndicatorTintColor = Color(253, 98, 42); // 当前页的小圆点颜色

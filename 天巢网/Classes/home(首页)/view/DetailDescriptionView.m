@@ -38,6 +38,9 @@ static CGFloat _height;
     [title setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [self addSubview:title];
     self.titleBtn = title;
+//    [title bk_addEventHandler:^(id sender) {
+//        NSLog(@"点击了商品标题");
+//    } forControlEvents:UIControlEventTouchUpInside];
     
     // 商品标题和分享按钮之间的分割线
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 10, 10, 0.5, 25)];
@@ -59,6 +62,9 @@ static CGFloat _height;
     [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [self addSubview:btn];
     self.btn = btn;
+    [btn bk_addEventHandler:^(id sender) {
+        
+    } forControlEvents:UIControlEventTouchUpInside];
     
     // 价格标签是一个有属性的字符串
     UILabel *priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(title.frame), JPScreenW / 2, 40)];

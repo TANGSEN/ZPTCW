@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailView : UIView
+@interface DetailViewController : UIViewController
 /**
  *  返回自己的高度
  *
