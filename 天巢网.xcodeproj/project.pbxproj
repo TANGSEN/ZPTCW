@@ -8,21 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		7860908704E879C4782B21E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB47D8B14A5E3D3C6DA61B6 /* libPods.a */; };
-		8774FC651BFB78FD001EEF0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC601BFB78FD001EEF0B /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC661BFB78FD001EEF0B /* Color_Process.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC621BFB78FD001EEF0B /* Color_Process.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC671BFB78FD001EEF0B /* CustomerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC641BFB78FD001EEF0B /* CustomerView.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC851BFB7AB1001EEF0B /* ProfileViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC7D1BFB7AB1001EEF0B /* ProfileViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC861BFB7AB1001EEF0B /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC7E1BFB7AB1001EEF0B /* ProfileViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		8774FC871BFB7AB1001EEF0B /* TCOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC801BFB7AB1001EEF0B /* TCOrderCell.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC881BFB7AB1001EEF0B /* TCOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC811BFB7AB1001EEF0B /* TCOrderCell.xib */; settings = {ASSET_TAGS = (); }; };
-		8774FC891BFB7AB1001EEF0B /* TCOrderTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC831BFB7AB1001EEF0B /* TCOrderTable.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC8F1BFB7B79001EEF0B /* TCDetailOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC8B1BFB7B79001EEF0B /* TCDetailOrderController.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC901BFB7B79001EEF0B /* TCDetailOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC8C1BFB7B79001EEF0B /* TCDetailOrderController.xib */; settings = {ASSET_TAGS = (); }; };
-		8774FC911BFB7B79001EEF0B /* TCOrderManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC8E1BFB7B79001EEF0B /* TCOrderManagerController.m */; settings = {ASSET_TAGS = (); }; };
-		8774FC9B1BFB7E5F001EEF0B /* TCProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC9A1BFB7E5F001EEF0B /* TCProfileController.m */; settings = {ASSET_TAGS = (); }; };
-		8774FCA11BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC9D1BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		8774FCA21BFB7EA7001EEF0B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FCA01BFB7EA7001EEF0B /* UIView+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		8774FCA51BFB7F54001EEF0B /* TCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FCA41BFB7F54001EEF0B /* TCNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		8774FC661BFB78FD001EEF0B /* Color_Process.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC621BFB78FD001EEF0B /* Color_Process.m */; };
+		8774FC671BFB78FD001EEF0B /* CustomerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC641BFB78FD001EEF0B /* CustomerView.m */; };
+		8774FC851BFB7AB1001EEF0B /* ProfileViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC7D1BFB7AB1001EEF0B /* ProfileViewCell.m */; };
+		8774FC861BFB7AB1001EEF0B /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC7E1BFB7AB1001EEF0B /* ProfileViewCell.xib */; };
+		8774FC871BFB7AB1001EEF0B /* TCOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC801BFB7AB1001EEF0B /* TCOrderCell.m */; };
+		8774FC881BFB7AB1001EEF0B /* TCOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC811BFB7AB1001EEF0B /* TCOrderCell.xib */; };
+		8774FC891BFB7AB1001EEF0B /* TCOrderTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC831BFB7AB1001EEF0B /* TCOrderTable.m */; };
+		8774FC8F1BFB7B79001EEF0B /* TCDetailOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC8B1BFB7B79001EEF0B /* TCDetailOrderController.m */; };
+		8774FC901BFB7B79001EEF0B /* TCDetailOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC8C1BFB7B79001EEF0B /* TCDetailOrderController.xib */; };
+		8774FC911BFB7B79001EEF0B /* TCOrderManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC8E1BFB7B79001EEF0B /* TCOrderManagerController.m */; };
+		8774FC9B1BFB7E5F001EEF0B /* TCProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC9A1BFB7E5F001EEF0B /* TCProfileController.m */; };
+		8774FCA11BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC9D1BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m */; };
+		8774FCA21BFB7EA7001EEF0B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FCA01BFB7EA7001EEF0B /* UIView+Extension.m */; };
+		8774FCA51BFB7F54001EEF0B /* TCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FCA41BFB7F54001EEF0B /* TCNavigationController.m */; };
 		AA1A53DB1BF9A88400EE98FB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A52FE1BF9A88400EE98FB /* AFHTTPRequestOperation.m */; };
 		AA1A53DC1BF9A88400EE98FB /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53001BF9A88400EE98FB /* AFHTTPRequestOperationManager.m */; };
 		AA1A53DD1BF9A88400EE98FB /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53021BF9A88400EE98FB /* AFHTTPSessionManager.m */; };
@@ -121,6 +120,7 @@
 		AA1A543A1BF9A88400EE98FB /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53D81BF9A88400EE98FB /* SWUtilityButtonTapGestureRecognizer.m */; };
 		AA1A543B1BF9A88400EE98FB /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53DA1BF9A88400EE98FB /* SWUtilityButtonView.m */; };
 		AA1A543F1BF9A8B700EE98FB /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A543E1BF9A8B700EE98FB /* Factory.m */; };
+		AA9CD34A1BFC2C2D00D77983 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9CD3491BFC2C2D00D77983 /* AppDelegate.m */; };
 		AAACD4B21BF5B9CD00FC4603 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAACD4B11BF5B9CD00FC4603 /* Channel.m */; };
 		AAACD4B51BF5D58B00FC4603 /* RXCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAACD4B41BF5D58B00FC4603 /* RXCollectionController.m */; };
 		AAACD4B81BF5DF9600FC4603 /* RXCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAACD4B71BF5DF9600FC4603 /* RXCollectionCell.m */; };
@@ -164,8 +164,6 @@
 
 /* Begin PBXFileReference section */
 		82D20F8980E8FC5CE83CC6EB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		8774FC5F1BFB78FD001EEF0B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8774FC601BFB78FD001EEF0B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8774FC611BFB78FD001EEF0B /* Color_Process.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color_Process.h; sourceTree = "<group>"; };
 		8774FC621BFB78FD001EEF0B /* Color_Process.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color_Process.m; sourceTree = "<group>"; };
 		8774FC631BFB78FD001EEF0B /* CustomerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerView.h; sourceTree = "<group>"; };
@@ -397,6 +395,8 @@
 		AA1A53DA1BF9A88400EE98FB /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
 		AA1A543D1BF9A8B700EE98FB /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
 		AA1A543E1BF9A8B700EE98FB /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
+		AA9CD3481BFC2C2D00D77983 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AA9CD3491BFC2C2D00D77983 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AAACD4B01BF5B9CD00FC4603 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
 		AAACD4B11BF5B9CD00FC4603 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
 		AAACD4B31BF5D58B00FC4603 /* RXCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCollectionController.h; sourceTree = "<group>"; };
@@ -475,8 +475,6 @@
 		8774FC5E1BFB78FD001EEF0B /* other(其它) */ = {
 			isa = PBXGroup;
 			children = (
-				8774FC5F1BFB78FD001EEF0B /* AppDelegate.h */,
-				8774FC601BFB78FD001EEF0B /* AppDelegate.m */,
 				8774FC611BFB78FD001EEF0B /* Color_Process.h */,
 				8774FC621BFB78FD001EEF0B /* Color_Process.m */,
 				8774FC631BFB78FD001EEF0B /* CustomerView.h */,
@@ -1149,6 +1147,8 @@
 		AAAD3EE71BF2DD8300082CBC /* main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				AA9CD3481BFC2C2D00D77983 /* AppDelegate.h */,
+				AA9CD3491BFC2C2D00D77983 /* AppDelegate.m */,
 				AAAD3EEB1BF2DD8300082CBC /* TCTabBarController.h */,
 				AAAD3EEC1BF2DD8300082CBC /* TCTabBarController.m */,
 				8774FCA31BFB7F54001EEF0B /* TCNavigationController.h */,
@@ -1453,7 +1453,6 @@
 				AA1A540A1BF9A88400EE98FB /* MJRefreshAutoFooter.m in Sources */,
 				AAAD36C81BF2DD5300082CBC /* TCCategoryController.m in Sources */,
 				AA1A53FE1BF9A88400EE98FB /* MJProperty.m in Sources */,
-				8774FC651BFB78FD001EEF0B /* AppDelegate.m in Sources */,
 				AAF04FCA1BFAF3B9006BEAC6 /* DetailScrollView.m in Sources */,
 				AA1A54271BF9A88400EE98FB /* UIViewController+RESideMenu.m in Sources */,
 				AA1A54111BF9A88400EE98FB /* MJRefreshAutoStateFooter.m in Sources */,
@@ -1486,6 +1485,7 @@
 				AA1A53FF1BF9A88400EE98FB /* MJPropertyKey.m in Sources */,
 				AA1A53E31BF9A88400EE98FB /* AFURLSessionManager.m in Sources */,
 				AA1A54191BF9A88400EE98FB /* MJRefreshConst.m in Sources */,
+				AA9CD34A1BFC2C2D00D77983 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
