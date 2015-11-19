@@ -8,12 +8,14 @@
 
 #import "ChannelView.h"
 #import "Channel.h"
-// 列数
+/**  列数 */
 #define JPBtnMaxCols 4
-// 行数
+/**  行数 */
 #define JPBtnMaxRows 2
-// 间距
+/** 间距 */
 #define JPChannelMargin 10
+/** 自身的高度 */
+#define SelfH 190;
 
 @interface ChannelView ()
 
@@ -36,7 +38,7 @@
 // 按钮的图片
 - (NSArray *)btnImages{
     if (!_btnImages) {
-        _btnImages = [NSArray arrayWithObjects:@"首页-1_15",@"首页-1_17",@"首页-1_19",@"首页-1_21",@"首页-1_28",@"首页-1_29",@"首页-1_30",@"首页-1_27", nil];
+        _btnImages = [NSArray arrayWithObjects:@"button_keting",@"button_woshi",@"button_chufan",@"button_shufan",@"button_yangtai",@"button_weiyu",@"button_bangongshi",@"button_ertongfang", nil];
     }return _btnImages;
 }
 
@@ -47,7 +49,7 @@
         NSInteger count = self.btnImages.count;
         // 添加所有子控件
         for (int i = 0; i<count; i++) {
-            Channel *channel = [[Channel alloc]init];
+            Channel *channel = [Channel channelViewinitWithBtnRect:CGRectMake(0, 0, 40, 40)];
             
             channel.btnImageName = self.btnImages[i];
             channel.labelText = self.names[i];
@@ -63,7 +65,8 @@
 {
     [super layoutSubviews];
     NSInteger count = self.btnImages.count;
-    CGFloat btnW = (self.width - 5 * JPChannelMargin) / JPBtnMaxCols;
+    CGFloat btnMargin = (JPScreenW - 40 * JPBtnMaxCols) / JPBtnMaxCols;
+    CGFloat btnW = (JPScreenW - 4 * btnMargin) / JPBtnMaxCols;
     CGFloat btnH = (self.height - 2 * JPChannelMargin) / JPBtnMaxRows;
     for (int i = 0; i<count; i++) {
         // 行号
@@ -71,7 +74,7 @@
         // 列号
         int col = i % JPBtnMaxCols;
         Channel *channel = self.subviews[i];
-            channel.x = col * (JPChannelMargin + btnW) + JPChannelMargin;
+            channel.x = col * (btnMargin + btnW) + btnMargin / 2;
             channel.y = row * (JPChannelMargin + btnH) + JPChannelMargin;
             channel.width = btnW;
             channel.height = btnH;
@@ -79,6 +82,10 @@
         
     }
     
+}
+
++ (CGFloat)height{
+    return SelfH;
 }
 
 @end

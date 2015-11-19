@@ -64,10 +64,11 @@
     btn.titleLabel.numberOfLines = 0;
     [btn setTitle:@"***********这是一个按钮**********\n使用blockskit框架把[btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside]用block实现" forState:UIControlStateNormal];
 //    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    // 给按钮添加点击事件.使用block
     [btn bk_addEventHandler:^(id sender) {
         NSLog(@"点击了btn按钮，使用blockskit框架把[btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside]用block实现");
     } forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+//    [self.view addSubview:btn];
     /*********************************************************************/
     
     

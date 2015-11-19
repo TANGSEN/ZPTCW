@@ -93,7 +93,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"点击了第%ld个item",indexPath.item);
+    NSLog(@"点击了第%ld个item",(long)indexPath.item);
     self.collectionView.userInteractionEnabled = YES;
     TCDetailTableController *vc = [[TCDetailTableController alloc]init];
     vc.view.userInteractionEnabled = YES;

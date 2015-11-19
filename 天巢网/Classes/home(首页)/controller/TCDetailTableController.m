@@ -13,7 +13,7 @@
 #import "TWXQView.h"
 
 
-@interface TCDetailTableController () <CustomerDelegate>
+@interface TCDetailTableController () <CustomerDelegate ,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong) CustomerView *topView;
 /** 图文详情视图 */
 @property (nonatomic ,strong) TWXQView *twxqView;
@@ -47,8 +47,7 @@
 
 - (GGCSView *)ggcsView{
     if (!_ggcsView) {
-        _ggcsView = [GGCSView view];
-        _ggcsView.frame = CGRectMake(0, 0, JPScreenW, [GGCSView height]);
+        _ggcsView = [[GGCSView alloc]initWithFrame:CGRectMake(0, 0, JPScreenW, [GGCSView Height]) style:UITableViewStylePlain];
         _ggcsView.hidden = YES;
     }return _ggcsView;
 }
@@ -142,11 +141,13 @@
         phoneBtn.width = JPScreenW / 2;
         phoneBtn.y = 0;
         [phoneBtn setTitle:@"电话" forState:UIControlStateNormal];
-        phoneBtn.backgroundColor = RandomColor;
+        [phoneBtn setImage:[UIImage imageNamed:@"图层-234"] forState:UIControlStateNormal];
+        phoneBtn.backgroundColor = [UIColor blackColor];
         
         UIButton *gouBtn = [[UIButton alloc]init];
-        gouBtn.backgroundColor = RandomColor;
+        gouBtn.backgroundColor = [UIColor grayColor];
         [gouBtn setTitle:@"加入购物车" forState:UIControlStateNormal];
+        [gouBtn setImage:[UIImage imageNamed:@"icon_gouwu"] forState:UIControlStateNormal];
         gouBtn.frame = phoneBtn.frame;
         gouBtn.x = JPScreenW / 2;
         [cell.contentView addSubview:phoneBtn];
@@ -173,7 +174,7 @@
         if (self.ggcsView.hidden == YES) {
             return [TWXQView height];
         }else{
-            return [GGCSView height];
+            return [GGCSView Height];
         }
     }
     if (indexPath.section == 5) {

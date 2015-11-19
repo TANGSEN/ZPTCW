@@ -85,7 +85,7 @@
 -(void)BuyNow:(UIButton *)button
 {
 
-    NSLog(@"点击了第%ld分区,第%ld行",button.tag/100,button.tag%100);
+    NSLog(@"点击了第%d分区,第%d行",button.tag/100,button.tag%100);
 
 
 }

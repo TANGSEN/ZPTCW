@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -31,7 +31,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgI-pZ-fgN">
@@ -65,7 +65,6 @@
                 <constraint firstAttribute="trailing" secondItem="JgI-pZ-fgN" secondAttribute="trailing" id="RPu-Qx-BUm"/>
                 <constraint firstItem="JgI-pZ-fgN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gJd-yF-nPn"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="JgI-pZ-fgN"/>
@@ -86,14 +85,14 @@
                     <include reference="gJd-yF-nPn"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="676" y="-140"/>
+            <point key="canvasLocation" x="265" y="-126"/>
         </view>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="uYL-bf-YtY" userLabel="topView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2q-qC-f4Z">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刘烨" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4z-p0-E4s">
                             <rect key="frame" x="25" y="10" width="97" height="35"/>
@@ -107,7 +106,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15899999999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mi-nG-Ie1">
-                            <rect key="frame" x="138" y="10" width="132" height="35"/>
+                            <rect key="frame" x="418" y="10" width="132" height="35"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="132" id="ySP-o8-7UV"/>
@@ -117,7 +116,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="广东省广州市天河区巫山街道天河北 龙口西100中明大厦15楼  刘烨收" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOy-Va-Mz7">
-                            <rect key="frame" x="25" y="45" width="245" height="50"/>
+                            <rect key="frame" x="25" y="45" width="525" height="50"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="0Md-yw-LbW"/>
@@ -127,7 +126,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KX4-G0-a7o">
-                            <rect key="frame" x="10" y="104" width="320" height="1"/>
+                            <rect key="frame" x="10" y="104" width="600" height="1"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="NfX-cC-pqM"/>
@@ -258,11 +257,10 @@
                 <constraint firstAttribute="bottom" secondItem="e2q-qC-f4Z" secondAttribute="bottom" id="Nqj-9h-gyd"/>
                 <constraint firstItem="e2q-qC-f4Z" firstAttribute="top" secondItem="uYL-bf-YtY" secondAttribute="top" id="j1S-ze-GeM"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="-36" y="-140"/>
+            <point key="canvasLocation" x="70" y="-131"/>
         </view>
         <view contentMode="scaleToFill" id="1n0-1c-m3d" userLabel="Table">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3425456565" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTK-am-jkk">
@@ -767,7 +765,6 @@
                 <constraint firstItem="EVb-CS-zDk" firstAttribute="leading" secondItem="V8x-Wa-Ceh" secondAttribute="leading" id="yZl-e0-9Vf"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="OTK-am-jkk"/>
@@ -914,7 +911,7 @@
                     <include reference="SEu-Jt-hbh"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="320" y="-140"/>
+            <point key="canvasLocation" x="132" y="-126"/>
         </view>
     </objects>
     <resources>
