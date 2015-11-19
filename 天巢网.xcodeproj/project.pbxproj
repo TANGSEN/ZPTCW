@@ -11,6 +11,8 @@
 		8605D5661BFDB2460002BB5C /* TCWealthListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5651BFDB2460002BB5C /* TCWealthListController.m */; settings = {ASSET_TAGS = (); }; };
 		8605D56A1BFDB46F0002BB5C /* WeathListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5681BFDB46F0002BB5C /* WeathListCell.m */; settings = {ASSET_TAGS = (); }; };
 		8605D56B1BFDB46F0002BB5C /* WeathListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8605D5691BFDB46F0002BB5C /* WeathListCell.xib */; settings = {ASSET_TAGS = (); }; };
+		8605D5711BFDCCA80002BB5C /* EvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5701BFDCCA80002BB5C /* EvaluationView.m */; settings = {ASSET_TAGS = (); }; };
+		864E6A971BFDD2510031F3C9 /* EvaluationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864E6A961BFDD2510031F3C9 /* EvaluationView.xib */; settings = {ASSET_TAGS = (); }; };
 		8774FC661BFB78FD001EEF0B /* Color_Process.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC621BFB78FD001EEF0B /* Color_Process.m */; };
 		8774FC671BFB78FD001EEF0B /* CustomerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC641BFB78FD001EEF0B /* CustomerView.m */; };
 		8774FC851BFB7AB1001EEF0B /* ProfileViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC7D1BFB7AB1001EEF0B /* ProfileViewCell.m */; };
@@ -172,6 +174,9 @@
 		8605D5671BFDB46F0002BB5C /* WeathListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeathListCell.h; sourceTree = "<group>"; };
 		8605D5681BFDB46F0002BB5C /* WeathListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeathListCell.m; sourceTree = "<group>"; };
 		8605D5691BFDB46F0002BB5C /* WeathListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeathListCell.xib; sourceTree = "<group>"; };
+		8605D56F1BFDCCA80002BB5C /* EvaluationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluationView.h; sourceTree = "<group>"; };
+		8605D5701BFDCCA80002BB5C /* EvaluationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluationView.m; sourceTree = "<group>"; };
+		864E6A961BFDD2510031F3C9 /* EvaluationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvaluationView.xib; sourceTree = "<group>"; };
 		8774FC611BFB78FD001EEF0B /* Color_Process.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color_Process.h; sourceTree = "<group>"; };
 		8774FC621BFB78FD001EEF0B /* Color_Process.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color_Process.m; sourceTree = "<group>"; };
 		8774FC631BFB78FD001EEF0B /* CustomerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerView.h; sourceTree = "<group>"; };
@@ -504,6 +509,9 @@
 			children = (
 				8774FC7C1BFB7AB1001EEF0B /* ProfileViewCell.h */,
 				8774FC7D1BFB7AB1001EEF0B /* ProfileViewCell.m */,
+				8605D56F1BFDCCA80002BB5C /* EvaluationView.h */,
+				8605D5701BFDCCA80002BB5C /* EvaluationView.m */,
+				864E6A961BFDD2510031F3C9 /* EvaluationView.xib */,
 				8774FC7E1BFB7AB1001EEF0B /* ProfileViewCell.xib */,
 				8774FC7F1BFB7AB1001EEF0B /* TCOrderCell.h */,
 				8774FC801BFB7AB1001EEF0B /* TCOrderCell.m */,
@@ -1305,6 +1313,7 @@
 				AA1A54181BF9A88400EE98FB /* MJRefresh.bundle in Resources */,
 				AAD487531BF96E720051E6AA /* LoadMoreFooter.xib in Resources */,
 				8605D56B1BFDB46F0002BB5C /* WeathListCell.xib in Resources */,
+				864E6A971BFDD2510031F3C9 /* EvaluationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1413,6 +1422,7 @@
 				AA1A53F01BF9A88400EE98FB /* MASConstraintMaker.m in Sources */,
 				AA1A53E61BF9A88400EE98FB /* UIAlertView+AFNetworking.m in Sources */,
 				AAACD4B21BF5B9CD00FC4603 /* Channel.m in Sources */,
+				8605D5711BFDCCA80002BB5C /* EvaluationView.m in Sources */,
 				AA1A53EC1BF9A88400EE98FB /* FBShimmeringLayer.m in Sources */,
 				AA1A54131BF9A88400EE98FB /* MJRefreshBackNormalFooter.m in Sources */,
 				AA1A53F21BF9A88400EE98FB /* MASViewAttribute.m in Sources */,
