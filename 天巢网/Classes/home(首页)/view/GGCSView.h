@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GGCSView : UIView
-+ (GGCSView *)view;
-+ (CGFloat)height;
+@interface GGCSView : UITableView
++ (CGFloat)Height;
 @end

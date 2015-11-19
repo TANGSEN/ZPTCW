@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ChannelView : UIView
-
++ (CGFloat)height;
 @end

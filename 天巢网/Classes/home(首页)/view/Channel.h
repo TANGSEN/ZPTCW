@@ -12,6 +12,7 @@
 
 @property (nonatomic ,copy) NSString *btnImageName;
 @property (nonatomic ,copy) NSString *labelText;
+@property (nonatomic ,assign) CGRect rect;
 
-
++ (Channel *)channelViewinitWithBtnRect:(CGRect)rect;
 @end

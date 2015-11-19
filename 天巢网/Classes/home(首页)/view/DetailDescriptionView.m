@@ -7,6 +7,7 @@
 //
 
 #import "DetailDescriptionView.h"
+#import "TCShareView.h"
 
 @interface DetailDescriptionView ()
 @property (nonatomic ,strong) UIButton *titleBtn;
@@ -33,7 +34,6 @@ static CGFloat _height;
     UIButton *title  = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, JPScreenW - 60, 40)];
     [title setTitle:@"源氏木语 北欧简约纯实木白橡木三人特价木架沙发 客厅组合家具" forState:UIControlStateNormal];
     title.titleLabel.numberOfLines = 2;
-    title.backgroundColor = RandomColor;
     title.titleLabel.font = [UIFont boldSystemFontOfSize:12];
     [title setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [self addSubview:title];
@@ -49,9 +49,8 @@ static CGFloat _height;
     [self addSubview:label];
     
     // 分享按钮
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 20, 10, 20, 40)];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 20, 10, 25, 40)];
     UIImage *image = [UIImage imageNamed:@"1-详情页_16"];
-    btn.backgroundColor = RandomColor;
     btn.contentMode = UIViewContentModeScaleAspectFit;
     [btn setImage:image forState:UIControlStateNormal];
     [btn setTitle:@"分享" forState:UIControlStateNormal];
@@ -63,7 +62,18 @@ static CGFloat _height;
     [self addSubview:btn];
     self.btn = btn;
     [btn bk_addEventHandler:^(id sender) {
+        TCShareView *view = [[TCShareView alloc]init];
         
+        view.frame  = CGRectMake(0, JPScreenH, JPScreenW, [TCShareView height]);
+        view.backgroundColor = [UIColor whiteColor];
+        UIView *superView = self.superview.superview.superview.superview.superview.superview;
+        [superView addSubview:view];
+        [UIView animateWithDuration:0.25 animations:^{
+            view.y = JPScreenH - [TCShareView height];
+            
+        }];
+//        NSLog(@"----%@\n%@\n%@\n%@\n%@\n%@\n%@\n",self.superview,self.superview.superview,self.superview.superview.superview,self.superview.superview.superview.superview,self.superview.superview.superview.superview.superview,self.superview.superview.superview.superview.superview.superview,self.superview.superview.superview.superview.superview.superview.superview);
+//        NSLog(@"----%@\n%@\n%@\n%@\n%@\n%@\n%@\n",self.superclass,self.superclass.superclass,self.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass.superclass.superclass);
     } forControlEvents:UIControlEventTouchUpInside];
     
     // 价格标签是一个有属性的字符串

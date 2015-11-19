@@ -32,6 +32,8 @@
 @property (nonatomic, strong) NSMutableArray *filterArray;
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
 @property (nonatomic, strong) UISearchController *mySearchController;
+@property (nonatomic ,weak) UIView *rxHeader;
+@property (nonatomic ,weak) UIButton *headerBtn;
 
 @end
 
@@ -141,7 +143,7 @@
         _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -64, JPScreenW, JPScreenH)];
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.showsVerticalScrollIndicator = NO;
-        
+        _scrollView.backgroundColor = Color(240, 240, 240);
     }return _scrollView;
 }
 
@@ -154,6 +156,7 @@
     [self.scrollView addSubview:self.collectionView];
     [self addPageControl];
     [self addChannelView];
+    [self addRXHeaderView];
     [self addCollectionView];
     // 注册cell
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CellIdentifier];
@@ -211,10 +214,12 @@
  *  添加频道分类
  */
 - (void)addChannelView{
-    CGRect rect = CGRectMake(0, CGRectGetMaxY(self.pageControl.frame), JPScreenW, 150);
+    CGRect rect = CGRectMake(0, CGRectGetMaxY(self.pageControl.frame), JPScreenW, [ChannelView height]);
     ChannelView *channelView = [[ChannelView alloc]initWithFrame:rect];
+    channelView.backgroundColor = [UIColor whiteColor];
     for (Channel *channel in channelView.subviews) {
         UIButton *btn = channel.subviews[0];
+        channel.backgroundColor = RandomColor;
         [btn bk_addEventHandler:^(id sender) {
             NSLog(@"点击了频道分类按钮");
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
@@ -228,13 +233,29 @@
     NSLog(@"channel");
 }
 
+- (void)addRXHeaderView{
+    UIView *rxHeader = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.channelView.frame) + JPMargin, JPScreenW, 50)];
+    rxHeader.backgroundColor = [UIColor whiteColor];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(5, 0, JPScreenW, 50)];
+    btn.backgroundColor = [UIColor whiteColor];
+    [btn setTitle:@"热销商品" forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"icon-sanjiao"] forState:UIControlStateNormal];
+    btn.contentHorizontalAlignment = 1;
+    btn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
+    [btn setTitleColor:Color(95, 56, 37) forState:UIControlStateNormal];
+    
+    [self.scrollView addSubview:rxHeader];
+    [rxHeader addSubview:btn];
+    self.headerBtn = btn;
+    self.rxHeader = rxHeader;
+}
 
 - (void)addCollectionView{
     self.collectionVC = [[RXCollectionController alloc]init];
     [self addChildViewController:self.collectionVC];
     UICollectionView *collectionView = self.collectionVC.collectionView;
 //    collectionView.userInteractionEnabled = NO;
-    collectionView.frame = CGRectMake(0, CGRectGetMaxY(self.channelView.frame) + 20, JPScreenW, [RXCollectionController height]);
+    collectionView.frame = CGRectMake(0, CGRectGetMaxY(self.rxHeader.frame), JPScreenW, [RXCollectionController height]);
     collectionView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:collectionView];
     self.rxCollectionView = collectionView;
@@ -277,7 +298,7 @@
 }
 
 - (void)setupLeftBarBtn{
-    NSString *image = @"首页-1_03";
+    NSString *image = @"nav_logo";
     /**
      *  设置导航栏左边的按钮
      *

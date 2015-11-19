@@ -61,13 +61,13 @@
 
 - (void)setPrice:(NSInteger)price{
     _price = price;
-    _priceLabel.text = [NSString stringWithFormat:@"$%ld",_price];
+    _priceLabel.text = [NSString stringWithFormat:@"$%ld",(long)_price];
 
 }
 
 - (void)setSales:(NSInteger)sales{
     _sales = sales;
-    _salesLabel.text = [NSString stringWithFormat:@"已售%ld",_sales];
+    _salesLabel.text = [NSString stringWithFormat:@"已售%ld",(long)_sales];
 }
 
 - (void)layoutSubviews{

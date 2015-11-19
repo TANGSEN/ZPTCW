@@ -100,12 +100,33 @@
     self.Table.frame = CGRectMake(0, 160, ApplicationframeValue.width, 320);
     [self.scrollV addSubview:self.Table];
     
-   
+    
+    
+    
+    /*********************************************************************/
+    // blockskit功能小试
+    UIButton *btn = [[UIButton alloc]init];
+    btn.x = 0;
+    btn.y = 300;
+    btn.Width = JPScreenW;
+    btn.height = 120;
+    btn.backgroundColor = RandomColor;
+    btn.titleLabel.numberOfLines = 0;
+    [btn setTitle:@"***********这是一个按钮**********\n使用blockskit框架把[btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside]用block实现" forState:UIControlStateNormal];
+//    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    // 给按钮添加点击事件.使用block
+    [btn bk_addEventHandler:^(id sender) {
+        NSLog(@"点击了btn按钮，使用blockskit框架把[btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside]用block实现");
+    } forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:btn];
+    /*********************************************************************/
+    
     
     
     
     [self getRoundCorner:self.StepperView];
-    
+    self.scrollV.bounces = NO;
+    NSLog(@"%@",NSStringFromCGRect(self.scrollV.frame));
 }
 
 -(UIView *)getRoundCorner:(UIView *)vView

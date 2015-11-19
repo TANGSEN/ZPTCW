@@ -22,20 +22,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     TCHomeViewController *homeVC = [[TCHomeViewController alloc]init];
-    [self addChildVc:homeVC Title:@"首页" Image:@"tabbar_home" SelectedImage:@"tabbar_home_select"];
+    [self addChildVc:homeVC Title:@"首页" Image:@"tab_icon_home_default" SelectedImage:@"tab_icon_home_selected"];
     
     
     TCCategoryController *cateVC = [[TCCategoryController alloc]init];
-    [self addChildVc:cateVC Title:@"分类" Image:@"tabbar_category" SelectedImage:@"tabbar_category_select"];
+    [self addChildVc:cateVC Title:@"分类" Image:@"tab_icon_category_default" SelectedImage:@"tab_icon_category_selected"];
     
     TCShoppingController *shopVC = [[TCShoppingController alloc]init];
     
-    [self addChildVc:shopVC Title:@"购物车" Image:@"tabbar_shopping" SelectedImage:@"tabbar_shopping_select"];
+    [self addChildVc:shopVC Title:@"门店" Image:@"tab_icon_story_default" SelectedImage:@"tab_icon_story_selected"];
     
     TCProfileController *profileVC = [[TCProfileController alloc]init];
-    [self addChildVc:profileVC Title:@"个人中心" Image:@"tabbar_profile" SelectedImage:@"tabbar_profile_select"];
+    [self addChildVc:profileVC Title:@"个人中心" Image:@"tab_icon_profile_default" SelectedImage:@"tab_icon_profile_selected"];
     
-    
+    [self.tabBar setTintColor:[UIColor redColor]];
     
 }
 
