@@ -41,8 +41,9 @@ static Channel *_channel;
     if (self= [super initWithFrame:frame]) {
         UIButton *btn = [[UIButton alloc]init];
         btn.tag = 1;
-        btn.Width = 15;
-        btn.Height = 15;
+        btn.Width = 25;
+        btn.Height = 25;
+        btn.backgroundColor = RandomColor;
         btn.y = 10;
         btn.x = JPScreenW - btn.Width - 10;
         [btn setImage:[UIImage imageNamed:@"share_btn_cancel"] forState:UIControlStateNormal];
@@ -56,6 +57,7 @@ static Channel *_channel;
             Channel *channel = [Channel channelViewinitWithBtnRect:CGRectMake(0, 0, 55, 55)];
             channel.btnImageName = self.btnImages[i];
             channel.labelText = @"朋友圈";
+            channel.backgroundColor = RandomColor;
             [self addSubview:channel];
         }
     }

@@ -49,7 +49,7 @@ static CGFloat _height;
     [self addSubview:label];
     
     // 分享按钮
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 20, 10, 20, 40)];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 20, 10, 25, 40)];
     UIImage *image = [UIImage imageNamed:@"1-详情页_16"];
     btn.contentMode = UIViewContentModeScaleAspectFit;
     [btn setImage:image forState:UIControlStateNormal];
@@ -65,12 +65,12 @@ static CGFloat _height;
         TCShareView *view = [[TCShareView alloc]init];
         
         view.frame  = CGRectMake(0, JPScreenH, JPScreenW, [TCShareView height]);
-        view.backgroundColor = [UIColor blackColor];
+        view.backgroundColor = [UIColor whiteColor];
         UIView *superView = self.superview.superview.superview.superview.superview.superview;
         [superView addSubview:view];
         [UIView animateWithDuration:0.25 animations:^{
             view.y = JPScreenH - [TCShareView height];
-            view.alpha = 0.8;
+            
         }];
 //        NSLog(@"----%@\n%@\n%@\n%@\n%@\n%@\n%@\n",self.superview,self.superview.superview,self.superview.superview.superview,self.superview.superview.superview.superview,self.superview.superview.superview.superview.superview,self.superview.superview.superview.superview.superview.superview,self.superview.superview.superview.superview.superview.superview.superview);
 //        NSLog(@"----%@\n%@\n%@\n%@\n%@\n%@\n%@\n",self.superclass,self.superclass.superclass,self.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass.superclass.superclass);
