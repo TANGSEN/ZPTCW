@@ -7,7 +7,7 @@
 //
 
 #import "EvaluationView.h"
-
+#define Margin (ApplicationframeValue.width-20)/14
 @implementation EvaluationView
 -(id)initWithFrame:(CGRect)frame
 {
@@ -17,33 +17,85 @@
         self.overlayView.backgroundColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.5];
         [self.overlayView addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
         
-        UIView *viewS = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.width-40, ApplicationframeValue.height-150)];
-        viewS.backgroundColor = Color_Hex16(@"eaeaea");
+        UIView *viewS = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.width-20, ApplicationframeValue.height-150)];
+        viewS.backgroundColor =[UIColor whiteColor];
         [self addSubview:viewS];
+        self.viewS = viewS;
         
         
+        UILabel *TitleLabel = [[UILabel alloc] initWithFrame:CGRectMake((ApplicationframeValue.width-20-100)/2, 25, 100, 25)];
+        TitleLabel.textAlignment = NSTextAlignmentCenter;
+        TitleLabel.text = @"商品评价";
+        TitleLabel.backgroundColor = [UIColor clearColor];
+        TitleLabel.font = AppFont(text_size_middle_2);
+        [viewS addSubview:TitleLabel];
         
+        NSArray *arr = @[@"质量评价:",@"配送评价:",@"安装评价:",@"自由评价:"];
+        for (int i = 0; i<4; i++) {
+            
+            
+            UILabel *leftLabel = [[UILabel alloc] initWithFrame:CGRectMake(Margin/2, 70+2*Margin*i, 5*Margin/2, Margin)];
+            
+            leftLabel.text = arr[i];
+            leftLabel.textAlignment = NSTextAlignmentCenter;
+            leftLabel.adjustsFontSizeToFitWidth = YES;
+            leftLabel.font = AppFont(text_size_other);
+            [viewS addSubview:leftLabel];
+            if (i == 3) {
+                UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(4*Margin, 70+2*Margin*3, ApplicationframeValue.width-5*Margin-20, 3*Margin)];
+                textView.backgroundColor = View_BgColor;
+                [viewS addSubview:textView];
+            }
+            else{
+                
+                for (int j = 0; j<5; j++) {
+                    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(4*Margin+2*j*Margin, 70+2*Margin*i, Margin, Margin)];
+                
+                    [button setBackgroundImage: [UIImage imageNamed:@"5-我的订单-评价_07"] forState:UIControlStateNormal];
+                    [button setBackgroundImage:[UIImage imageNamed:@"5-我的订单-评价_03"] forState:UIControlStateSelected];
+                    [viewS addSubview:button];
+                    button.selected = NO;
+                    button.tag = 100*i + j;
+                    [button addTarget:self action:@selector(changeImage:) forControlEvents:UIControlEventTouchUpInside];
+                    
+                }
+            }
+        }
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 90, 100, 15)];
-        label.text = @"分享到";
-        label.textColor = Color_Hex16(@"6d6d6d");
-        label.backgroundColor = [UIColor clearColor];
-        label.font = AppFont(12);
-        [viewS addSubview:label];
         
         
         UIButton *cancleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        cancleBtn.frame = CGRectMake(0, 160 -44, ApplicationframeValue.width-40, 44);
-        [cancleBtn setTitle:@"取消" forState:UIControlStateNormal];
+        cancleBtn.frame = CGRectMake(2*Margin, 70+10*Margin, ApplicationframeValue.width-4*Margin-20, 3*Margin/2);
+        [cancleBtn setTitle:@"发表评论" forState:UIControlStateNormal];
         [cancleBtn setTitleColor:Color_Hex16(@"666666") forState:UIControlStateNormal];
-        cancleBtn.titleLabel.font = AppFont(14);
-        cancleBtn.backgroundColor = [UIColor whiteColor];
+        cancleBtn.titleLabel.font = AppFont(text_size_other);
+        cancleBtn.backgroundColor = View_BgColor;
         
         [viewS addSubview:cancleBtn];
         
     }
     return self;
 }
+
+
+-(void)changeImage:(UIButton *)sender
+{
+
+    
+    if (sender.tag/100==0) {
+ 
+            for (UIButton *button in self.viewS.subviews) {
+                if (button.tag<sender.tag) {
+                    button.selected = YES;
+                
+            }
+        }
+    }
+
+
+}
+
+
 - (void)show
 {
     UIWindow *keywindow = [[UIApplication sharedApplication] keyWindow];

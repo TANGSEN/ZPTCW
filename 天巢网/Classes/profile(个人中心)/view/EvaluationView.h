@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *message;//内容
 @property (nonatomic, strong) NSString *pictureName;//图片名称
 @property (nonatomic, strong) NSString *shareUrl;//跳转URL
-
+@property(nonatomic,strong)UIView *viewS;
 -(void)show;
 -(void)dismiss;
 @end
