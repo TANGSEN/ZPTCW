@@ -56,6 +56,7 @@
             channel.labelText = self.names[i];
             [self addSubview:channel];
             self.channel = channel;
+            
         }
     }
     return self;
