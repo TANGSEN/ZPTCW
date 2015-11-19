@@ -133,8 +133,7 @@
 
 #define  AppFont(c_font) [UIFont systemFontOfSize:c_font]
 /**屏幕大小*/
-#define ApplicationframeValue [[UIScreen mainScreen]bounds]
-
+#define ApplicationframeValue [[UIScreen mainScreen]bounds].size
 
 #import "Factory.h"
 #import "UIView+Extension.h"

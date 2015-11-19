@@ -8,7 +8,7 @@
 
 #import "TCOrderManagerController.h"
 #import "TCDetailOrderController.h"
-
+#import "TCWealthListController.h"
 @interface TCOrderManagerController ()
 @property (nonatomic,strong)CustomerView *topView;
 @property (nonatomic,strong)TCOrderTable *tableView1;
@@ -20,18 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"全部订单";
-    self.topView = [[CustomerView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.size.width, 47) initButWithArray:[NSArray arrayWithObjects:@"未付款",@"已完成",nil]butFont:(NSInteger)16];
+    self.topView = [[CustomerView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.width, 47) initButWithArray:[NSArray arrayWithObjects:@"未付款",@"已完成",nil]butFont:(NSInteger)16];
     [self.view addSubview:self.topView];
-    self.view.frame = CGRectMake(0,64, ApplicationframeValue.size.width, ApplicationframeValue.size.height-64);
+    self.view.frame = CGRectMake(0,64, ApplicationframeValue.width, ApplicationframeValue.height-64);
     self.topView.delegate = self;
     self.topView.clipsToBounds = YES;
     self.view.backgroundColor = View_BgColor;
+    self.tableView1.showsHorizontalScrollIndicator = NO;
+    self.tableView1.showsVerticalScrollIndicator = NO;
     
-    
-    self.tableView1 = [[TCOrderTable alloc] initWithFrame:CGRectMake(0, 47, ApplicationframeValue.size.width, ApplicationframeValue.size.height-47)];
+    self.tableView2.showsHorizontalScrollIndicator = NO;
+    self.tableView2.showsVerticalScrollIndicator = NO;
+    self.tableView1 = [[TCOrderTable alloc] initWithFrame:CGRectMake(0, 47, ApplicationframeValue.width, ApplicationframeValue.height-47-64)];
     self.tableView1.TC_delegate = self;
     
-    self.tableView2 = [[TCOrderTable alloc] initWithFrame:CGRectMake(0, 47, ApplicationframeValue.size.width, ApplicationframeValue.size.height)];
+    self.tableView2 = [[TCOrderTable alloc] initWithFrame:CGRectMake(0, 47, ApplicationframeValue.width, ApplicationframeValue.height-47-64)];
 
     self.tableView1.backgroundColor = View_BgColor;
     self.tableView2.TC_delegate = self;
@@ -73,12 +76,9 @@
 
 -(void)TC_tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     
     TCDetailOrderController *detail = [[TCDetailOrderController alloc] initWithNibName:@"TCDetailOrderController" bundle:nil];
-    
     [self.navigationController pushViewController:detail animated:YES];
-
 
 }
 

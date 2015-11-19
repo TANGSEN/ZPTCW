@@ -9,15 +9,65 @@
 #import "TCDetailOrderController.h"
 
 @interface TCDetailOrderController ()
+{
 
+    NSInteger count;
+
+}
 @end
 
 @implementation TCDetailOrderController
+- (IBAction)DecreaseButton:(id)sender {
+    count --;
+    if (count==0) {
+        count = 1;
+    }
+    
+    self.CountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+    self.PriceLabel.text = @"39.00";
+    float preSum =[self.PriceLabel.text floatValue]*[self.CountLabel.text intValue];
+    self.PreSumLabel.text = [NSString stringWithFormat:@"%.2f",preSum];
+    
+    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",count];
+}
+
+
+
+
+- (IBAction)PlusButton:(id)sender {
+    
+    count++;
+//    NSString *countStr = [NSString stringWithFormat:@"%ld",(long)count];
+//    
+//    self.CountLabel.text = countStr;
+    
+//    self.PreCountLabel.text = [NSString stringWithFormat:@"共%ld件商品  合计：",count];
+//    NSInteger price = (NSInteger)self.PriceLabel.text;
+//    NSString *preSumStr  = [NSString stringWithFormat:@"%ld",count * price];
+//    self.PreSumLabel.text = preSumStr;
+    
+    self.CountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+    self.PriceLabel.text = @"39.00";
+    float preSum =[self.PriceLabel.text floatValue]*[self.CountLabel.text intValue];
+    self.PreSumLabel.text = [NSString stringWithFormat:@"%.2f",preSum];
+    
+    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",count];
+    
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"订单详情";
     self.view.backgroundColor = View_BgColor;
+    count = 1;
+    self.CountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+    self.PriceLabel.text = @"39.00";
+    float preSum =[self.PriceLabel.text floatValue]*[self.CountLabel.text intValue];
+    self.PreSumLabel.text = [NSString stringWithFormat:@"%.2f",preSum];
+    
+    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",count];
     
 
     self.lineImageView.backgroundColor = Color_Hex16(@"#f0f0f0");
@@ -26,7 +76,7 @@
     self.lineImageView3.backgroundColor = Color_Hex16(@"#f0f0f0");
     self.lineImageView4.backgroundColor = Color_Hex16(@"#f0f0f0");
     self.lineImageView5.backgroundColor = Color_Hex16(@"#f0f0f0");
-    self.lineImageView6.backgroundColor = Color_Hex16(@"#f0f0f0");
+    
     self.lineImageView7.backgroundColor = [UIColor lightGrayColor];
     self.lineImageView8.backgroundColor = [UIColor lightGrayColor];
     self.view.backgroundColor = View_BgColor;
@@ -38,15 +88,16 @@
     self.AddressLabel.font = AppFont(text_size_other);
     self.AddressLabel.textColor = Color_Common;
     
-    self.scrollV = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.size.width, ApplicationframeValue.size.height)];
-    self.scrollV.contentSize = CGSizeMake(ApplicationframeValue.size.width, 154+411+20);
+    self.scrollV = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.width, ApplicationframeValue.height-50-64)];
+    self.scrollV.contentSize = CGSizeMake(ApplicationframeValue.width, 145+320+15+15);
     self.scrollV.backgroundColor =[UIColor clearColor];
     [self.view addSubview:self.scrollV];
     
-    
-    self.TopView.frame = CGRectMake(0, 0, ApplicationframeValue.size.width, 154);
+    self.scrollV.showsHorizontalScrollIndicator = NO;
+    self.scrollV.showsVerticalScrollIndicator = NO;
+    self.TopView.frame = CGRectMake(0, 0, ApplicationframeValue.width, 145);
      [self.scrollV addSubview:self.TopView];
-    self.Table.frame = CGRectMake(0, 164, ApplicationframeValue.size.width, 411);
+    self.Table.frame = CGRectMake(0, 160, ApplicationframeValue.width, 320);
     [self.scrollV addSubview:self.Table];
     
    
@@ -61,7 +112,7 @@
 {
     vView.layer.borderWidth  = 1.0f;
     vView.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5].CGColor;
-    vView.layer.cornerRadius = 6.0f;
+    vView.layer.cornerRadius = 3.0f;
     [vView.layer setMasksToBounds:YES];
 
 

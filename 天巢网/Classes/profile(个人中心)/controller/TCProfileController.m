@@ -9,6 +9,7 @@
 #import "TCProfileController.h"
 #import "ProfileViewCell.h"
 #import "TCOrderManagerController.h"
+#import "TCWealthListController.h"
 #import "TCNavigationController.h"
 @interface TCProfileController ()
 /**分区文字*/
@@ -23,10 +24,9 @@
     [super viewDidLoad];
     self.title = @"个人中心";
     self.view.backgroundColor = View_BgColor;
-    self.tableView.bounces = NO;
     
-    
-    
+    self.tableView.showsHorizontalScrollIndicator = NO;
+    self.tableView.showsVerticalScrollIndicator = NO;
 }
 
 
@@ -98,13 +98,35 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TCOrderManagerController *order = [[TCOrderManagerController alloc] init];
-    order.hidesBottomBarWhenPushed = YES;
-  
     
-    [self.navigationController pushViewController:order animated:YES];
+    UIViewController *obj = nil;
     
-    
+    switch (indexPath.section) {
+        case 0:
+            obj = [[TCOrderManagerController alloc] init];
+            break;
+        case 1:
+            obj = [[TCWealthListController alloc] init];
+            break;
+        case 2:
+            obj = [[TCOrderManagerController alloc] init];
+            break;
+        case 3:
+            obj = [[TCOrderManagerController alloc] init];
+            break;
+        case 4:
+            obj = [[TCOrderManagerController alloc] init];
+            break;
+        case 5:
+            obj = [[TCOrderManagerController alloc] init];
+            break;
+        default:
+            break;
+    }
+   
+    obj.title = self.sectionsTitles[indexPath.section];
+    obj.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:obj animated:YES];
     NSLog(@"%@",self.sectionsTitles[indexPath.section]);
 
 }
