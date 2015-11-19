@@ -15,13 +15,13 @@
 		8774FC871BFB7AB1001EEF0B /* TCOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC801BFB7AB1001EEF0B /* TCOrderCell.m */; };
 		8774FC881BFB7AB1001EEF0B /* TCOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC811BFB7AB1001EEF0B /* TCOrderCell.xib */; };
 		8774FC891BFB7AB1001EEF0B /* TCOrderTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC831BFB7AB1001EEF0B /* TCOrderTable.m */; };
-		8774FC8F1BFB7B79001EEF0B /* TCDetailOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC8B1BFB7B79001EEF0B /* TCDetailOrderController.m */; };
-		8774FC901BFB7B79001EEF0B /* TCDetailOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774FC8C1BFB7B79001EEF0B /* TCDetailOrderController.xib */; };
 		8774FC911BFB7B79001EEF0B /* TCOrderManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC8E1BFB7B79001EEF0B /* TCOrderManagerController.m */; };
 		8774FC9B1BFB7E5F001EEF0B /* TCProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC9A1BFB7E5F001EEF0B /* TCProfileController.m */; };
 		8774FCA11BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC9D1BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m */; };
 		8774FCA21BFB7EA7001EEF0B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FCA01BFB7EA7001EEF0B /* UIView+Extension.m */; };
 		8774FCA51BFB7F54001EEF0B /* TCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FCA41BFB7F54001EEF0B /* TCNavigationController.m */; };
+		878ABA5D1BFCA813006AE440 /* TCDetailOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878ABA5B1BFCA813006AE440 /* TCDetailOrderController.m */; settings = {ASSET_TAGS = (); }; };
+		878ABA5E1BFCA813006AE440 /* TCDetailOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878ABA5C1BFCA813006AE440 /* TCDetailOrderController.xib */; settings = {ASSET_TAGS = (); }; };
 		AA1A53DB1BF9A88400EE98FB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A52FE1BF9A88400EE98FB /* AFHTTPRequestOperation.m */; };
 		AA1A53DC1BF9A88400EE98FB /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53001BF9A88400EE98FB /* AFHTTPRequestOperationManager.m */; };
 		AA1A53DD1BF9A88400EE98FB /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A53021BF9A88400EE98FB /* AFHTTPSessionManager.m */; };
@@ -176,9 +176,6 @@
 		8774FC811BFB7AB1001EEF0B /* TCOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCOrderCell.xib; sourceTree = "<group>"; };
 		8774FC821BFB7AB1001EEF0B /* TCOrderTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCOrderTable.h; sourceTree = "<group>"; };
 		8774FC831BFB7AB1001EEF0B /* TCOrderTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCOrderTable.m; sourceTree = "<group>"; };
-		8774FC8A1BFB7B79001EEF0B /* TCDetailOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDetailOrderController.h; sourceTree = "<group>"; };
-		8774FC8B1BFB7B79001EEF0B /* TCDetailOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDetailOrderController.m; sourceTree = "<group>"; };
-		8774FC8C1BFB7B79001EEF0B /* TCDetailOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCDetailOrderController.xib; sourceTree = "<group>"; };
 		8774FC8D1BFB7B79001EEF0B /* TCOrderManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCOrderManagerController.h; sourceTree = "<group>"; };
 		8774FC8E1BFB7B79001EEF0B /* TCOrderManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCOrderManagerController.m; sourceTree = "<group>"; };
 		8774FC991BFB7E5F001EEF0B /* TCProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProfileController.h; sourceTree = "<group>"; };
@@ -189,6 +186,9 @@
 		8774FCA01BFB7EA7001EEF0B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		8774FCA31BFB7F54001EEF0B /* TCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNavigationController.h; sourceTree = "<group>"; };
 		8774FCA41BFB7F54001EEF0B /* TCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNavigationController.m; sourceTree = "<group>"; };
+		878ABA5A1BFCA813006AE440 /* TCDetailOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDetailOrderController.h; sourceTree = "<group>"; };
+		878ABA5B1BFCA813006AE440 /* TCDetailOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDetailOrderController.m; sourceTree = "<group>"; };
+		878ABA5C1BFCA813006AE440 /* TCDetailOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCDetailOrderController.xib; sourceTree = "<group>"; };
 		AA1A52FD1BF9A88400EE98FB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		AA1A52FE1BF9A88400EE98FB /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		AA1A52FF1BF9A88400EE98FB /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -1092,9 +1092,9 @@
 		AAAD31961BF2DD5100082CBC /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				8774FC8A1BFB7B79001EEF0B /* TCDetailOrderController.h */,
-				8774FC8B1BFB7B79001EEF0B /* TCDetailOrderController.m */,
-				8774FC8C1BFB7B79001EEF0B /* TCDetailOrderController.xib */,
+				878ABA5A1BFCA813006AE440 /* TCDetailOrderController.h */,
+				878ABA5B1BFCA813006AE440 /* TCDetailOrderController.m */,
+				878ABA5C1BFCA813006AE440 /* TCDetailOrderController.xib */,
 				8774FC8D1BFB7B79001EEF0B /* TCOrderManagerController.h */,
 				8774FC8E1BFB7B79001EEF0B /* TCOrderManagerController.m */,
 				8774FC991BFB7E5F001EEF0B /* TCProfileController.h */,
@@ -1288,7 +1288,7 @@
 				AAAD31631BF2DCFE00082CBC /* LaunchScreen.storyboard in Resources */,
 				AA1A53F91BF9A88400EE98FB /* MBProgressHUD.bundle in Resources */,
 				AAAD31601BF2DCFE00082CBC /* Assets.xcassets in Resources */,
-				8774FC901BFB7B79001EEF0B /* TCDetailOrderController.xib in Resources */,
+				878ABA5E1BFCA813006AE440 /* TCDetailOrderController.xib in Resources */,
 				AA1A54181BF9A88400EE98FB /* MJRefresh.bundle in Resources */,
 				AAD487531BF96E720051E6AA /* LoadMoreFooter.xib in Resources */,
 			);
@@ -1372,6 +1372,7 @@
 				AA1A54231BF9A88400EE98FB /* MJPhotoView.m in Sources */,
 				AA1A540D1BF9A88400EE98FB /* MJRefreshFooter.m in Sources */,
 				8774FC911BFB7B79001EEF0B /* TCOrderManagerController.m in Sources */,
+				878ABA5D1BFCA813006AE440 /* TCDetailOrderController.m in Sources */,
 				AA1A541D1BF9A88400EE98FB /* MJPhoto.m in Sources */,
 				8774FCA11BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m in Sources */,
 				AA1A54241BF9A88400EE98FB /* SDWebImageManager+MJ.m in Sources */,
@@ -1411,7 +1412,6 @@
 				AA1A54301BF9A88400EE98FB /* UIButton+WebCache.m in Sources */,
 				AA1A53EE1BF9A88400EE98FB /* MASCompositeConstraint.m in Sources */,
 				AA1A54281BF9A88400EE98FB /* NSData+ImageContentType.m in Sources */,
-				8774FC8F1BFB7B79001EEF0B /* TCDetailOrderController.m in Sources */,
 				AA1A53F81BF9A88400EE98FB /* MBProgressHUD+MJ.m in Sources */,
 				AA1A53E21BF9A88400EE98FB /* AFURLResponseSerialization.m in Sources */,
 				AA1A53E01BF9A88400EE98FB /* AFURLConnectionOperation.m in Sources */,
