@@ -17,6 +17,8 @@
 /** 自身的高度 */
 #define SelfH 190;
 
+#define JPBtnCount 8
+
 @interface ChannelView ()
 
 @property (nonatomic ,strong) UIButton *btn;
@@ -46,29 +48,27 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        NSInteger count = self.btnImages.count;
         // 添加所有子控件
-        for (int i = 0; i<count; i++) {
+        for (int i = 0; i<JPBtnCount; i++) {
             Channel *channel = [Channel channelViewinitWithBtnRect:CGRectMake(0, 0, 40, 40)];
             
             channel.btnImageName = self.btnImages[i];
             channel.labelText = self.names[i];
             [self addSubview:channel];
             self.channel = channel;
+            
         }
     }
     return self;
 }
 
-
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    NSInteger count = self.btnImages.count;
     CGFloat btnMargin = (JPScreenW - 40 * JPBtnMaxCols) / JPBtnMaxCols;
     CGFloat btnW = (JPScreenW - 4 * btnMargin) / JPBtnMaxCols;
     CGFloat btnH = (self.height - 2 * JPChannelMargin) / JPBtnMaxRows;
-    for (int i = 0; i<count; i++) {
+    for (int i = 0; i < JPBtnCount; i++) {
         // 行号
         int row = i / JPBtnMaxCols;
         // 列号
@@ -79,9 +79,7 @@
             channel.width = btnW;
             channel.height = btnH;
         self.channel = channel;
-        
     }
-    
 }
 
 + (CGFloat)height{

@@ -54,7 +54,7 @@
 
 - (CustomerView *)topView{
     if (!_topView){
-        _topView = [[CustomerView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.size.width, 47) initButWithArray:[NSArray arrayWithObjects:@"商品详情",@"规格参数",nil] butFont:(NSInteger)14];
+        _topView = [[CustomerView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.width, 47) initButWithArray:[NSArray arrayWithObjects:@"商品详情",@"规格参数",nil] butFont:(NSInteger)14];
         _topView.delegate = self;
         _topView.clipsToBounds = YES;
     }

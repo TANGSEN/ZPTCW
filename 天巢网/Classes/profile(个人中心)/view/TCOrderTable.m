@@ -8,6 +8,8 @@
 
 #import "TCOrderTable.h"
 #import "TCOrderCell.h"
+
+#import "EvaluationView.h"
 @implementation TCOrderTable
 
 
@@ -85,7 +87,10 @@
 -(void)BuyNow:(UIButton *)button
 {
 
-    NSLog(@"点击了第%d分区,第%d行",button.tag/100,button.tag%100);
+    
+    EvaluationView *view = [[EvaluationView alloc] initWithFrame:CGRectMake(10,80, ApplicationframeValue.width-20, ApplicationframeValue.height-150)];
+    
+    [view show];
 
 
 }
