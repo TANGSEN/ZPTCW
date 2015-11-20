@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TCDetailOrderController">
@@ -902,9 +902,6 @@
                     <exclude reference="Ddm-PB-URP"/>
                     <exclude reference="PCb-3S-iTD"/>
                     <exclude reference="RC1-hg-WvF"/>
-                    <exclude reference="PZj-uv-gLu"/>
-                    <exclude reference="RRg-Wd-cRP"/>
-                    <exclude reference="u4r-Wy-Bh4"/>
                     <exclude reference="8h0-kL-TyF"/>
                     <exclude reference="bqU-4E-ug3"/>
                     <exclude reference="euW-WL-dkj"/>
@@ -940,6 +937,9 @@
                     <exclude reference="xgf-4K-42O"/>
                     <exclude reference="QcQ-ms-gOB"/>
                     <exclude reference="n2I-IF-aQt"/>
+                    <exclude reference="PZj-uv-gLu"/>
+                    <exclude reference="RRg-Wd-cRP"/>
+                    <exclude reference="u4r-Wy-Bh4"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -977,9 +977,6 @@
                     <include reference="Ddm-PB-URP"/>
                     <include reference="PCb-3S-iTD"/>
                     <include reference="RC1-hg-WvF"/>
-                    <include reference="PZj-uv-gLu"/>
-                    <include reference="RRg-Wd-cRP"/>
-                    <include reference="u4r-Wy-Bh4"/>
                     <include reference="8h0-kL-TyF"/>
                     <include reference="bqU-4E-ug3"/>
                     <include reference="euW-WL-dkj"/>
@@ -1015,6 +1012,9 @@
                     <include reference="xgf-4K-42O"/>
                     <include reference="QcQ-ms-gOB"/>
                     <include reference="n2I-IF-aQt"/>
+                    <include reference="PZj-uv-gLu"/>
+                    <include reference="RRg-Wd-cRP"/>
+                    <include reference="u4r-Wy-Bh4"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="608" y="-152"/>

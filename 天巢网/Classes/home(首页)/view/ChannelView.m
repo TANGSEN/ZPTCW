@@ -15,7 +15,7 @@
 /** 间距 */
 #define JPChannelMargin 10
 /** 自身的高度 */
-#define SelfH 190;
+#define SelfH 180;
 
 #define JPBtnCount 8
 
@@ -67,7 +67,7 @@
     [super layoutSubviews];
     CGFloat btnMargin = (JPScreenW - 40 * JPBtnMaxCols) / JPBtnMaxCols;
     CGFloat btnW = (JPScreenW - 4 * btnMargin) / JPBtnMaxCols;
-    CGFloat btnH = (self.height - 2 * JPChannelMargin) / JPBtnMaxRows;
+    CGFloat btnH = (self.height - JPChannelMargin) / JPBtnMaxRows;
     for (int i = 0; i < JPBtnCount; i++) {
         // 行号
         int row = i / JPBtnMaxCols;
@@ -75,7 +75,7 @@
         int col = i % JPBtnMaxCols;
         Channel *channel = self.subviews[i];
             channel.x = col * (btnMargin + btnW) + btnMargin / 2;
-            channel.y = row * (JPChannelMargin + btnH) + JPChannelMargin;
+            channel.y = row * btnH + JPChannelMargin;
             channel.width = btnW;
             channel.height = btnH;
         self.channel = channel;

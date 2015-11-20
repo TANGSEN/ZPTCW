@@ -27,6 +27,7 @@
         UIButton *btn = [[UIButton alloc]init];
         btn.titleLabel.numberOfLines = 2;
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setTitleColor:Color(128, 128, 128) forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:btn];
         self.btn = btn;

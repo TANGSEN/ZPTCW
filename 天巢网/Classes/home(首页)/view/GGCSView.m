@@ -39,7 +39,6 @@
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
     if (self = [super initWithFrame:frame style:style]) {
         self.bounces = NO;
-        self.backgroundColor = RandomColor;
         self.delegate = self;
         self.dataSource = self;
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -62,6 +61,7 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:Identifier];
     }
     cell.textLabel.text = self.names[indexPath .row];
+    cell.textLabel.textColor = Color(128, 128, 128);
     cell.detailTextLabel.text = self.detailTexts[indexPath . row];
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 49.5, JPScreenW, 0.5)];
     label.backgroundColor = [UIColor grayColor];

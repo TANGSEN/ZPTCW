@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>StoryPhone</key>
+		<string>020-12345678</string>
+		<key>StoryAddress</key>
+		<string>北京市朝阳大悦城4层21号</string>
+		<key>StoryName</key>
+		<string>朝阳大悦城专卖店</string>
+	</dict>
+	<dict>
+		<key>StoryPhone</key>
+		<string>0316-88888888</string>
+		<key>StoryAddress</key>
+		<string>松山湖产业园</string>
+		<key>StoryName</key>
+		<string>松山湖产业园</string>
+	</dict>
+	<dict>
+		<key>StoryPhone</key>
+		<string>0832-84500871</string>
+		<key>StoryAddress</key>
+		<string>大安专卖店</string>
+		<key>StoryName</key>
+		<string>大安专卖店</string>
+	</dict>
+	<dict>
+		<key>StoryPhone</key>
+		<string>020-15879632</string>
+		<key>StoryAddress</key>
+		<string>大学城公交车站左侧100米</string>
+		<key>StoryName</key>
+		<string>大学城专卖店</string>
+	</dict>
+	<dict>
+		<key>StoryPhone</key>
+		<string>020-88888887</string>
+		<key>StoryAddress</key>
+		<string>港东公交站</string>
+		<key>StoryName</key>
+		<string>港东专卖店</string>
+	</dict>
+</array>
+</plist>

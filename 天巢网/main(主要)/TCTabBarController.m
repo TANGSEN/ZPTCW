@@ -10,7 +10,7 @@
 #import "TCHomeViewController.h"
 #import "TCCategoryController.h"
 #import "TCProfileController.h"
-#import "TCShoppingController.h"
+#import "TCStoryController.h"
 #import "TCNavigationController.h"
 
 @interface TCTabBarController ()
@@ -28,7 +28,7 @@
     TCCategoryController *cateVC = [[TCCategoryController alloc]init];
     [self addChildVc:cateVC Title:@"分类" Image:@"tab_icon_category_default" SelectedImage:@"tab_icon_category_selected"];
     
-    TCShoppingController *shopVC = [[TCShoppingController alloc]init];
+    TCStoryController *shopVC = [[TCStoryController alloc]init];
     
     [self addChildVc:shopVC Title:@"门店" Image:@"tab_icon_story_default" SelectedImage:@"tab_icon_story_selected"];
     

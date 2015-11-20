@@ -22,7 +22,7 @@
 #define BtnMargin (JPScreenW - 55 * JPBtnMaxCount) / JPBtnMaxCount
 
 @interface TCShareView ()
-
+@property (nonatomic ,strong) NSArray *btnNames;
 @property (nonatomic ,strong) NSArray *btnImages;
 @end
 
@@ -37,15 +37,21 @@ static Channel *_channel;
     }return _btnImages;
 }
 
+- (NSArray *)btnNames{
+    if (!_btnNames) {
+        _btnNames = @[@"QQ",@"微信",@"朋友圈"];
+    }
+    return _btnNames;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self= [super initWithFrame:frame]) {
         UIButton *btn = [[UIButton alloc]init];
         btn.tag = 1;
-        btn.Width = 25;
-        btn.Height = 25;
-        btn.backgroundColor = RandomColor;
+        btn.width = 25;
+        btn.height = 25;
         btn.y = 10;
-        btn.x = JPScreenW - btn.Width - 10;
+        btn.x = JPScreenW - btn.width - 10;
         [btn setImage:[UIImage imageNamed:@"share_btn_cancel"] forState:UIControlStateNormal];
         [btn bk_addEventHandler:^(id sender) {
             [UIView animateWithDuration:0.25 animations:^{
@@ -56,8 +62,7 @@ static Channel *_channel;
         for (int i = 0; i < self.btnImages.count; i++) {
             Channel *channel = [Channel channelViewinitWithBtnRect:CGRectMake(0, 0, 55, 55)];
             channel.btnImageName = self.btnImages[i];
-            channel.labelText = @"朋友圈";
-            channel.backgroundColor = RandomColor;
+            channel.labelText = self.btnNames[i];
             [self addSubview:channel];
         }
     }

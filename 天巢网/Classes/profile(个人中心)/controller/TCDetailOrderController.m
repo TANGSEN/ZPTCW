@@ -108,7 +108,7 @@
     UIButton *btn = [[UIButton alloc]init];
     btn.x = 0;
     btn.y = 300;
-    btn.Width = JPScreenW;
+    btn.width = JPScreenW;
     btn.height = 120;
     btn.backgroundColor = RandomColor;
     btn.titleLabel.numberOfLines = 0;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TCShoppingController : UIViewController
+@interface TCStoryController : UITableViewController
 
 @end

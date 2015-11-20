@@ -28,11 +28,13 @@ static UILabel *_label;
 + (Channel *)channelViewinitWithBtnRect:(CGRect)rect{
     Channel *channel = [[Channel alloc]init];
     UIButton *btn = [[UIButton alloc]initWithFrame:rect];
+    
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(btn.frame) + 10, btn.width, 20)];
     label.font = [UIFont boldSystemFontOfSize:JPChannelFont];
     label.textAlignment = NSTextAlignmentCenter;
     [channel addSubview:btn];
     [channel addSubview:label];
+    label.textColor = Color(128, 128, 128);
     _btn = btn;
     _label = label;
     return channel;

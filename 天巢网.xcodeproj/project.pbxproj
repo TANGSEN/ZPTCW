@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7860908704E879C4782B21E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB47D8B14A5E3D3C6DA61B6 /* libPods.a */; };
-		8605D5661BFDB2460002BB5C /* TCWealthListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5651BFDB2460002BB5C /* TCWealthListController.m */; settings = {ASSET_TAGS = (); }; };
-		8605D56A1BFDB46F0002BB5C /* WeathListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5681BFDB46F0002BB5C /* WeathListCell.m */; settings = {ASSET_TAGS = (); }; };
-		8605D56B1BFDB46F0002BB5C /* WeathListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8605D5691BFDB46F0002BB5C /* WeathListCell.xib */; settings = {ASSET_TAGS = (); }; };
-		8605D5711BFDCCA80002BB5C /* EvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5701BFDCCA80002BB5C /* EvaluationView.m */; settings = {ASSET_TAGS = (); }; };
-		864E6A971BFDD2510031F3C9 /* EvaluationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864E6A961BFDD2510031F3C9 /* EvaluationView.xib */; settings = {ASSET_TAGS = (); }; };
+		8605D5661BFDB2460002BB5C /* TCWealthListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5651BFDB2460002BB5C /* TCWealthListController.m */; };
+		8605D56A1BFDB46F0002BB5C /* WeathListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5681BFDB46F0002BB5C /* WeathListCell.m */; };
+		8605D56B1BFDB46F0002BB5C /* WeathListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8605D5691BFDB46F0002BB5C /* WeathListCell.xib */; };
+		8605D5711BFDCCA80002BB5C /* EvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5701BFDCCA80002BB5C /* EvaluationView.m */; };
+		864E6A971BFDD2510031F3C9 /* EvaluationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864E6A961BFDD2510031F3C9 /* EvaluationView.xib */; };
 		8774FC661BFB78FD001EEF0B /* Color_Process.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC621BFB78FD001EEF0B /* Color_Process.m */; };
 		8774FC671BFB78FD001EEF0B /* CustomerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC641BFB78FD001EEF0B /* CustomerView.m */; };
 		8774FC851BFB7AB1001EEF0B /* ProfileViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC7D1BFB7AB1001EEF0B /* ProfileViewCell.m */; };
@@ -136,10 +136,14 @@
 		AAAD31791BF2DCFF00082CBC /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAD31781BF2DCFF00082CBC /* ___UITests.m */; };
 		AAAD36C81BF2DD5300082CBC /* TCCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAD318A1BF2DD5100082CBC /* TCCategoryController.m */; };
 		AAAD36C91BF2DD5300082CBC /* TCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAD318C1BF2DD5100082CBC /* TCHomeViewController.m */; };
-		AAAD36CB1BF2DD5300082CBC /* TCShoppingController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAD319F1BF2DD5100082CBC /* TCShoppingController.m */; };
+		AAAD36CB1BF2DD5300082CBC /* TCStoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAD319F1BF2DD5100082CBC /* TCStoryController.m */; };
 		AAAD3EEE1BF2DD8300082CBC /* TCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAD3EEC1BF2DD8300082CBC /* TCTabBarController.m */; };
 		AAB2806B1BFAC81F000A6CA2 /* libBlocksKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2806A1BFAC81F000A6CA2 /* libBlocksKit.a */; };
 		AAB2806E1BFACF7C000A6CA2 /* TCDetailTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB2806D1BFACF7C000A6CA2 /* TCDetailTableController.m */; };
+		AAC21CB41BFEBDFF005A9BFF /* StoryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC21CB31BFEBDFF005A9BFF /* StoryList.plist */; };
+		AAC21CC01BFEE27C005A9BFF /* TCStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC21CBE1BFEE27C005A9BFF /* TCStoryCell.m */; };
+		AAC21CC11BFEE27C005A9BFF /* TCStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC21CBF1BFEE27C005A9BFF /* TCStoryCell.xib */; };
+		AAC21CC41BFEE28B005A9BFF /* TCStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC21CC31BFEE28B005A9BFF /* TCStoryModel.m */; };
 		AAD487521BF96E720051E6AA /* LoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD487501BF96E720051E6AA /* LoadMoreFooter.m */; };
 		AAD487531BF96E720051E6AA /* LoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAD487511BF96E720051E6AA /* LoadMoreFooter.xib */; };
 		AAECEEAC1BF596CF004B79AB /* ChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAECEEAB1BF596CF004B79AB /* ChannelView.m */; };
@@ -431,14 +435,22 @@
 		AAAD318A1BF2DD5100082CBC /* TCCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCategoryController.m; sourceTree = "<group>"; };
 		AAAD318B1BF2DD5100082CBC /* TCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCHomeViewController.h; path = "../../category(分类界面)/controller/TCHomeViewController.h"; sourceTree = "<group>"; };
 		AAAD318C1BF2DD5100082CBC /* TCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCHomeViewController.m; path = "../../category(分类界面)/controller/TCHomeViewController.m"; sourceTree = "<group>"; };
-		AAAD319E1BF2DD5100082CBC /* TCShoppingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCShoppingController.h; sourceTree = "<group>"; };
-		AAAD319F1BF2DD5100082CBC /* TCShoppingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCShoppingController.m; sourceTree = "<group>"; };
+		AAAD319E1BF2DD5100082CBC /* TCStoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCStoryController.h; sourceTree = "<group>"; };
+		AAAD319F1BF2DD5100082CBC /* TCStoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCStoryController.m; sourceTree = "<group>"; };
 		AAAD3EEB1BF2DD8300082CBC /* TCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTabBarController.h; sourceTree = "<group>"; };
 		AAAD3EEC1BF2DD8300082CBC /* TCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTabBarController.m; sourceTree = "<group>"; };
 		AAAD46721BF2E56700082CBC /* TCW.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCW.pch; sourceTree = "<group>"; };
 		AAB2806A1BFAC81F000A6CA2 /* libBlocksKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBlocksKit.a; path = "Pods/../build/Debug-iphoneos/libBlocksKit.a"; sourceTree = "<group>"; };
 		AAB2806C1BFACF7C000A6CA2 /* TCDetailTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDetailTableController.h; sourceTree = "<group>"; };
 		AAB2806D1BFACF7C000A6CA2 /* TCDetailTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDetailTableController.m; sourceTree = "<group>"; };
+		AAC21CB31BFEBDFF005A9BFF /* StoryList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoryList.plist; sourceTree = "<group>"; };
+		AAC21CBD1BFEE27C005A9BFF /* TCStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCStoryCell.h; sourceTree = "<group>"; };
+		AAC21CBE1BFEE27C005A9BFF /* TCStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCStoryCell.m; sourceTree = "<group>"; };
+		AAC21CBF1BFEE27C005A9BFF /* TCStoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCStoryCell.xib; sourceTree = "<group>"; };
+		AAC21CC21BFEE28B005A9BFF /* TCStoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCStoryModel.h; sourceTree = "<group>"; };
+		AAC21CC31BFEE28B005A9BFF /* TCStoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCStoryModel.m; sourceTree = "<group>"; };
+		AAC21CC51BFEF814005A9BFF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		AAC21CC61BFEF81A005A9BFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		AAD4874F1BF96E720051E6AA /* LoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadMoreFooter.h; path = ../LoadMoreFooter.h; sourceTree = "<group>"; };
 		AAD487501BF96E720051E6AA /* LoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadMoreFooter.m; path = ../LoadMoreFooter.m; sourceTree = "<group>"; };
 		AAD487511BF96E720051E6AA /* LoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadMoreFooter.xib; path = ../LoadMoreFooter.xib; sourceTree = "<group>"; };
@@ -947,6 +959,7 @@
 				AAAD315F1BF2DCFE00082CBC /* Assets.xcassets */,
 				AAAD31611BF2DCFE00082CBC /* LaunchScreen.storyboard */,
 				AAAD31641BF2DCFE00082CBC /* Info.plist */,
+				AAC21CB31BFEBDFF005A9BFF /* StoryList.plist */,
 				AAAD31541BF2DCFE00082CBC /* main.m */,
 				AAAD46721BF2E56700082CBC /* TCW.pch */,
 			);
@@ -1130,8 +1143,8 @@
 		AAAD319D1BF2DD5100082CBC /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				AAAD319E1BF2DD5100082CBC /* TCShoppingController.h */,
-				AAAD319F1BF2DD5100082CBC /* TCShoppingController.m */,
+				AAAD319E1BF2DD5100082CBC /* TCStoryController.h */,
+				AAAD319F1BF2DD5100082CBC /* TCStoryController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1139,6 +1152,8 @@
 		AAAD31A01BF2DD5100082CBC /* model */ = {
 			isa = PBXGroup;
 			children = (
+				AAC21CC21BFEE28B005A9BFF /* TCStoryModel.h */,
+				AAC21CC31BFEE28B005A9BFF /* TCStoryModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1146,6 +1161,9 @@
 		AAAD31A11BF2DD5100082CBC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				AAC21CBD1BFEE27C005A9BFF /* TCStoryCell.h */,
+				AAC21CBE1BFEE27C005A9BFF /* TCStoryCell.m */,
+				AAC21CBF1BFEE27C005A9BFF /* TCStoryCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1297,10 +1315,12 @@
 			files = (
 				8774FC861BFB7AB1001EEF0B /* ProfileViewCell.xib in Resources */,
 				8774FC881BFB7AB1001EEF0B /* TCOrderCell.xib in Resources */,
+				AAC21CC11BFEE27C005A9BFF /* TCStoryCell.xib in Resources */,
 				AA1A541E1BF9A88400EE98FB /* MJPhotoBrowser.bundle in Resources */,
 				AAAD31631BF2DCFE00082CBC /* LaunchScreen.storyboard in Resources */,
 				AA1A53F91BF9A88400EE98FB /* MBProgressHUD.bundle in Resources */,
 				AAAD31601BF2DCFE00082CBC /* Assets.xcassets in Resources */,
+				AAC21CB41BFEBDFF005A9BFF /* StoryList.plist in Resources */,
 				878ABA5E1BFCA813006AE440 /* TCDetailOrderController.xib in Resources */,
 				AA1A54181BF9A88400EE98FB /* MJRefresh.bundle in Resources */,
 				AAD487531BF96E720051E6AA /* LoadMoreFooter.xib in Resources */,
@@ -1397,7 +1417,7 @@
 				AA1A53F71BF9A88400EE98FB /* ViewController+MASAdditions.m in Sources */,
 				AA1A54341BF9A88400EE98FB /* UIImageView+WebCache.m in Sources */,
 				AA1A540B1BF9A88400EE98FB /* MJRefreshBackFooter.m in Sources */,
-				AAAD36CB1BF2DD5300082CBC /* TCShoppingController.m in Sources */,
+				AAAD36CB1BF2DD5300082CBC /* TCStoryController.m in Sources */,
 				AA1A53ED1BF9A88400EE98FB /* FBShimmeringView.m in Sources */,
 				AA1A541A1BF9A88400EE98FB /* UIScrollView+MJExtension.m in Sources */,
 				AA1A53E51BF9A88400EE98FB /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -1408,6 +1428,7 @@
 				AA1A54141BF9A88400EE98FB /* MJRefreshBackStateFooter.m in Sources */,
 				8774FC851BFB7AB1001EEF0B /* ProfileViewCell.m in Sources */,
 				8605D5661BFDB2460002BB5C /* TCWealthListController.m in Sources */,
+				AAC21CC41BFEE28B005A9BFF /* TCStoryModel.m in Sources */,
 				AA1A54331BF9A88400EE98FB /* UIImageView+HighlightedWebCache.m in Sources */,
 				AA1A53E71BF9A88400EE98FB /* UIButton+AFNetworking.m in Sources */,
 				AA1A54291BF9A88400EE98FB /* SDImageCache.m in Sources */,
@@ -1438,6 +1459,7 @@
 				AAECEEAC1BF596CF004B79AB /* ChannelView.m in Sources */,
 				AAAD3EEE1BF2DD8300082CBC /* TCTabBarController.m in Sources */,
 				AA1A54321BF9A88400EE98FB /* UIImage+MultiFormat.m in Sources */,
+				AAC21CC01BFEE27C005A9BFF /* TCStoryCell.m in Sources */,
 				AA1A543B1BF9A88400EE98FB /* SWUtilityButtonView.m in Sources */,
 				AA1A54051BF9A88400EE98FB /* NSObject+MJProperty.m in Sources */,
 				AA1A53E91BF9A88400EE98FB /* UIProgressView+AFNetworking.m in Sources */,
@@ -1543,6 +1565,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				AAAD31621BF2DCFE00082CBC /* Base */,
+				AAC21CC51BFEF814005A9BFF /* zh-Hant */,
+				AAC21CC61BFEF81A005A9BFF /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1555,7 +1579,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1586,7 +1610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1599,7 +1623,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1624,7 +1648,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1638,6 +1662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "天巢网/TCW.pch";
 				INFOPLIST_FILE = "天巢网/Info.plist";
@@ -1660,6 +1685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "天巢网/TCW.pch";
 				INFOPLIST_FILE = "天巢网/Info.plist";

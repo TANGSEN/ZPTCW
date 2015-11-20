@@ -219,7 +219,6 @@
     channelView.backgroundColor = [UIColor whiteColor];
     for (Channel *channel in channelView.subviews) {
         UIButton *btn = channel.subviews[0];
-        channel.backgroundColor = RandomColor;
         [btn bk_addEventHandler:^(id sender) {
             NSLog(@"点击了频道分类按钮");
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
