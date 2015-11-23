@@ -28,7 +28,7 @@
     float preSum =[self.PriceLabel.text floatValue]*[self.CountLabel.text intValue];
     self.PreSumLabel.text = [NSString stringWithFormat:@"%.2f",preSum];
     
-    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",count];
+    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
 }
 
 
@@ -51,7 +51,7 @@
     float preSum =[self.PriceLabel.text floatValue]*[self.CountLabel.text intValue];
     self.PreSumLabel.text = [NSString stringWithFormat:@"%.2f",preSum];
     
-    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",count];
+    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
     
     
 }
@@ -67,7 +67,7 @@
     float preSum =[self.PriceLabel.text floatValue]*[self.CountLabel.text intValue];
     self.PreSumLabel.text = [NSString stringWithFormat:@"%.2f",preSum];
     
-    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",count];
+    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
     
 
     self.lineImageView.backgroundColor = Color_Hex16(@"#f0f0f0");

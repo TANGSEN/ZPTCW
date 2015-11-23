@@ -10,4 +10,9 @@
 
 @interface ChannelView : UIView
 + (CGFloat)height;
++ (ChannelView *)channelViewWithRect:(CGRect)rect;
+@property (nonatomic ,assign) NSInteger cols;
+@property (nonatomic ,assign) NSInteger rows;
+@property (nonatomic ,strong) NSArray *channelImages;
+@property (nonatomic ,strong) NSArray *channelNames;
 @end

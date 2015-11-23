@@ -22,6 +22,11 @@
 @property (nonatomic ,strong) UICollectionView *collectionView;
 @property (nonatomic ,strong) UICollectionView *rxCollectionView;
 @property (nonatomic ,strong) NSArray *images;
+/** channel的图片名和title */
+@property (nonatomic ,strong) NSArray *btnImages;
+@property (nonatomic ,strong) NSArray *names;
+
+
 @property (nonatomic ,strong) UIPageControl *pageControl;
 @property (nonatomic ,strong) UIScrollView *scrollView;
 @property (nonatomic ,strong) ChannelView *channelView;
@@ -111,6 +116,19 @@
 
 #pragma mark - 懒加载
 
+// channel按钮的图片
+- (NSArray *)btnImages{
+    if (!_btnImages) {
+        _btnImages = [NSArray arrayWithObjects:@"button_keting",@"button_woshi",@"button_chufan",@"button_shufan",@"button_yangtai",@"button_weiyu",@"button_bangongshi",@"button_ertongfang", nil];
+    }return _btnImages;
+}
+// channel按钮的title
+- (NSArray *)names{
+    if (!_names) {
+        _names = [NSArray arrayWithObjects:@"客厅",@"卧室",@"厨房",@"书房",@"阳台",@"卫浴",@"办公室",@"儿童房", nil];
+    }
+    return _names;
+}
 
 
 - (NSArray *)images{
@@ -215,7 +233,13 @@
  */
 - (void)addChannelView{
     CGRect rect = CGRectMake(0, CGRectGetMaxY(self.pageControl.frame), JPScreenW, [ChannelView height]);
-    ChannelView *channelView = [[ChannelView alloc]initWithFrame:rect];
+//    ChannelView *channelView = [[ChannelView alloc]initWithFrame:rect];
+    
+    ChannelView *channelView = [ChannelView channelViewWithRect:rect];
+    channelView.cols = 4;
+    channelView.rows = 2;
+    channelView.channelNames = self.names;
+    channelView.channelImages = self.btnImages;
     channelView.backgroundColor = [UIColor whiteColor];
     for (Channel *channel in channelView.subviews) {
         UIButton *btn = channel.subviews[0];

@@ -22,58 +22,67 @@
 @interface ChannelView ()
 
 @property (nonatomic ,strong) UIButton *btn;
-@property (nonatomic ,strong) NSArray *btnImages;
-@property (nonatomic ,strong) NSArray *names;
 @property (nonatomic ,strong) Channel *channel;
 
 @end
 
+static ChannelView *_channelView = nil;
+
 @implementation ChannelView
-
-- (NSArray *)names{
-    if (!_names) {
-        _names = [NSArray arrayWithObjects:@"客厅",@"卧室",@"厨房",@"书房",@"阳台",@"卫浴",@"办公室",@"儿童房", nil];
-    }
-    return _names;
-}
-
-// 按钮的图片
-- (NSArray *)btnImages{
-    if (!_btnImages) {
-        _btnImages = [NSArray arrayWithObjects:@"button_keting",@"button_woshi",@"button_chufan",@"button_shufan",@"button_yangtai",@"button_weiyu",@"button_bangongshi",@"button_ertongfang", nil];
-    }return _btnImages;
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // 添加所有子控件
-        for (int i = 0; i<JPBtnCount; i++) {
-            Channel *channel = [Channel channelViewinitWithBtnRect:CGRectMake(0, 0, 40, 40)];
-            
-            channel.btnImageName = self.btnImages[i];
-            channel.labelText = self.names[i];
-            [self addSubview:channel];
-            self.channel = channel;
-            
-        }
+
+        
     }
     return self;
 }
 
+
+
+/**
+ *  返回一个频道视图
+ *
+ *  @param btnImages 频道的图片
+ *  @param names     频道的名字
+ *  @param rect      频道视图的位置
+ *
+ *  @return 频道视图
+ */
++ (ChannelView *)channelViewWithRect:(CGRect)rect {
+    _channelView = [[self alloc]initWithFrame:rect];
+    
+    return _channelView;
+}
+
+
+- (void)setChannelImages:(NSArray *)channelImages{
+    _channelImages = channelImages;
+    Channel *channel = nil;
+    for (int i = 0; i < self.cols * self.rows; i++) {
+       channel  = [Channel channelViewinitWithBtnRect:CGRectMake(0, 0, 40, 40)];
+        channel.btnImageName = channelImages[i];
+        channel.labelText = self.channelNames[i];
+        [_channelView addSubview:channel];
+    }
+}
+
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    CGFloat btnMargin = (JPScreenW - 40 * JPBtnMaxCols) / JPBtnMaxCols;
-    CGFloat btnW = (JPScreenW - 4 * btnMargin) / JPBtnMaxCols;
-    CGFloat btnH = (self.height - JPChannelMargin) / JPBtnMaxRows;
-    for (int i = 0; i < JPBtnCount; i++) {
+    CGFloat btnMargin = (self.width - 40 * self.cols) / self.cols;
+    CGFloat btnW = (self.width - 4 * btnMargin) / self.cols;
+    CGFloat btnH = (self.height - JPChannelMargin) / self.rows;
+    NSInteger count = self.cols * self.rows;
+    for (int i = 0; i < count; i++) {
         // 行号
-        int row = i / JPBtnMaxCols;
+        int row = i / self.cols;
         // 列号
-        int col = i % JPBtnMaxCols;
-        Channel *channel = self.subviews[i];
+        int col = i % self.cols;
+        Channel *channel = _channelView.subviews[i];
             channel.x = col * (btnMargin + btnW) + btnMargin / 2;
             channel.y = row * btnH + JPChannelMargin;
             channel.width = btnW;

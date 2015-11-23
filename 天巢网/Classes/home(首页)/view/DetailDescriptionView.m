@@ -79,7 +79,7 @@ static CGFloat _height;
     // 价格标签是一个有属性的字符串
     UILabel *priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(title.frame), JPScreenW / 2, 40)];
     NSInteger price = rand() % 10000;
-    NSString *str = [NSString stringWithFormat:@"$%ld",price];
+    NSString *str = [NSString stringWithFormat:@"$%ld",(long)price];
     NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:str];
     [string addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, str.length)];
     [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, 1)];
@@ -89,7 +89,7 @@ static CGFloat _height;
     // 销量标签 sales
     UILabel *salesLabel = [[UILabel alloc]initWithFrame:CGRectMake(JPScreenW / 2, priceLabel.y, JPScreenW / 2 - 15, priceLabel.height)];
     NSInteger sales = rand() % 10000;
-    NSString *salesStr = [NSString stringWithFormat:@"已售%ld",sales];
+    NSString *salesStr = [NSString stringWithFormat:@"已售%ld",(long)sales];
     salesLabel.text = salesStr;
     salesLabel.textColor = [UIColor grayColor];
     salesLabel.textAlignment = NSTextAlignmentRight;
