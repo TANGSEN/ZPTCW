@@ -17,41 +17,41 @@
 @end
 
 @implementation TCDetailOrderController
+
+
+
 - (IBAction)DecreaseButton:(id)sender {
     count --;
     if (count==0) {
         count = 1;
     }
-    
-    self.CountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
-    self.PriceLabel.text = @"39.00";
-    float preSum =[self.PriceLabel.text floatValue]*[self.CountLabel.text intValue];
-    self.PreSumLabel.text = [NSString stringWithFormat:@"%.2f",preSum];
-    
-    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+    [self addTableCell];
+  
 }
 
 
 
 
+-(void)addTableCell{
+    self.CountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+    float price = 3900.00;
+    
+    self.PriceLabel.text = [NSString stringWithFormat:@"￥%.2f",price];
+    float preSum =price*[self.CountLabel.text intValue];
+    
+    
+    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+    self.PreSumLabel.text = [NSString stringWithFormat:@"￥%.2f",preSum];
+    self.PreSumLabel.adjustsFontSizeToFitWidth = YES;
+    
+}
+
 - (IBAction)PlusButton:(id)sender {
     
     count++;
-//    NSString *countStr = [NSString stringWithFormat:@"%ld",(long)count];
-//    
-//    self.CountLabel.text = countStr;
+
+    [self addTableCell];
     
-//    self.PreCountLabel.text = [NSString stringWithFormat:@"共%ld件商品  合计：",count];
-//    NSInteger price = (NSInteger)self.PriceLabel.text;
-//    NSString *preSumStr  = [NSString stringWithFormat:@"%ld",count * price];
-//    self.PreSumLabel.text = preSumStr;
-    
-    self.CountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
-    self.PriceLabel.text = @"39.00";
-    float preSum =[self.PriceLabel.text floatValue]*[self.CountLabel.text intValue];
-    self.PreSumLabel.text = [NSString stringWithFormat:@"%.2f",preSum];
-    
-    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
     
     
 }
@@ -60,14 +60,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"订单详情";
+    
     self.view.backgroundColor = View_BgColor;
     count = 1;
-    self.CountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
-    self.PriceLabel.text = @"39.00";
-    float preSum =[self.PriceLabel.text floatValue]*[self.CountLabel.text intValue];
-    self.PreSumLabel.text = [NSString stringWithFormat:@"%.2f",preSum];
-    
-    self.PreCountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+    [self addTableCell];
     
 
     self.lineImageView.backgroundColor = Color_Hex16(@"#f0f0f0");
@@ -99,7 +95,7 @@
      [self.scrollV addSubview:self.TopView];
     self.Table.frame = CGRectMake(0, 160, ApplicationframeValue.width, 320);
     [self.scrollV addSubview:self.Table];
-    
+    self.scrollV.bounces = YES;
     
     
     

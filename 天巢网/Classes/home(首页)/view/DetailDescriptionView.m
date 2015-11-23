@@ -8,7 +8,7 @@
 
 #import "DetailDescriptionView.h"
 #import "TCShareView.h"
-
+#import "ShareView.h"
 @interface DetailDescriptionView ()
 @property (nonatomic ,strong) UIButton *titleBtn;
 @property (nonatomic ,strong) UIButton *btn;
@@ -62,8 +62,8 @@ static CGFloat _height;
     [self addSubview:btn];
     self.btn = btn;
     [btn bk_addEventHandler:^(id sender) {
-        TCShareView *view = [[TCShareView alloc]init];
-        
+      /*  TCShareView *view = [[TCShareView alloc]init];
+      
         view.frame  = CGRectMake(0, JPScreenH, JPScreenW, [TCShareView height]);
         view.backgroundColor = [UIColor whiteColor];
         UIView *superView = self.superview.superview.superview.superview.superview.superview;
@@ -71,7 +71,16 @@ static CGFloat _height;
         [UIView animateWithDuration:0.25 animations:^{
             view.y = JPScreenH - [TCShareView height];
             
-        }];
+        }];*/
+        ShareView *view = [[ShareView alloc] initWithFrame:CGRectMake(0, ApplicationframeValue.height - 160, ApplicationframeValue.width, 160)];
+        view.content = @"天巢网";
+        view.message = @"快来挑选一下属于你的家具吧";
+        view.shareUrl = @"http://www.skyhives.com/m";
+        view.pictureName = @"76-76";
+        
+        [view show];
+        
+        
 //        NSLog(@"----%@\n%@\n%@\n%@\n%@\n%@\n%@\n",self.superview,self.superview.superview,self.superview.superview.superview,self.superview.superview.superview.superview,self.superview.superview.superview.superview.superview,self.superview.superview.superview.superview.superview.superview,self.superview.superview.superview.superview.superview.superview.superview);
 //        NSLog(@"----%@\n%@\n%@\n%@\n%@\n%@\n%@\n",self.superclass,self.superclass.superclass,self.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass.superclass.superclass);
     } forControlEvents:UIControlEventTouchUpInside];
