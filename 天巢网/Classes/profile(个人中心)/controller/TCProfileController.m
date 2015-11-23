@@ -11,8 +11,10 @@
 #import "TCOrderManagerController.h"
 #import "TCWealthListController.h"
 #import "FeedbackViewController.h"
-
+#import "MyFavoriteViewController.h"
 #import "TCNavigationController.h"
+#import "InformationManagerController.h"
+
 @interface TCProfileController ()
 /**分区文字*/
 @property (nonatomic,strong)NSArray *sectionsTitles;
@@ -116,10 +118,10 @@
             obj = [[TCOrderManagerController alloc] init];
             break;
         case 3:
-            obj = [[TCOrderManagerController alloc] init];
+            obj = [[MyFavoriteViewController alloc] init];
             break;
         case 4:
-            obj = [[TCOrderManagerController alloc] init];
+            obj = [[InformationManagerController alloc] init];
             break;
         case 5:
             obj = [[FeedbackViewController alloc] init];

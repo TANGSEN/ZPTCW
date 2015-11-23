@@ -21,10 +21,14 @@
     if (self) {
         UILabel *placeholderLabel = [[UILabel alloc] init];
         [self addSubview:placeholderLabel];
+    
+        
+        self.layer.borderWidth = 0.4f;
+        self.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
         
         self.placeholderLabel = placeholderLabel;
         
-        self.font = AppFont(text_size_middle_2);
+        self.font = AppFont(text_size_middle_3);
         self.placeholderLabel.textColor = [UIColor lightGrayColor];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:self];
         
@@ -63,8 +67,8 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    self.placeholderLabel.y = 8;
-    self.placeholderLabel.x = 5;
+    self.placeholderLabel.y = 10;
+    self.placeholderLabel.x = 8;
     self.placeholderLabel.width = self.width - 2*self.placeholderLabel.x;
     
     

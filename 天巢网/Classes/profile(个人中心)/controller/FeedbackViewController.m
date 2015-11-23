@@ -23,49 +23,47 @@
 //添加输入控件
 -(void)setupTextView
 {
-    TCTextView *textView = [[TCTextView alloc] init];
-    textView.frame = CGRectMake(10, 25, ApplicationframeValue.width - 20, 200);
-    textView.alwaysBounceVertical  = YES;
-    textView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    TCTextView *adviceText = [[TCTextView alloc] init];
+    adviceText.frame = CGRectMake(10, 25, ApplicationframeValue.width - 20, 200);
+    adviceText.alwaysBounceVertical  = YES;
+//    adviceText.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+//    
+//    adviceText.layer.borderWidth = 0.5f;
     
-    textView.layer.borderWidth = 0.5f;
+    adviceText.placeholder = @"您的问题或建议";
+    self.textView = adviceText;
     
-    textView.placeholder = @"你的问题或建议";
-    self.textView = textView;
-    
-    [self.view addSubview:textView];
-    
-    
-    TCTextView *textView1 = [[TCTextView alloc] init];
-    textView1.frame = CGRectMake(10, 25+200+20, ApplicationframeValue.width - 20, 40);
-    textView1.alwaysBounceVertical  = YES;
-    textView1.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-    
-    textView1.layer.borderWidth = 0.5f;
-    
-    textView1.placeholder = @"填写你的手机号，以便我们及时联系你";
-    
-    
-    [self.view addSubview:textView1];
+    [self.view addSubview:adviceText];
     
     
     
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(10, textView1.origin.y+40+30, ApplicationframeValue.width - 20, 45)];
+    TCTextView *phoneText = [[TCTextView alloc] init];
+    phoneText.frame = CGRectMake(10, 25+200+20, ApplicationframeValue.width - 20, 40);
+    phoneText.alwaysBounceVertical  = YES;
+//    phoneText.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+//    
+//    phoneText.layer.borderWidth = 0.5f;
+    
+    phoneText.placeholder = @"填写您的手机号，以便我们及时联系您";
+
+    [self.view addSubview:phoneText];
+    
+    
+    
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(10, phoneText.origin.y+40+30, ApplicationframeValue.width - 20, 45)];
     [button setTitle:@"发表建议" forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:@"navigationbar_background"] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
-    
-    
+
     [self.view addSubview:button];
-    
-    
-    
-    
-    
-    
+   
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
 
+    [self.view endEditing:YES];
+}
 
 
 @end
