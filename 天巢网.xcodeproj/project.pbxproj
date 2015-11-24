@@ -166,7 +166,6 @@
 		AAB2B7D11C03FD49007B6073 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAB2B7BB1C03FD49007B6073 /* Resource.bundle */; };
 		AAB2B7D21C03FD49007B6073 /* ShareSDKCoreService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2B7BC1C03FD49007B6073 /* ShareSDKCoreService.framework */; };
 		AAB2B7D31C03FD49007B6073 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2B7C11C03FD49007B6073 /* TencentOpenAPI.framework */; };
-		AAB2B7D41C03FD49007B6073 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAB2B7C21C03FD49007B6073 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		AAB2B7D51C03FD49007B6073 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2B7C41C03FD49007B6073 /* libWeChatSDK.a */; };
 		AAB2B7D61C03FD49007B6073 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2B7C71C03FD49007B6073 /* ShareSDK.framework */; };
 		AAB2B7D71C03FD49007B6073 /* ShareSDKFlatShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAB2B7C91C03FD49007B6073 /* ShareSDKFlatShareViewUI.bundle */; };
@@ -1528,7 +1527,6 @@
 				8774FC861BFB7AB1001EEF0B /* ProfileViewCell.xib in Resources */,
 				8774FC881BFB7AB1001EEF0B /* TCOrderCell.xib in Resources */,
 				AAC21CC11BFEE27C005A9BFF /* TCStoryCell.xib in Resources */,
-				878D6ABB1C033BC900206CDA /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				86D0560B1C045AD600F8721A /* MyShoppingCell.xib in Resources */,
 				AA1A541E1BF9A88400EE98FB /* MJPhotoBrowser.bundle in Resources */,
 				AAAD31631BF2DCFE00082CBC /* LaunchScreen.storyboard in Resources */,
