@@ -9,6 +9,14 @@
 #import "AppDelegate.h"
 #import "TCTabBarController.h"
 
+
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <QQConnection/QQConnection.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
 @interface AppDelegate ()
 
 @end
@@ -25,6 +33,38 @@
     TCTabBarController *tctabbar = [[TCTabBarController alloc]init];
     self.window.rootViewController = tctabbar;
     [self.window makeKeyAndVisible];
+    
+    [ShareSDK registerApp:ShareAppKey];
+    
+    
+    
+    //添加微信应用 注册网址 http://open.weixin.qq.com
+    [ShareSDK connectWeChatWithAppId:WXAppID
+                           appSecret:WXAppSecret
+                           wechatCls:[WXApi class]];
+    
+    //微信朋友圈
+    [ShareSDK connectWeChatTimelineWithAppId:WXAppID appSecret:WXAppSecret wechatCls:[WXApi class]];
+    
+    //QQ
+    //    [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
+//    [ShareSDK connectQQWithQZoneAppKey:QQAppPKEY qqApiInterfaceCls:[QQApiInterface class] tencentOAuthCls:[TencentOAuth class]];
+    [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
+    
+    
+    
+    
+    
+    
+    
+    
+//    [ShareSDK connectQQWithQZoneAppKey:QQAppPKEY
+    
+     
+//                     qqApiInterfaceCls:[QQApiInterface class]
+    
+     
+//                       tencentOAuthCls:[TencentOAuth class]];
     
     return YES;
 }

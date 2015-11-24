@@ -29,13 +29,13 @@
 #import "AppDelegate.h"
 
 #import "Factory.h"
-
+// 41DCB280
 #define WXAppID @"wx25d9ec509a6dbfca"//WXAppID
 #define WXAppSecret @"d4624c36b6795d1d99dcf0547af5443d"//WXAppSecret
 #define ShareAppKey @"564e7ea267e58ee2b0005052" //ShareSdk  appkey
 
 
-#define QQAppID @"1104982656"//QQAppID
+#define QQAppID @"1104911525"//QQAppID1104982656
 #define QQAppPKEY @"YeZhERCRGkkZABhh"//QQAppKey
 
 // 间距

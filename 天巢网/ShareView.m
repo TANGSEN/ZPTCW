@@ -85,7 +85,7 @@
         }
         
         UIButton *cancleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        cancleBtn.frame = CGRectMake(ApplicationframeValue.width-25, 10, 15, 15);
+        cancleBtn.frame = CGRectMake(ApplicationframeValue.width-25, 10, 20, 20);
         [cancleBtn setBackgroundImage:[UIImage imageNamed:@"share_btn_cancel"] forState:UIControlStateNormal];
         cancleBtn.backgroundColor = [UIColor whiteColor];
         [cancleBtn addTarget:self action:@selector(onCancleBtn) forControlEvents:UIControlEventTouchUpInside];
@@ -140,7 +140,7 @@
 
             
         //微信好友
-        case 2:
+        case 2:{
             if ([WXApi isWXAppInstalled]) {
                 id<ISSContent> publishContent = [ShareSDK content:nil defaultContent:nil image:nil title:nil url:nil description:nil mediaType:SSPublishContentMediaTypeText];
                 [publishContent addWeixinSessionUnitWithType:[NSNumber numberWithInteger:SSPublishContentMediaTypeNews]
@@ -173,7 +173,7 @@
             else{
                 AlertLog(@"", @"没有安装微信客户端，无法进行微信分享", @"确定", nil);
             }
-    
+        }
         break;
          //QQ好友
         case 3:{
