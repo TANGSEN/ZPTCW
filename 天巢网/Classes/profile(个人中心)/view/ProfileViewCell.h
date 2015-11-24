@@ -4,7 +4,9 @@
 //
 //  Created by 赵贺 on 15/11/17.
 //  Copyright © 2015年 tangjp. All rights reserved.
-//
+
+
+//个人中心 --自定义单元格
 
 #import <UIKit/UIKit.h>
 
@@ -14,5 +16,5 @@
 /**文字*/
 @property (strong, nonatomic) IBOutlet UILabel *CellLabel;
 
-@property (strong, nonatomic) IBOutlet UIImageView *RightImage;
+
 @end

@@ -14,6 +14,7 @@
 #import "MyFavoriteViewController.h"
 #import "TCNavigationController.h"
 #import "InformationManagerController.h"
+#import "MyShoppingController.h"
 
 @interface TCProfileController ()
 /**分区文字*/
@@ -79,7 +80,6 @@
     cell.CellLabel.textColor = Color_Common;
     cell.ImageView.image = [UIImage imageNamed:self.sectionsImages[indexPath.section]];
     cell.ImageView.contentMode = UIViewContentModeScaleAspectFill;
-    cell.RightImage.image  = [UIImage imageNamed:@"信息管理-1_03"];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -115,7 +115,8 @@
             obj = [[TCWealthListController alloc] init];
             break;
         case 2:
-            obj = [[TCOrderManagerController alloc] init];
+            obj = [[MyShoppingController alloc] initWithNibName:@"MyShoppingController" bundle:nil];
+//            obj = [[MyShoppingController alloc] init];
             break;
         case 3:
             obj = [[MyFavoriteViewController alloc] init];

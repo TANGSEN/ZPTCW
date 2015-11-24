@@ -7,31 +7,75 @@
 //
 
 #import "EmailBindingController.h"
-
-@interface EmailBindingController ()
-
-@end
+#import "CountDownButton.h"
 
 @implementation EmailBindingController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = View_BgColor;
+    
+    /**输入邮箱号*/
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 30, ApplicationframeValue.width-100, 45)];
+    [self.view addSubview:textField];
+    textField.backgroundColor = [UIColor whiteColor];
+    textField.placeholder = @"输入邮箱号";
+    textField.font = AppFont(text_size_little_2);
+    textField.layer.borderWidth = 0.4f;
+    textField.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
+    
+    /**获取验证码（倒计时）*/
+    CountDownButton *button = [[CountDownButton alloc] initWithFrame:CGRectMake(ApplicationframeValue.width-100, 30, 100, 45)];
+    
+    [self.view addSubview:button];
+    
+    [button bk_addEventHandler:^(id sender) {
+        
+        NSString *alert = [NSString stringWithFormat:@"我们将发送校检码到这个邮箱\n请注意查收\n%@",textField.text];
+        
+        if (!textField.text.length) {
+            AlertLog(@"", @"请输入邮箱号", @"确定", nil);
+        }
+        else{
+            AlertLog(@"确认邮箱号码", alert, @"好", nil);
+
+            [button beginCountDown];
+        }
+   
+    } forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    /**输入邮箱验证码*/
+    UITextField *text = [[UITextField alloc] initWithFrame:CGRectMake(0, button.origin.y+45+15, ApplicationframeValue.width, 45)];
+    [self.view addSubview:text];
+    text.backgroundColor = [UIColor whiteColor];
+    text.placeholder = @"输入邮箱验证码";
+    text.font = AppFont(text_size_little_2);
+    text.layer.borderWidth = 0.4f;
+    text.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
+    
+    
+    
+    /**确认绑定按钮*/
+    UIButton *complishBtn = [[UIButton alloc]initWithFrame:CGRectMake(10, text.origin.y+45+30, ApplicationframeValue.width - 20, 45)];
+    [complishBtn setTitle:@"确认绑定" forState:UIControlStateNormal];
+    [complishBtn setBackgroundImage:[UIImage imageNamed:@"navigationbar_background"] forState:UIControlStateNormal];
+    [complishBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    [self.view addSubview:complishBtn];
+    
+    [complishBtn bk_addEventHandler:^(id sender) {
+        if (!textField.text.length) {
+            AlertLog(@"", @"请输入验证码", @"确定", nil);
+        }
+        else{
+            
+            
+        }
+    } forControlEvents:UIControlEventTouchUpInside];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

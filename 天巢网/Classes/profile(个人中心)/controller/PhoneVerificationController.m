@@ -58,7 +58,8 @@
             AlertLog(@"", @"请输入手机验证码", @"确定", nil);
         }
         else{
-        
+            NSString *message = [NSString stringWithFormat:@"已为您重新绑定手机号\n%@",self.phoneNumber];
+        AlertLog(@"温馨提示", message, @"好", nil);
         
         }
     } forControlEvents:UIControlEventTouchUpInside];
