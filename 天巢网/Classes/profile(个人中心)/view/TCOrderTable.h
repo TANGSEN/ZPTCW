@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "TCOrderCell.h"
+
 @protocol TCOrderTableDelegate<NSObject>
+
 -(void)TC_tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

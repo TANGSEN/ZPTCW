@@ -145,7 +145,22 @@
 
 #import "Factory.h"
 
-
+#import "ShareView.h"//分享视图
+//**提示框宏定义
+CG_INLINE void AlertLog (NSString *titleStr,NSString *message,NSString *button1,NSString *button2)
+{
+    if(!titleStr)
+        titleStr = @"";
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: titleStr
+                                                        message: message
+                                                       delegate: nil
+                                              cancelButtonTitle: button1
+                                              otherButtonTitles: button2,
+                              nil];
+    [alertView show];
+    
+}
 
 
 #endif /* TCW_pch */

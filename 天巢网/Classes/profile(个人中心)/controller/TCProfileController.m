@@ -10,7 +10,11 @@
 #import "ProfileViewCell.h"
 #import "TCOrderManagerController.h"
 #import "TCWealthListController.h"
+#import "FeedbackViewController.h"
+#import "MyFavoriteViewController.h"
 #import "TCNavigationController.h"
+#import "InformationManagerController.h"
+
 @interface TCProfileController ()
 /**分区文字*/
 @property (nonatomic,strong)NSArray *sectionsTitles;
@@ -76,6 +80,8 @@
     cell.ImageView.image = [UIImage imageNamed:self.sectionsImages[indexPath.section]];
     cell.ImageView.contentMode = UIViewContentModeScaleAspectFill;
     cell.RightImage.image  = [UIImage imageNamed:@"信息管理-1_03"];
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -112,13 +118,13 @@
             obj = [[TCOrderManagerController alloc] init];
             break;
         case 3:
-            obj = [[TCOrderManagerController alloc] init];
+            obj = [[MyFavoriteViewController alloc] init];
             break;
         case 4:
-            obj = [[TCOrderManagerController alloc] init];
+            obj = [[InformationManagerController alloc] init];
             break;
         case 5:
-            obj = [[TCOrderManagerController alloc] init];
+            obj = [[FeedbackViewController alloc] init];
             break;
         default:
             break;

@@ -7,20 +7,46 @@
 //
 
 #import "EvaluationView.h"
-#define Margin (ApplicationframeValue.width-20)/14
+#import "StarView.h"
+
+
+/**间距*/
+#define Margin (int)(ApplicationframeValue.width-20)/14
+
+
+@interface EvaluationView  ()
+/**空的星星视图*/
+@property (nonatomic,strong)UIView *EmptyView;
+/**实心的星星*/
+@property (nonatomic,strong)UIView *StarView;
+
+
+@end
+
 @implementation EvaluationView
+
+
+
 -(id)initWithFrame:(CGRect)frame
 {
+    
+    
     self = [super initWithFrame:frame];
     if (self) {
         self.overlayView = [[UIControl alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         self.overlayView.backgroundColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.5];
         [self.overlayView addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
         
+        
+        /**显示视图*/
         UIView *viewS = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ApplicationframeValue.width-20, ApplicationframeValue.height-150)];
         viewS.backgroundColor =[UIColor whiteColor];
         [self addSubview:viewS];
         self.viewS = viewS;
+       
+        
+            
+   
         
         
         UILabel *TitleLabel = [[UILabel alloc] initWithFrame:CGRectMake((ApplicationframeValue.width-20-100)/2, 25, 100, 25)];
@@ -31,8 +57,8 @@
         [viewS addSubview:TitleLabel];
         
         NSArray *arr = @[@"质量评价:",@"配送评价:",@"安装评价:",@"自由评价:"];
+        /**左边儿文字*/
         for (int i = 0; i<4; i++) {
-            
             
             UILabel *leftLabel = [[UILabel alloc] initWithFrame:CGRectMake(Margin/2, 70+2*Margin*i, 5*Margin/2, Margin)];
             
@@ -45,54 +71,27 @@
                 UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(4*Margin, 70+2*Margin*3, ApplicationframeValue.width-5*Margin-20, 3*Margin)];
                 textView.backgroundColor = View_BgColor;
                 [viewS addSubview:textView];
+            }else{
+                /**五角星视图*/
+                StarView *starView = [[StarView alloc] initWithFrame:CGRectMake(0, 70+2*Margin*i, ApplicationframeValue.width-20, Margin)];
+                [viewS addSubview:starView];
+               
             }
-            else{
-                
-                for (int j = 0; j<5; j++) {
-                    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(4*Margin+2*j*Margin, 70+2*Margin*i, Margin, Margin)];
-                
-                    [button setBackgroundImage: [UIImage imageNamed:@"5-我的订单-评价_07"] forState:UIControlStateNormal];
-                    [button setBackgroundImage:[UIImage imageNamed:@"5-我的订单-评价_03"] forState:UIControlStateSelected];
-                    [viewS addSubview:button];
-                    button.selected = NO;
-                    button.tag = 100*i + j;
-                    [button addTarget:self action:@selector(changeImage:) forControlEvents:UIControlEventTouchUpInside];
-                    
-                }
-            }
+            
         }
+
+        /**发表评论视图*/
+        UIButton *EvaluationBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        EvaluationBtn.frame = CGRectMake(2*Margin, self.frame.size.height-60, ApplicationframeValue.width-4*Margin-20, 3*Margin/2);
+        [EvaluationBtn setTitle:@"发表评论" forState:UIControlStateNormal];
+        [EvaluationBtn setTitleColor:Color_Hex16(@"666666") forState:UIControlStateNormal];
+        EvaluationBtn.titleLabel.font = AppFont(text_size_other);
+        EvaluationBtn.backgroundColor = View_BgColor;
         
-        
-        
-        UIButton *cancleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        cancleBtn.frame = CGRectMake(2*Margin, 70+10*Margin, ApplicationframeValue.width-4*Margin-20, 3*Margin/2);
-        [cancleBtn setTitle:@"发表评论" forState:UIControlStateNormal];
-        [cancleBtn setTitleColor:Color_Hex16(@"666666") forState:UIControlStateNormal];
-        cancleBtn.titleLabel.font = AppFont(text_size_other);
-        cancleBtn.backgroundColor = View_BgColor;
-        
-        [viewS addSubview:cancleBtn];
+        [viewS addSubview:EvaluationBtn];
         
     }
     return self;
-}
-
-
--(void)changeImage:(UIButton *)sender
-{
-
-    
-    if (sender.tag/100==0) {
- 
-            for (UIButton *button in self.viewS.subviews) {
-                if (button.tag<sender.tag) {
-                    button.selected = YES;
-                
-            }
-        }
-    }
-
-
 }
 
 
