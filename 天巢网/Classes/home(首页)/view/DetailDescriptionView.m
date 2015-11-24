@@ -14,20 +14,26 @@
 @property (nonatomic ,strong) UIButton *btn;
 @end
 
+/** 私有变量 视图自身的高度值 */
 static CGFloat _height;
 
 @implementation DetailDescriptionView
 
+/**
+ *  类方法创建一个视图
+ *
+ *  @return 创建好的视图
+ */
 + (DetailDescriptionView *)descriptionView{
     DetailDescriptionView *descriptionView = [[self alloc]init];
-    
+    // 添加所有子控件
     [descriptionView addSubControl];
     
     return descriptionView;
     
 }
 /**
- *  标题
+ *  添加所有子控件
  */
 - (void )addSubControl{
     // 商品标题
@@ -38,9 +44,6 @@ static CGFloat _height;
     [title setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [self addSubview:title];
     self.titleBtn = title;
-//    [title bk_addEventHandler:^(id sender) {
-//        NSLog(@"点击了商品标题");
-//    } forControlEvents:UIControlEventTouchUpInside];
     
     // 商品标题和分享按钮之间的分割线
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 10, 10, 0.5, 25)];
@@ -62,16 +65,7 @@ static CGFloat _height;
     [self addSubview:btn];
     self.btn = btn;
     [btn bk_addEventHandler:^(id sender) {
-      /*  TCShareView *view = [[TCShareView alloc]init];
-      
-        view.frame  = CGRectMake(0, JPScreenH, JPScreenW, [TCShareView height]);
-        view.backgroundColor = [UIColor whiteColor];
-        UIView *superView = self.superview.superview.superview.superview.superview.superview;
-        [superView addSubview:view];
-        [UIView animateWithDuration:0.25 animations:^{
-            view.y = JPScreenH - [TCShareView height];
-            
-        }];*/
+
         ShareView *view = [[ShareView alloc] initWithFrame:CGRectMake(0, ApplicationframeValue.height - 160, ApplicationframeValue.width, 160)];
         view.content = @"天巢网";
         view.message = @"快来挑选一下属于你的家具吧";
@@ -80,9 +74,7 @@ static CGFloat _height;
         
         [view show];
         
-        
-//        NSLog(@"----%@\n%@\n%@\n%@\n%@\n%@\n%@\n",self.superview,self.superview.superview,self.superview.superview.superview,self.superview.superview.superview.superview,self.superview.superview.superview.superview.superview,self.superview.superview.superview.superview.superview.superview,self.superview.superview.superview.superview.superview.superview.superview);
-//        NSLog(@"----%@\n%@\n%@\n%@\n%@\n%@\n%@\n",self.superclass,self.superclass.superclass,self.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass.superclass,self.superclass.superclass.superclass.superclass.superclass.superclass.superclass);
+    
     } forControlEvents:UIControlEventTouchUpInside];
     
     // 价格标签是一个有属性的字符串
@@ -125,6 +117,11 @@ static CGFloat _height;
     NSLog(@"hahahahhah");
 }
 
+/**
+ *  返回视图自身的高度
+ *
+ *  @return 高度值
+ */
 + (CGFloat)height{
     return _height;
 }

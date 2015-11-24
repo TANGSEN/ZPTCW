@@ -47,11 +47,7 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     // 设置每一个item的宽高
     layout.itemSize = ItemSize;
-    // 设置item行与行之间的间隙
-    layout.minimumLineSpacing = 10;
-    // 设置item列与列之间的间隙
-//        layout.minimumInteritemSpacing = 10;
-    layout.sectionInset = UIEdgeInsetsMake(0, JPMargin, JPMargin, JPMargin);
+    layout.sectionInset = UIEdgeInsetsMake(0, JPMargin, 0, JPMargin);
     // 在初始化的时候传入自己创建的布局对象
     if (self = [super initWithCollectionViewLayout:layout]) {
         
@@ -83,7 +79,10 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     RXCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
+    for (UIView *subView in cell.contentView.subviews)
+    {
+        [subView removeFromSuperview];
+    }
     cell.imageName = [NSString stringWithFormat:@"%ld",indexPath.item + 1];
     cell.title = self.titles[indexPath.item];
     cell.price = rand() % 10000;
@@ -99,7 +98,6 @@ static NSString * const reuseIdentifier = @"Cell";
     vc.view.userInteractionEnabled = YES;
     self.detailController = vc;
     [self.navigationController pushViewController:vc animated:YES];
-    NSLog(@"%@",self.navigationController);
 }
 
 

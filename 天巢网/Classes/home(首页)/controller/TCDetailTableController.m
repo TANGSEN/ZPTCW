@@ -120,7 +120,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *Identifier = @"cell";
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:Identifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:Identifier];
+    }
+    for (UIView *subView in cell.contentView.subviews)
+    {
+        [subView removeFromSuperview];
+    }
     cell.textLabel.text = nil;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.userInteractionEnabled = YES;

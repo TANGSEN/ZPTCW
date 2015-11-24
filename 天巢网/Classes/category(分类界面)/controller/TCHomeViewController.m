@@ -133,7 +133,7 @@
 
 - (NSArray *)images{
     if (!_images) {
-        _images = [NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15", nil];
+        _images = [NSArray arrayWithObjects:@"1",@"2",/*@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",*/ nil];
         
     }return _images;
 }
@@ -152,7 +152,6 @@
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.showsVerticalScrollIndicator = NO;
-        
     }return _collectionView;
 }
 
@@ -204,18 +203,6 @@
 
 #pragma mark - 自定义方法
 /**
- *  添加上拉加载更多控件
- */
-- (void)setupRefresh{
-    
-    LoadMoreFooter *footer = [LoadMoreFooter footer];
-    footer.frame = CGRectMake(0, CGRectGetMaxY(self.rxCollectionView.frame), JPScreenW, 40);
-    [self.scrollView addSubview:footer];
-    self.footer = footer;
-    _scrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(footer.frame));
-}
-
-/**
  *  添加pageControl
  */
 - (void)addPageControl{
@@ -256,6 +243,9 @@
     NSLog(@"channel");
 }
 
+/**
+ *  添加热销商品标题
+ */
 - (void)addRXHeaderView{
     UIView *rxHeader = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.channelView.frame) + JPMargin, JPScreenW, 50)];
     rxHeader.backgroundColor = [UIColor whiteColor];
@@ -273,6 +263,9 @@
     self.rxHeader = rxHeader;
 }
 
+/**
+ *  添加热销商品展示
+ */
 - (void)addCollectionView{
     self.collectionVC = [[RXCollectionController alloc]init];
     [self addChildViewController:self.collectionVC];
