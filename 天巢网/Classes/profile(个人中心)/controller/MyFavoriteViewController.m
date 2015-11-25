@@ -39,9 +39,9 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"TCOrderCell" owner:self options:nil] lastObject];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.ImageView.image = [UIImage imageNamed:@"cm2_daily_banner3"];
+    cell.ImageView.image = [UIImage imageNamed:@"placehyolder"];
     
-    cell.PriceLabel.text = @"$9000";
+    cell.PriceLabel.text = @"￥9000";
     cell.PriceLabel.textColor = [UIColor orangeColor];
     cell.PriceLabel.font = AppFont(text_size_middle_1);
     
@@ -49,7 +49,7 @@
     cell.Count.textColor = Color_LightGray;
     cell.Count.font = AppFont(text_size_little_3);
     
-    cell.ProductNameLabel.text = @"这是实木的床这是实木的床 你信不信你信不信";
+    cell.ProductNameLabel.text = @"这是我的收藏 我的收藏 我的收藏 你信不信你信不信";
     cell.ProductNameLabel.textColor = Color_LightGray;
     cell.ProductNameLabel.font = AppFont(text_size_little_1);
     

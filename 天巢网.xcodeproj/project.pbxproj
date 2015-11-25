@@ -12,11 +12,16 @@
 		8605D56A1BFDB46F0002BB5C /* WeathListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5681BFDB46F0002BB5C /* WeathListCell.m */; };
 		8605D56B1BFDB46F0002BB5C /* WeathListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8605D5691BFDB46F0002BB5C /* WeathListCell.xib */; };
 		8605D5711BFDCCA80002BB5C /* EvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605D5701BFDCCA80002BB5C /* EvaluationView.m */; };
-		8717ED6D1C034F6600DD2A5C /* MyFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED6C1C034F6600DD2A5C /* MyFavoriteViewController.m */; };
-		8717ED701C0352ED00DD2A5C /* InformationManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED6F1C0352ED00DD2A5C /* InformationManagerController.m */; };
-		8717ED731C035A8500DD2A5C /* PhoneBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED721C035A8500DD2A5C /* PhoneBindingController.m */; };
-		8717ED761C035BDC00DD2A5C /* EmailBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED751C035BDC00DD2A5C /* EmailBindingController.m */; };
-		8717ED791C03615C00DD2A5C /* PhoneVerificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED781C03615C00DD2A5C /* PhoneVerificationController.m */; };
+		86D056031C04492300F8721A /* CountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D056021C04492300F8721A /* CountDownButton.m */; settings = {ASSET_TAGS = (); }; };
+		86D056061C04594D00F8721A /* MyShoppingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D056051C04594D00F8721A /* MyShoppingController.m */; settings = {ASSET_TAGS = (); }; };
+		86D0560A1C045AD600F8721A /* MyShoppingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D056081C045AD600F8721A /* MyShoppingCell.m */; settings = {ASSET_TAGS = (); }; };
+		86D0560B1C045AD600F8721A /* MyShoppingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D056091C045AD600F8721A /* MyShoppingCell.xib */; settings = {ASSET_TAGS = (); }; };
+		86D0560D1C04648400F8721A /* MyShoppingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D0560C1C04648400F8721A /* MyShoppingController.xib */; settings = {ASSET_TAGS = (); }; };
+		8717ED6D1C034F6600DD2A5C /* MyFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED6C1C034F6600DD2A5C /* MyFavoriteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8717ED701C0352ED00DD2A5C /* InformationManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED6F1C0352ED00DD2A5C /* InformationManagerController.m */; settings = {ASSET_TAGS = (); }; };
+		8717ED731C035A8500DD2A5C /* PhoneBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED721C035A8500DD2A5C /* PhoneBindingController.m */; settings = {ASSET_TAGS = (); }; };
+		8717ED761C035BDC00DD2A5C /* EmailBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED751C035BDC00DD2A5C /* EmailBindingController.m */; settings = {ASSET_TAGS = (); }; };
+		8717ED791C03615C00DD2A5C /* PhoneVerificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717ED781C03615C00DD2A5C /* PhoneVerificationController.m */; settings = {ASSET_TAGS = (); }; };
 		8774FC661BFB78FD001EEF0B /* Color_Process.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC621BFB78FD001EEF0B /* Color_Process.m */; };
 		8774FC671BFB78FD001EEF0B /* CustomerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC641BFB78FD001EEF0B /* CustomerView.m */; };
 		8774FC851BFB7AB1001EEF0B /* ProfileViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC7D1BFB7AB1001EEF0B /* ProfileViewCell.m */; };
@@ -161,7 +166,6 @@
 		AAB2B7D11C03FD49007B6073 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAB2B7BB1C03FD49007B6073 /* Resource.bundle */; };
 		AAB2B7D21C03FD49007B6073 /* ShareSDKCoreService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2B7BC1C03FD49007B6073 /* ShareSDKCoreService.framework */; };
 		AAB2B7D31C03FD49007B6073 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2B7C11C03FD49007B6073 /* TencentOpenAPI.framework */; };
-		AAB2B7D41C03FD49007B6073 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAB2B7C21C03FD49007B6073 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		AAB2B7D51C03FD49007B6073 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2B7C41C03FD49007B6073 /* libWeChatSDK.a */; };
 		AAB2B7D61C03FD49007B6073 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2B7C71C03FD49007B6073 /* ShareSDK.framework */; };
 		AAB2B7D71C03FD49007B6073 /* ShareSDKFlatShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAB2B7C91C03FD49007B6073 /* ShareSDKFlatShareViewUI.bundle */; };
@@ -208,6 +212,14 @@
 		8605D5691BFDB46F0002BB5C /* WeathListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeathListCell.xib; sourceTree = "<group>"; };
 		8605D56F1BFDCCA80002BB5C /* EvaluationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluationView.h; sourceTree = "<group>"; };
 		8605D5701BFDCCA80002BB5C /* EvaluationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluationView.m; sourceTree = "<group>"; };
+		86D056011C04492300F8721A /* CountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButton.h; sourceTree = "<group>"; };
+		86D056021C04492300F8721A /* CountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownButton.m; sourceTree = "<group>"; };
+		86D056041C04594D00F8721A /* MyShoppingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShoppingController.h; sourceTree = "<group>"; };
+		86D056051C04594D00F8721A /* MyShoppingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShoppingController.m; sourceTree = "<group>"; };
+		86D056071C045AD600F8721A /* MyShoppingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShoppingCell.h; sourceTree = "<group>"; };
+		86D056081C045AD600F8721A /* MyShoppingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShoppingCell.m; sourceTree = "<group>"; };
+		86D056091C045AD600F8721A /* MyShoppingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyShoppingCell.xib; sourceTree = "<group>"; };
+		86D0560C1C04648400F8721A /* MyShoppingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyShoppingController.xib; sourceTree = "<group>"; };
 		8717ED6B1C034F6600DD2A5C /* MyFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFavoriteViewController.h; sourceTree = "<group>"; };
 		8717ED6C1C034F6600DD2A5C /* MyFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFavoriteViewController.m; sourceTree = "<group>"; };
 		8717ED6E1C0352ED00DD2A5C /* InformationManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationManagerController.h; sourceTree = "<group>"; };
@@ -604,6 +616,8 @@
 		8774FC7B1BFB7AB1001EEF0B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				86D056011C04492300F8721A /* CountDownButton.h */,
+				86D056021C04492300F8721A /* CountDownButton.m */,
 				878D6A921C033A4C00206CDA /* StarView.h */,
 				878D6A931C033A4C00206CDA /* StarView.m */,
 				878D6A941C033A4C00206CDA /* TCTextView.h */,
@@ -618,6 +632,9 @@
 				8774FC811BFB7AB1001EEF0B /* TCOrderCell.xib */,
 				8774FC821BFB7AB1001EEF0B /* TCOrderTable.h */,
 				8774FC831BFB7AB1001EEF0B /* TCOrderTable.m */,
+				86D056071C045AD600F8721A /* MyShoppingCell.h */,
+				86D056081C045AD600F8721A /* MyShoppingCell.m */,
+				86D056091C045AD600F8721A /* MyShoppingCell.xib */,
 				8605D5671BFDB46F0002BB5C /* WeathListCell.h */,
 				8605D5681BFDB46F0002BB5C /* WeathListCell.m */,
 				8605D5691BFDB46F0002BB5C /* WeathListCell.xib */,
@@ -1220,6 +1237,9 @@
 				878D6ACC1C033D2600206CDA /* FeedbackViewController.m */,
 				8717ED6B1C034F6600DD2A5C /* MyFavoriteViewController.h */,
 				8717ED6C1C034F6600DD2A5C /* MyFavoriteViewController.m */,
+				86D056041C04594D00F8721A /* MyShoppingController.h */,
+				86D056051C04594D00F8721A /* MyShoppingController.m */,
+				86D0560C1C04648400F8721A /* MyShoppingController.xib */,
 				8717ED6E1C0352ED00DD2A5C /* InformationManagerController.h */,
 				8717ED6F1C0352ED00DD2A5C /* InformationManagerController.m */,
 				8717ED711C035A8500DD2A5C /* PhoneBindingController.h */,
@@ -1507,7 +1527,7 @@
 				8774FC861BFB7AB1001EEF0B /* ProfileViewCell.xib in Resources */,
 				8774FC881BFB7AB1001EEF0B /* TCOrderCell.xib in Resources */,
 				AAC21CC11BFEE27C005A9BFF /* TCStoryCell.xib in Resources */,
-				AAB2B7D41C03FD49007B6073 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				86D0560B1C045AD600F8721A /* MyShoppingCell.xib in Resources */,
 				AA1A541E1BF9A88400EE98FB /* MJPhotoBrowser.bundle in Resources */,
 				AAAD31631BF2DCFE00082CBC /* LaunchScreen.storyboard in Resources */,
 				AAB2B7D11C03FD49007B6073 /* Resource.bundle in Resources */,
@@ -1521,6 +1541,7 @@
 				AAD487531BF96E720051E6AA /* LoadMoreFooter.xib in Resources */,
 				AAB2B7D71C03FD49007B6073 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				8605D56B1BFDB46F0002BB5C /* WeathListCell.xib in Resources */,
+				86D0560D1C04648400F8721A /* MyShoppingController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1606,6 +1627,7 @@
 				878ABA5D1BFCA813006AE440 /* TCDetailOrderController.m in Sources */,
 				8717ED6D1C034F6600DD2A5C /* MyFavoriteViewController.m in Sources */,
 				AA1A541D1BF9A88400EE98FB /* MJPhoto.m in Sources */,
+				86D056031C04492300F8721A /* CountDownButton.m in Sources */,
 				8774FCA11BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m in Sources */,
 				AA1A54241BF9A88400EE98FB /* SDWebImageManager+MJ.m in Sources */,
 				AA72B46A1BFDB7AE008C0DF7 /* TCShareView.m in Sources */,
@@ -1669,10 +1691,12 @@
 				878D6ACD1C033D2600206CDA /* FeedbackViewController.m in Sources */,
 				AAB2806E1BFACF7C000A6CA2 /* TCDetailTableController.m in Sources */,
 				AA1A540C1BF9A88400EE98FB /* MJRefreshComponent.m in Sources */,
+				86D0560A1C045AD600F8721A /* MyShoppingCell.m in Sources */,
 				AA1A54101BF9A88400EE98FB /* MJRefreshAutoNormalFooter.m in Sources */,
 				AA1A543A1BF9A88400EE98FB /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				AA1A53DC1BF9A88400EE98FB /* AFHTTPRequestOperationManager.m in Sources */,
 				AA1A54311BF9A88400EE98FB /* UIImage+GIF.m in Sources */,
+				86D056061C04594D00F8721A /* MyShoppingController.m in Sources */,
 				AA1A53DF1BF9A88400EE98FB /* AFSecurityPolicy.m in Sources */,
 				AA1A542D1BF9A88400EE98FB /* SDWebImageDownloaderOperation.m in Sources */,
 				8774FC891BFB7AB1001EEF0B /* TCOrderTable.m in Sources */,
@@ -1809,6 +1833,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1853,6 +1878,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1902,8 +1928,9 @@
 					"$(PROJECT_DIR)/天巢网/Lib/ShareSDK/Extend/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = ZP.TCW;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyhives;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1939,8 +1966,9 @@
 					"$(PROJECT_DIR)/天巢网/Lib/ShareSDK/Extend/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = ZP.TCW;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyhives;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

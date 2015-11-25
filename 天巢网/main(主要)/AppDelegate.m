@@ -14,9 +14,7 @@
 #import "WXApi.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
-#import <QQConnection/QQConnection.h>
-#import <TencentOpenAPI/QQApiInterface.h>
-
+#import <TencentOpenAPI/TencentOAuth.h>
 @interface AppDelegate ()
 
 @end
@@ -24,9 +22,7 @@
 @implementation AppDelegate
 
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc]init];
     self.window.frame = [UIScreen mainScreen].bounds;
@@ -36,7 +32,7 @@
     
     [ShareSDK registerApp:ShareAppKey];
     
-    
+ 
     
     //添加微信应用 注册网址 http://open.weixin.qq.com
     [ShareSDK connectWeChatWithAppId:WXAppID
@@ -46,27 +42,32 @@
     //微信朋友圈
     [ShareSDK connectWeChatTimelineWithAppId:WXAppID appSecret:WXAppSecret wechatCls:[WXApi class]];
     
-    //QQ
-    //    [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
-//    [ShareSDK connectQQWithQZoneAppKey:QQAppPKEY qqApiInterfaceCls:[QQApiInterface class] tencentOAuthCls:[TencentOAuth class]];
-    [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
     
-    
-    
-    
-    
-    
-    
-    
-//    [ShareSDK connectQQWithQZoneAppKey:QQAppPKEY
-    
-     
-//                     qqApiInterfaceCls:[QQApiInterface class]
-    
-     
-//                       tencentOAuthCls:[TencentOAuth class]];
+   [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
+
     
     return YES;
+    
+    
+    
+}
+
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

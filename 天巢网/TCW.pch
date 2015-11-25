@@ -35,9 +35,15 @@
 #define ShareAppKey @"564e7ea267e58ee2b0005052" //ShareSdk  appkey
 
 
-#define QQAppID @"1104911525"//QQAppID1104982656
-#define QQAppPKEY @"YeZhERCRGkkZABhh"//QQAppKey
+#define QQAppID @"1104982656"//QQAppID 41DCB280  十六进制
+//1104911525   41DB9CA5
+//1104982656    41DCB280（网页）
 
+#define QQAppKEY @"97ZPixmld9P8N4EB"//QQAppKey
+
+
+//YeZhERCRGkkZABhh
+//97ZPixmld9P8N4EB（网页）
 // 间距
 #define JPMargin 10
 

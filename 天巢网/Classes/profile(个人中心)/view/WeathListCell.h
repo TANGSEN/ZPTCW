@@ -4,7 +4,8 @@
 //
 //  Created by 赵贺 on 15/11/19.
 //  Copyright © 2015年 tangjp. All rights reserved.
-//
+
+//流水视图
 
 #import <UIKit/UIKit.h>
 

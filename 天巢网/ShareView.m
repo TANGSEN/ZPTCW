@@ -127,11 +127,10 @@
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"分享失败,错误码:%ld,错误描述:%@",(long)[error errorCode], [error errorDescription]] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
                         [alert show];
                     }
-                    else if (state == SSResponseStateCancel){
-                        AlertLog(@"", @"分享取消", @"确定", nil);
-                    }
+                    
                 }];
             }
+           
             else{
                 AlertLog(@"", @"没有安装微信客户端，无法进行微信分享", @"确定", nil);
             }
@@ -165,9 +164,7 @@
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"分享失败,错误码:%ld,错误描述:%@",(long)[error errorCode], [error errorDescription]] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
                         [alert show];
                     }
-                    else if (state == SSResponseStateCancel){
-                        AlertLog(@"", @"分享取消", @"确定", nil);
-                    }
+                    
                 }];
             }
             else{
@@ -178,7 +175,7 @@
          //QQ好友
         case 3:{
             if ([QQApiInterface isQQInstalled]) {
-                id<ISSContent> publishContent = [ShareSDK content:nil defaultContent:nil image:nil title:nil url:nil description:nil mediaType:SSPublishContentMediaTypeText];
+                id<ISSContent> publishContent = [ShareSDK content:nil defaultContent:nil image:nil title:nil url:nil description:nil mediaType:SSPublishContentMediaTypeNews];
                 [publishContent addQQUnitWithType:[NSNumber numberWithInteger:SSPublishContentMediaTypeNews]
                                           content:self.message?self.message:INHERIT_VALUE
                                             title:self.content?self.content:INHERIT_VALUE
@@ -196,9 +193,7 @@
                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"分享失败,错误码:%ld,错误描述:%@",(long)[error errorCode], [error errorDescription]] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
                          [alert show];
                      }
-                     else if (state == SSResponseStateCancel){
-                         AlertLog(@"", @"分享取消", @"确定", nil);
-                     }
+                    
                  }];
             }
             else{

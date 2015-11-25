@@ -44,7 +44,7 @@
 
 [button bk_addEventHandler:^(id sender) {
     PhoneVerificationController *verification = [[PhoneVerificationController alloc] init];
- 
+    verification.phoneNumber = newPhoneText.text;
     [self.navigationController pushViewController:verification animated:YES];
 } forControlEvents:UIControlEventTouchUpInside];
     
