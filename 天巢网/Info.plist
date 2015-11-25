@@ -7,12 +7,10 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tencent1104982656</string>
+				<string>tencent1104911525</string>
 				<string>wx25d9ec509a6dbfca</string>
 				<string>QQ41DCB280</string>
 			</array>
-			<key>CFBundleURLName</key>
-			<string></string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
@@ -34,17 +32,6 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>tencent1104911525</string>
-				<string>wx25d9ec509a6dbfca</string>
-				<string>QQ41DB9CA5</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>

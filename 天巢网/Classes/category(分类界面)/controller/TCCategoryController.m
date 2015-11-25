@@ -8,11 +8,12 @@
 
 #import "TCCategoryController.h"
 #import "ChannelView.h"
+#import "TCJPCollectionController.h"
 
 #define CellMargin 10
 #define EdgeMargin 5
 #define CellIdentifier @"Cell"
-#define CELLH 100
+#define CELLH 44
 
 @interface TCCategoryController () <UITableViewDataSource ,UITableViewDelegate , UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -32,12 +33,15 @@
 @property (nonatomic ,strong) UITableView *mytable;
 @property (nonatomic ,strong) UIButton  *btn;
 @property (nonatomic ,strong) NSArray *titles;
+/** collection商品描述 */
+@property (nonatomic ,strong) NSArray *collectionTitles;
 @property (nonatomic ,strong) NSArray *cellTexts;
 @property (nonatomic ,strong) ChannelView *channelView;
 @property (nonatomic ,strong) UITableViewCell *cell;
 @property (nonatomic ,assign) NSInteger index;
 @property (nonatomic ,strong) UICollectionView *collectionView;
 @property (nonatomic ,strong) UILabel *label;
+@property (nonatomic ,strong) UILabel *selectedLabel;
 @end
 
 @implementation TCCategoryController
@@ -141,11 +145,29 @@
     return _titles;
 }
 
+- (NSArray *)collectionTitles{
+    if (!_collectionTitles){
+        _collectionTitles = [[NSArray alloc]initWithObjects:@"[可可佳]简约现代书柜书架置物架简易柜子书柜实木柜",@"[SWEETNIGHT]进口乳胶床垫1.5  1.8米弹簧椰棕颜色齐全",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用",@"[可可佳]简约现代书柜书架置物架简易柜子书柜实木柜",@"[SWEETNIGHT]进口乳胶床垫1.5  1.8米弹簧椰棕颜色齐全",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用",@"[可可佳]简约现代书柜书架置物架简易柜子书柜实木柜",@"[SWEETNIGHT]进口乳胶床垫1.5  1.8米弹簧椰棕颜色齐全",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用", nil];
+    }
+    return _collectionTitles;
+}
+
 - (UILabel *)label{
     if (!_label){
         _label = [[UILabel alloc]init];
     }
     return _label;
+}
+
+- (UILabel *)selectedLabel{
+    if (!_selectedLabel){
+        _selectedLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
+        _selectedLabel.backgroundColor = Color(230, 230, 230);
+        _selectedLabel.text = @"沙发";
+        _selectedLabel.textAlignment = NSTextAlignmentCenter;
+        _selectedLabel.textColor = [UIColor orangeColor];
+    }
+    return _selectedLabel;
 }
 
 - (UITableView *)mytable{
@@ -167,11 +189,10 @@
         
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(101, 0, JPScreenW - self.mytable.width, JPScreenH - 64 - 46) collectionViewLayout:layout];
         
-        layout.itemSize = CGSizeMake((_collectionView.width - EdgeMargin * 2 - CellMargin * 3) / 3    , (_collectionView.width - EdgeMargin * 2 - CellMargin * 2) / 3);
-        layout.minimumLineSpacing = 10;
-        layout.minimumInteritemSpacing = 10;
+        layout.itemSize = CGSizeMake(_collectionView.width  / 3    , (_collectionView.width ) / 3);
+        layout.minimumInteritemSpacing = 0;
+        layout.minimumLineSpacing = 0;
         
-        layout.sectionInset = UIEdgeInsetsMake(0, EdgeMargin, 0, EdgeMargin);
         NSLog(@"%@",NSStringFromCGRect(_collectionView.frame));
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -184,24 +205,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.mytable];
+    
+    
+    
+    
     
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(100, 0, 1, JPScreenH)];
     label.backgroundColor = [UIColor grayColor];
     [self.view addSubview:label];
-    
-    
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(101, 150, 220, 150)];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.view addSubview:btn];
-    [btn setTitle:@"沙发" forState:UIControlStateNormal];
-    self.btn = btn;
     // 注册cell
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CellIdentifier];
     [self.view addSubview:self.collectionView];
+    
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.mytable addSubview:self.selectedLabel];
+    [self.view addSubview:self.mytable];
+    [self.mytable selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+    
+}
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -221,20 +245,25 @@
     {
         [subView removeFromSuperview];
     }
-    cell.backgroundColor = RandomColor;
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.width, cell.height  -  20)];
+    imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",rand()%15]];
+    [cell.contentView addSubview:imageView];
     UILabel *label = [[UILabel alloc]init];
-    label.frame = cell.bounds;
+    label.frame = CGRectMake(0, imageView.height, cell.width, cell.height - imageView.height);
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = RandomColor;
     label.text = self.names[indexPath.item];
+    label.font = [UIFont systemFontOfSize:14];
     [cell.contentView addSubview:label];
     self.label = label;
-    
-    
+
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    TCJPCollectionController *collectionVc = [[TCJPCollectionController alloc]init];
+    collectionVc.titles = self.collectionTitles;
+    [self.navigationController pushViewController:collectionVc  animated:YES];
 }
 
 
@@ -250,32 +279,41 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:Identifier];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Identifier];
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.textColor = [UIColor blackColor];
+    for (UIView *subView in cell.contentView.subviews)
+    {
+        [subView removeFromSuperview];
+    }
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:cell.contentView.bounds];
+    label.text = self.cellTexts[indexPath.row];
+//    label.backgroundColor = RandomColor;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor blackColor];
+    label.font = [UIFont systemFontOfSize:14];
+    [cell setValue:label forKeyPath:@"textLabel"];
+//    [cell.contentView addSubview:label];
     UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake(0, CELLH - 1, cell.contentView.width, 1)];
     line.backgroundColor = [UIColor grayColor];
     [cell.contentView addSubview:line];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = [UIColor clearColor];
-    cell.contentView.backgroundColor = [UIColor clearColor];
-    cell.textLabel.text = self.cellTexts[indexPath.row];
-    if (self.cell != nil && self.index == indexPath.row) {
-        cell.textLabel.textColor = [UIColor orangeColor];
-        cell.backgroundColor = [UIColor whiteColor];
-    }
+//    cell.contentView.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    self.index = indexPath.row;
-    self.cell = cell;
     self.names = self.namesArray[indexPath.row];
+    self.selectedLabel.text = self.cellTexts[indexPath.row];
+        [UIView animateWithDuration:0.4 animations:^{
+        self.selectedLabel.y = self.selectedLabel.height * indexPath.row;
+    }completion:^(BOOL finished) {
+        
+
+    }];
     [UIView animateWithDuration:0.5 animations:^{
-    [tableView reloadData];
         [self.collectionView reloadData];
     }completion:^(BOOL finished) {
         [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];

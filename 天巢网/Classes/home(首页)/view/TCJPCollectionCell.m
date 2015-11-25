@@ -6,9 +6,9 @@
 //  Copyright © 2015年 tangjp. All rights reserved.
 //
 
-#import "RXCollectionCell.h"
+#import "TCJPCollectionCell.h"
 
-@interface RXCollectionCell ()
+@interface TCJPCollectionCell ()
 @property (nonatomic ,weak) UIImageView *imageView;
 @property (nonatomic ,weak) UIButton *btn;
 @property (nonatomic ,weak) UILabel *priceLabel;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation RXCollectionCell
+@implementation TCJPCollectionCell
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
@@ -62,7 +62,7 @@
 
 - (void)setPrice:(NSInteger)price{
     _price = price;
-    _priceLabel.text = [NSString stringWithFormat:@"$%ld",(long)_price];
+    _priceLabel.text = [NSString stringWithFormat:@"￥%ld",(long)_price];
 
 }
 

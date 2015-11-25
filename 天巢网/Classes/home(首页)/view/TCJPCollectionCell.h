@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RXCollectionCell : UICollectionViewCell
+@interface TCJPCollectionCell : UICollectionViewCell
 @property (nonatomic ,assign) NSInteger price;
 @property (nonatomic ,assign) NSInteger sales;
 @property (nonatomic ,copy) NSString *title;

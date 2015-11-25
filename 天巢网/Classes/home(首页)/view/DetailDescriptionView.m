@@ -52,8 +52,8 @@ static CGFloat _height;
     [self addSubview:label];
     
     // 分享按钮
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 20, 10, 25, 40)];
-    UIImage *image = [UIImage imageNamed:@"1-详情页_16"];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(title.frame) + 20, 10, 50, 40)];
+    UIImage *image = [UIImage imageNamed:@"icon_share"];
     btn.contentMode = UIViewContentModeScaleAspectFit;
     [btn setImage:image forState:UIControlStateNormal];
     [btn setTitle:@"分享" forState:UIControlStateNormal];
@@ -80,7 +80,7 @@ static CGFloat _height;
     // 价格标签是一个有属性的字符串
     UILabel *priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(title.frame), JPScreenW / 2, 40)];
     NSInteger price = rand() % 10000;
-    NSString *str = [NSString stringWithFormat:@"$%ld",(long)price];
+    NSString *str = [NSString stringWithFormat:@"￥%ld",(long)price];
     NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:str];
     [string addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, str.length)];
     [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, 1)];

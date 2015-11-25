@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RXCollectionController : UICollectionViewController
+@interface TCJPCollectionController : UICollectionViewController
 + (CGFloat)height;
+@property (nonatomic ,strong) NSArray *titles;
 @end

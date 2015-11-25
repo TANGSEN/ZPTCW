@@ -6,22 +6,23 @@
 //  Copyright © 2015年 tangjp. All rights reserved.
 //
 
-#import "RXCollectionController.h"
-#import "RXCollectionCell.h"
+#import "TCJPCollectionController.h"
+#import "TCJPCollectionCell.h"
 #import "TCDetailTableController.h"
 
 #define ItemH 180
 #define ItemW (JPScreenW - 30) / 2
 #define ItemSize CGSizeMake(ItemW, ItemH)
 
-@interface RXCollectionController ()
-@property (nonatomic ,strong) NSArray *titles;
+@interface TCJPCollectionController ()
 @property (nonatomic ,strong) TCDetailTableController *detailController;
 @end
 
-@implementation RXCollectionController
+@implementation TCJPCollectionController
 
 static NSString * const reuseIdentifier = @"Cell";
+
+
 
 + (CGFloat)height{
     return ((10 / 2) + (10 % 2)) * ItemH + (((10 / 2) + (10 % 2)) * JPMargin);
@@ -34,12 +35,7 @@ static NSString * const reuseIdentifier = @"Cell";
     return _detailController;
 }
 
-- (NSArray *)titles{
-    if (!_titles){
-        _titles = [[NSArray alloc]initWithObjects:@"[可可佳]简约现代书柜书架置物架简易柜子书柜实木柜",@"[SWEETNIGHT]进口乳胶床垫1.5  1.8米弹簧椰棕颜色齐全",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用",@"[可可佳]简约现代书柜书架置物架简易柜子书柜实木柜",@"[SWEETNIGHT]进口乳胶床垫1.5  1.8米弹簧椰棕颜色齐全",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用",@"[可可佳]简约现代书柜书架置物架简易柜子书柜实木柜",@"[SWEETNIGHT]进口乳胶床垫1.5  1.8米弹簧椰棕颜色齐全",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用", nil];
-    }
-    return _titles;
-}
+
 
 - (id)init
 {
@@ -57,9 +53,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.bounces = NO;
-    [self.collectionView registerClass:[RXCollectionCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
+    [self.collectionView registerClass:[TCJPCollectionCell class] forCellWithReuseIdentifier:reuseIdentifier];
 }
 
 
@@ -78,7 +74,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    RXCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    TCJPCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     for (UIView *subView in cell.contentView.subviews)
     {
         [subView removeFromSuperview];

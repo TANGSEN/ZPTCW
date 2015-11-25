@@ -7,16 +7,18 @@
 //
 
 #import "TCHomeViewController.h"
-#import "RXCollectionController.h"
+#import "TCJPCollectionController.h"
 #import "ChannelView.h"
 #import "LoadMoreFooter.h"
 #import "Channel.h"
+#import "TLCityPickerController.h"
+
 @import AVFoundation;
 
 #define CellIdentifier @"Cell"
 #define MaxSections 20
 
-@interface TCHomeViewController () <UISearchBarDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating>
+@interface TCHomeViewController () <UISearchBarDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating,TLCityPickerDelegate>
 @property (nonatomic ,weak) UISearchBar *searchBar;
 @property (nonatomic ,strong) NSTimer *timer;
 @property (nonatomic ,strong) UICollectionView *collectionView;
@@ -25,12 +27,12 @@
 /** channel的图片名和title */
 @property (nonatomic ,strong) NSArray *btnImages;
 @property (nonatomic ,strong) NSArray *names;
-
-
+/** collectionViewcontrollerItemTitles */
+@property (nonatomic ,strong) NSArray *titles;
 @property (nonatomic ,strong) UIPageControl *pageControl;
 @property (nonatomic ,strong) UIScrollView *scrollView;
 @property (nonatomic ,strong) ChannelView *channelView;
-@property (nonatomic ,strong) RXCollectionController *collectionVC;
+@property (nonatomic ,strong) TCJPCollectionController *collectionVC;
 @property (nonatomic ,strong) LoadMoreFooter *footer;
 @property (nonatomic, strong) UITableView *myTableView;
 @property (nonatomic, strong) NSMutableArray *visableArray;
@@ -39,6 +41,8 @@
 @property (nonatomic, strong) UISearchController *mySearchController;
 @property (nonatomic ,weak) UIView *rxHeader;
 @property (nonatomic ,weak) UIButton *headerBtn;
+
+@property (nonatomic ,weak) UIButton *cityPickerButton;
 
 @end
 
@@ -115,6 +119,13 @@
 }
 
 #pragma mark - 懒加载
+
+- (NSArray *)titles{
+    if (!_titles){
+        _titles = [[NSArray alloc]initWithObjects:@"[可可佳]简约现代书柜书架置物架简易柜子书柜实木柜",@"[SWEETNIGHT]进口乳胶床垫1.5  1.8米弹簧椰棕颜色齐全",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用",@"[可可佳]简约现代书柜书架置物架简易柜子书柜实木柜",@"[SWEETNIGHT]进口乳胶床垫1.5  1.8米弹簧椰棕颜色齐全",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用",@"[可可佳]简约现代书柜书架置物架简易柜子书柜实木柜",@"[SWEETNIGHT]进口乳胶床垫1.5  1.8米弹簧椰棕颜色齐全",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用",@"[比尼贝尔]真皮沙发现代简约头层牛皮大小户型统统适用", nil];
+    }
+    return _titles;
+}
 
 // channel按钮的图片
 - (NSArray *)btnImages{
@@ -232,7 +243,9 @@
         UIButton *btn = channel.subviews[0];
         [btn bk_addEventHandler:^(id sender) {
             NSLog(@"点击了频道分类按钮");
-            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+            TCJPCollectionController *collectionVc = [[TCJPCollectionController alloc]init];
+            collectionVc.titles = self.titles;
+            [self.navigationController pushViewController:collectionVc animated:YES];
         } forControlEvents:UIControlEventTouchUpInside];
     }
     [self.scrollView addSubview:channelView];
@@ -267,11 +280,12 @@
  *  添加热销商品展示
  */
 - (void)addCollectionView{
-    self.collectionVC = [[RXCollectionController alloc]init];
+    self.collectionVC = [[TCJPCollectionController alloc]init];
+    self.collectionVC.titles = self.titles;
     [self addChildViewController:self.collectionVC];
     UICollectionView *collectionView = self.collectionVC.collectionView;
 //    collectionView.userInteractionEnabled = NO;
-    collectionView.frame = CGRectMake(0, CGRectGetMaxY(self.rxHeader.frame), JPScreenW, [RXCollectionController height]);
+    collectionView.frame = CGRectMake(0, CGRectGetMaxY(self.rxHeader.frame), JPScreenW, [TCJPCollectionController height]);
     collectionView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:collectionView];
     self.rxCollectionView = collectionView;
@@ -286,24 +300,25 @@
  */
 - (void)setupRightBarBtn{
     UIButton *btn = [[UIButton alloc]init];
-    [btn setTitle:@"广州" forState:UIControlStateNormal];
+    [btn setTitle:@"广州市" forState:UIControlStateNormal];
     /**
      *  导航栏右边按钮点击事件
      */
     [btn bk_addEventHandler:^(id sender) {
-        NSLog(@"点击了导航栏右边的按钮");
+        [self cityPickerButtonDown:sender];
     } forControlEvents:UIControlEventTouchUpInside];
     btn.titleLabel.font = [UIFont systemFontOfSize:15];
     UIButton *imageBtn = [[UIButton alloc]init];
     [imageBtn setImage:[UIImage imageNamed:@"首页-1_09"] forState:UIControlStateNormal];
-    imageBtn.frame = CGRectMake(35, 0, 15, 20);
-    btn.frame = CGRectMake(0, 0, 35, 20);
+    imageBtn.frame = CGRectMake(50, 0, 15, 20);
+    btn.frame = CGRectMake(-5, 0, 55, 20);
     UIView *view = [[UIView alloc]init];
-    view.frame = CGRectMake(0, 0, 50, 20);
+    view.frame = CGRectMake(0, 0, 70, 20);
     [view addSubview:btn];
     [view addSubview:imageBtn];
+    self.cityPickerButton = btn;
     [imageBtn bk_addEventHandler:^(id sender) {
-        NSLog(@"点击了导航栏右边的按钮");
+        [self cityPickerButtonDown:sender];
     } forControlEvents:UIControlEventTouchUpInside];
     //使用弹簧控件缩小菜单按钮和边缘距离
     UIBarButtonItem *spaceItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
@@ -311,6 +326,35 @@
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:view];
     self.navigationItem.rightBarButtonItems = @[spaceItem,item];
+}
+
+- (void)cityPickerButtonDown:(UIButton *)sender {
+    TLCityPickerController *cityPickerVC = [[TLCityPickerController alloc] init];
+    [cityPickerVC setDelegate:self];
+    
+    cityPickerVC.locationCityID = @"1400010000";
+    //    cityPickerVC.commonCitys = [[NSMutableArray alloc] initWithArray: @[@"1400010000", @"100010000"]];        // 最近访问城市，如果不设置，将自动管理
+    cityPickerVC.hotCitys = @[@"100010000", @"200010000", @"300210000", @"600010000", @"300110000"];
+    
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:cityPickerVC] animated:YES completion:^{
+        
+    }];
+}
+
+#pragma mark - TLCityPickerDelegate
+- (void) cityPickerController:(TLCityPickerController *)cityPickerViewController didSelectCity:(TLCity *)city
+{
+    [self.cityPickerButton setTitle:city.cityName forState:UIControlStateNormal];
+    [cityPickerViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+- (void) cityPickerControllerDidCancel:(TLCityPickerController *)cityPickerViewController
+{
+    [cityPickerViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (void)setupLeftBarBtn{
@@ -471,7 +515,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-//    NSString *imageName = [NSString stringWithFormat:@"cm2_daily_banner%ld",indexPath.item + 1];
+    
     NSString *imageName = self.images[indexPath.item];
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:imageName]];
     imageView.frame = CGRectMake(0, 0 , JPScreenW, JPScreenH/3);

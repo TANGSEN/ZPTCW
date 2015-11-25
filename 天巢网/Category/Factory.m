@@ -14,7 +14,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
     [btn setBackgroundImage:[UIImage imageNamed:selectImage] forState:UIControlStateHighlighted];
-    btn.frame = CGRectMake(0, 0, 20, 20);
+    btn.frame = CGRectMake(0, 0, 25, 25);
     [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *menuItem=[[UIBarButtonItem alloc] initWithCustomView:btn];
     //使用弹簧控件缩小菜单按钮和边缘距离

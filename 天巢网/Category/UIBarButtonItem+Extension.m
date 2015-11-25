@@ -20,6 +20,8 @@
     
     [btn setImage:[UIImage imageNamed:bg] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:bg] forState:UIControlStateHighlighted];
+    btn.imageEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0);
+    btn.titleEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);;
     // 按钮边框
     btn.bounds =  (CGRect){CGPointZero, size};
     // 监听器
