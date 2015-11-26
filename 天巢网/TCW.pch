@@ -152,6 +152,7 @@
 #import "Factory.h"
 
 #import "TCJPCollectionController.h"
+#import "NSObject+Common.h"
 
 #import "ShareView.h"//分享视图
 //**提示框宏定义

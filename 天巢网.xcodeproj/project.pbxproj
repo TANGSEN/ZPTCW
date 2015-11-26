@@ -148,6 +148,12 @@
 		AA4EC8541C05B92500695962 /* TLCityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4EC84B1C05B92500695962 /* TLCityHeaderView.m */; };
 		AA4EC8551C05B92500695962 /* TLCityPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4EC84D1C05B92500695962 /* TLCityPickerController.m */; };
 		AA4EC8561C05B92500695962 /* TLCityPickerSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4EC8501C05B92500695962 /* TLCityPickerSearchResultController.m */; };
+		AA67D7A81C06ADC800EB05E0 /* AdvertisementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA67D7A71C06ADC800EB05E0 /* AdvertisementModel.m */; };
+		AA67D7AF1C06E19400EB05E0 /* JPNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = AA67D7AE1C06E19400EB05E0 /* JPNetWork.m */; };
+		AA67D7B61C06E2AA00EB05E0 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = AA67D7B51C06E2AA00EB05E0 /* NSObject+Common.m */; };
+		AA67D7B91C06E46B00EB05E0 /* HomeNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = AA67D7B81C06E46B00EB05E0 /* HomeNetWork.m */; };
+		AA67D7BC1C06E7F900EB05E0 /* JPViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA67D7BB1C06E7F900EB05E0 /* JPViewModel.m */; };
+		AA67D7BF1C06E91000EB05E0 /* AdvertisementViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA67D7BE1C06E91000EB05E0 /* AdvertisementViewModel.m */; };
 		AA72B46A1BFDB7AE008C0DF7 /* TCShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA72B4691BFDB7AE008C0DF7 /* TCShareView.m */; };
 		AA9CD34A1BFC2C2D00D77983 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9CD3491BFC2C2D00D77983 /* AppDelegate.m */; };
 		AAACD4B21BF5B9CD00FC4603 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAACD4B11BF5B9CD00FC4603 /* Channel.m */; };
@@ -490,6 +496,18 @@
 		AA4EC84E1C05B92500695962 /* TLCityPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerDelegate.h; sourceTree = "<group>"; };
 		AA4EC84F1C05B92500695962 /* TLCityPickerSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerSearchResultController.h; sourceTree = "<group>"; };
 		AA4EC8501C05B92500695962 /* TLCityPickerSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerSearchResultController.m; sourceTree = "<group>"; };
+		AA67D7A61C06ADC800EB05E0 /* AdvertisementModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisementModel.h; sourceTree = "<group>"; };
+		AA67D7A71C06ADC800EB05E0 /* AdvertisementModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertisementModel.m; sourceTree = "<group>"; };
+		AA67D7AD1C06E19400EB05E0 /* JPNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPNetWork.h; sourceTree = "<group>"; };
+		AA67D7AE1C06E19400EB05E0 /* JPNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPNetWork.m; sourceTree = "<group>"; };
+		AA67D7B41C06E2AA00EB05E0 /* NSObject+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Common.h"; sourceTree = "<group>"; };
+		AA67D7B51C06E2AA00EB05E0 /* NSObject+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Common.m"; sourceTree = "<group>"; };
+		AA67D7B71C06E46B00EB05E0 /* HomeNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNetWork.h; sourceTree = "<group>"; };
+		AA67D7B81C06E46B00EB05E0 /* HomeNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNetWork.m; sourceTree = "<group>"; };
+		AA67D7BA1C06E7F900EB05E0 /* JPViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPViewModel.h; sourceTree = "<group>"; };
+		AA67D7BB1C06E7F900EB05E0 /* JPViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPViewModel.m; sourceTree = "<group>"; };
+		AA67D7BD1C06E91000EB05E0 /* AdvertisementViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisementViewModel.h; sourceTree = "<group>"; };
+		AA67D7BE1C06E91000EB05E0 /* AdvertisementViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertisementViewModel.m; sourceTree = "<group>"; };
 		AA72B4681BFDB7AE008C0DF7 /* TCShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCShareView.h; sourceTree = "<group>"; };
 		AA72B4691BFDB7AE008C0DF7 /* TCShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCShareView.m; sourceTree = "<group>"; };
 		AA9CD3481BFC2C2D00D77983 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1043,6 +1061,8 @@
 		AA1A543C1BF9A8B700EE98FB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				AA67D7B41C06E2AA00EB05E0 /* NSObject+Common.h */,
+				AA67D7B51C06E2AA00EB05E0 /* NSObject+Common.m */,
 				8774FC9C1BFB7EA7001EEF0B /* UIBarButtonItem+Extension.h */,
 				8774FC9D1BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m */,
 				AA1A543D1BF9A8B700EE98FB /* Factory.h */,
@@ -1068,6 +1088,47 @@
 				AA4EC8501C05B92500695962 /* TLCityPickerSearchResultController.m */,
 			);
 			path = JPCityPicker;
+			sourceTree = "<group>";
+		};
+		AA67D7AC1C06E19400EB05E0 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				AA67D7BA1C06E7F900EB05E0 /* JPViewModel.h */,
+				AA67D7BB1C06E7F900EB05E0 /* JPViewModel.m */,
+				AA67D7AD1C06E19400EB05E0 /* JPNetWork.h */,
+				AA67D7AE1C06E19400EB05E0 /* JPNetWork.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		AA67D7B01C06E1A200EB05E0 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		AA67D7B11C06E1B000EB05E0 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				AA67D7B71C06E46B00EB05E0 /* HomeNetWork.h */,
+				AA67D7B81C06E46B00EB05E0 /* HomeNetWork.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		AA67D7B21C06E1BD00EB05E0 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		AA67D7B31C06E1C600EB05E0 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		AAAD31471BF2DCFE00082CBC = {
@@ -1142,6 +1203,7 @@
 		AAAD31861BF2DD5100082CBC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AA67D7AC1C06E19400EB05E0 /* NetWork */,
 				AAAD31871BF2DD5100082CBC /* category(分类界面) */,
 				AAAD31901BF2DD5100082CBC /* home(首页) */,
 				AAAD31951BF2DD5100082CBC /* profile(个人中心) */,
@@ -1153,6 +1215,7 @@
 		AAAD31871BF2DD5100082CBC /* category(分类界面) */ = {
 			isa = PBXGroup;
 			children = (
+				AA67D7B01C06E1A200EB05E0 /* NetWork */,
 				AAAD31881BF2DD5100082CBC /* controller */,
 				AAAD318D1BF2DD5100082CBC /* model */,
 				AAAD318E1BF2DD5100082CBC /* view */,
@@ -1194,6 +1257,7 @@
 		AAAD31901BF2DD5100082CBC /* home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				AA67D7B11C06E1B000EB05E0 /* NetWork */,
 				AAAD31911BF2DD5100082CBC /* controller */,
 				AAAD31921BF2DD5100082CBC /* model */,
 				AAAD31931BF2DD5100082CBC /* view */,
@@ -1218,6 +1282,8 @@
 		AAAD31921BF2DD5100082CBC /* model */ = {
 			isa = PBXGroup;
 			children = (
+				AA67D7A61C06ADC800EB05E0 /* AdvertisementModel.h */,
+				AA67D7A71C06ADC800EB05E0 /* AdvertisementModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1253,6 +1319,8 @@
 		AAAD31941BF2DD5100082CBC /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AA67D7BD1C06E91000EB05E0 /* AdvertisementViewModel.h */,
+				AA67D7BE1C06E91000EB05E0 /* AdvertisementViewModel.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -1260,6 +1328,7 @@
 		AAAD31951BF2DD5100082CBC /* profile(个人中心) */ = {
 			isa = PBXGroup;
 			children = (
+				AA67D7B21C06E1BD00EB05E0 /* NetWork */,
 				8774FC7A1BFB7AB1001EEF0B /* model */,
 				8774FC7B1BFB7AB1001EEF0B /* view */,
 				8774FC841BFB7AB1001EEF0B /* viewModel */,
@@ -1302,6 +1371,7 @@
 		AAAD319C1BF2DD5100082CBC /* ShoppingCart(购物车) */ = {
 			isa = PBXGroup;
 			children = (
+				AA67D7B31C06E1C600EB05E0 /* NetWork */,
 				AAAD319D1BF2DD5100082CBC /* controller */,
 				AAAD31A01BF2DD5100082CBC /* model */,
 				AAAD31A11BF2DD5100082CBC /* view */,
@@ -1704,6 +1774,7 @@
 				AAACD4B51BF5D58B00FC4603 /* TCJPCollectionController.m in Sources */,
 				AA1A53F41BF9A88400EE98FB /* NSArray+MASAdditions.m in Sources */,
 				AA1A54371BF9A88400EE98FB /* SWCellScrollView.m in Sources */,
+				AA67D7B91C06E46B00EB05E0 /* HomeNetWork.m in Sources */,
 				AA4EC8561C05B92500695962 /* TLCityPickerSearchResultController.m in Sources */,
 				AA4EC8531C05B92500695962 /* TLCityGroupCell.m in Sources */,
 				AA1A54021BF9A88400EE98FB /* NSObject+MJClass.m in Sources */,
@@ -1719,6 +1790,7 @@
 				AA1A53FB1BF9A88400EE98FB /* MJDictionaryCache.m in Sources */,
 				878D6A961C033A4C00206CDA /* StarView.m in Sources */,
 				AAECEEAC1BF596CF004B79AB /* ChannelView.m in Sources */,
+				AA67D7BC1C06E7F900EB05E0 /* JPViewModel.m in Sources */,
 				AAAD3EEE1BF2DD8300082CBC /* TCTabBarController.m in Sources */,
 				AA1A54321BF9A88400EE98FB /* UIImage+MultiFormat.m in Sources */,
 				AAC21CC01BFEE27C005A9BFF /* TCStoryCell.m in Sources */,
@@ -1750,8 +1822,10 @@
 				878D6A971C033A4C00206CDA /* TCTextView.m in Sources */,
 				AAF04FCD1BFAF4E5006BEAC6 /* DetailDescriptionView.m in Sources */,
 				AAACD4B81BF5DF9600FC4603 /* TCJPCollectionCell.m in Sources */,
+				AA67D7B61C06E2AA00EB05E0 /* NSObject+Common.m in Sources */,
 				8774FC661BFB78FD001EEF0B /* Color_Process.m in Sources */,
 				AA1A54001BF9A88400EE98FB /* MJPropertyType.m in Sources */,
+				AA67D7A81C06ADC800EB05E0 /* AdvertisementModel.m in Sources */,
 				AAAD36C91BF2DD5300082CBC /* TCHomeViewController.m in Sources */,
 				AA1A53E11BF9A88400EE98FB /* AFURLRequestSerialization.m in Sources */,
 				AA1A53DE1BF9A88400EE98FB /* AFNetworkReachabilityManager.m in Sources */,
@@ -1791,6 +1865,8 @@
 				AA1A53EB1BF9A88400EE98FB /* UIWebView+AFNetworking.m in Sources */,
 				AA1A540E1BF9A88400EE98FB /* MJRefreshHeader.m in Sources */,
 				AA1A54031BF9A88400EE98FB /* NSObject+MJCoding.m in Sources */,
+				AA67D7BF1C06E91000EB05E0 /* AdvertisementViewModel.m in Sources */,
+				AA67D7AF1C06E19400EB05E0 /* JPNetWork.m in Sources */,
 				AA1A54221BF9A88400EE98FB /* MJPhotoToolbar.m in Sources */,
 				AA1A542C1BF9A88400EE98FB /* SDWebImageDownloader.m in Sources */,
 				AA1A54361BF9A88400EE98FB /* NSMutableArray+SWUtilityButtons.m in Sources */,

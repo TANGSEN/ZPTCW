@@ -20,17 +20,6 @@
 
 @implementation TCStoryCell
 
-//- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-//{
-//    self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
-//    if (self) {
-//        self.name.text = self.model.storyName;
-//        self.address.text = self.model.storyAddress;
-//        self.phone.text = self.model.storyPhone;
-//    }
-//    return self;
-//}
-
 + (instancetype)cellWithTableView:(UITableView *)tableView
 {
     static NSString *ID = @"music";

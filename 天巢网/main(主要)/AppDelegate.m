@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 #import "TCTabBarController.h"
-
-
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
 #import <TencentOpenAPI/TencentOAuth.h>

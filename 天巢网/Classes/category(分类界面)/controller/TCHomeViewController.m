@@ -12,6 +12,8 @@
 #import "LoadMoreFooter.h"
 #import "Channel.h"
 #import "TLCityPickerController.h"
+#import "HomeNetWork.h"
+#import "AdvertisementModel.h"
 
 @import AVFoundation;
 
@@ -194,12 +196,16 @@
     [self addTimer];
     [self initial];
     
+    
 }
+
+
 
 /**
  *  屏幕点击方法
  */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
     if (self.searchBar.isFirstResponder) {
         [self.searchBar resignFirstResponder];
         [self.searchBar setShowsCancelButton:NO animated:YES];
@@ -372,6 +378,25 @@
  */
 - (void)leftBarBtnClick{
     NSLog(@"点击了导航栏左边的按钮");
+    // 1.请求管理者
+//    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+//    
+//    NSDictionary *params = nil;
+    // 3.发送请求
+//    [mgr GET:@"http://10.0.0.3:8080/zp/frontapi/rotatePics" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, NSDictionary *  _Nonnull responseObject) {
+//        NSLog(@"responseObject%@",responseObject);
+//       NSArray *array = [AdvertisementModel mj_objectArrayWithKeyValuesArray:responseObject];
+//        AdvertisementModel *model = array[0];
+//        NSLog(@"string%@",array);
+//        NSLog(@"model.ane%@",model.name);
+//    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+//        
+//    }];
+    
+    [HomeNetWork getAdcertisementWithBlock:^(NSArray *array, NSError *error) {
+        AdvertisementModel *model = array[0];
+        NSLog(@"name%@",model.name);
+    }];
 }
 
 
