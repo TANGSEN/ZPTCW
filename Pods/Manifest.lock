@@ -14,11 +14,25 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - Pingpp (2.1.4):
+    - Pingpp/Alipay (= 2.1.4)
+    - Pingpp/Core (= 2.1.4)
+    - Pingpp/UnionPay (= 2.1.4)
+    - Pingpp/Wx (= 2.1.4)
+  - Pingpp/Alipay (2.1.4):
+    - Pingpp/Core
+  - Pingpp/Core (2.1.4)
+  - Pingpp/UnionPay (2.1.4):
+    - Pingpp/Core
+  - Pingpp/Wx (2.1.4):
+    - Pingpp/Core
 
 DEPENDENCIES:
   - BlocksKit
+  - Pingpp (~> 2.1.0)
 
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  Pingpp: 08415163eb1791bc07d7d939f1648d2e36a30eda
 
 COCOAPODS: 0.39.0

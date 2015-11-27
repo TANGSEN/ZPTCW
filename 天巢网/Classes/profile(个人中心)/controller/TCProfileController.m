@@ -28,7 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人中心";
-    self.view.backgroundColor = View_BgColor;
     
     self.tableView.showsHorizontalScrollIndicator = NO;
     self.tableView.showsVerticalScrollIndicator = NO;
@@ -90,13 +89,13 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
 
-    return 20.0f;
+    return 15.0f;
 
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    return 55.0f;
+    return 50.0f;
 
 }
 
@@ -115,8 +114,7 @@
             obj = [[TCWealthListController alloc] init];
             break;
         case 2:
-            obj = [[MyShoppingController alloc] initWithNibName:@"MyShoppingController" bundle:nil];
-//            obj = [[MyShoppingController alloc] init];
+            obj = [[MyShoppingController alloc] init];
             break;
         case 3:
             obj = [[MyFavoriteViewController alloc] init];

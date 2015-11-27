@@ -1,5 +1,7 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Pingpp/lib/Channels/Alipay"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BlocksKit"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BlocksKit"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"BlocksKit" -framework "MessageUI"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BlocksKit" "${PODS_ROOT}/Headers/Public/Pingpp"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Pingpp/lib/Channels/Alipay" $(inherited) "${PODS_ROOT}/Pingpp/lib" $(inherited) "${PODS_ROOT}/Pingpp/lib/Channels/UnionPay" $(inherited) "${PODS_ROOT}/Pingpp/lib/Channels/UnionPay" $(inherited) "${PODS_ROOT}/Pingpp/lib/Channels/Wx" $(inherited) "${PODS_ROOT}/Pingpp/lib/Channels/Wx"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BlocksKit" -isystem "${PODS_ROOT}/Headers/Public/Pingpp"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"BlocksKit" -l"ObjC" -l"UPPayPlugin" -l"WeChatSDK" -l"c++" -l"pingpp" -l"pingpp+alipay" -l"pingpp+up" -l"pingpp+wx" -l"sqlite3" -l"stdc++" -l"z" -framework "AlipaySDK" -framework "CFNetwork" -framework "MessageUI" -framework "Security" -framework "SystemConfiguration"
 PODS_ROOT = ${SRCROOT}/Pods

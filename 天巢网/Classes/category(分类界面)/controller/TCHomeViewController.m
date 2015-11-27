@@ -20,7 +20,7 @@
 #define CellIdentifier @"Cell"
 #define MaxSections 20
 
-@interface TCHomeViewController () <UISearchBarDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating,TLCityPickerDelegate>
+@interface TCHomeViewController () <UISearchBarDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating,TLCityPickerDelegate,UIActionSheetDelegate>
 @property (nonatomic ,weak) UISearchBar *searchBar;
 @property (nonatomic ,strong) NSTimer *timer;
 @property (nonatomic ,strong) UICollectionView *collectionView;
@@ -147,7 +147,6 @@
 - (NSArray *)images{
     if (!_images) {
         _images = [NSArray arrayWithObjects:@"1",@"2",/*@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",*/ nil];
-        
     }return _images;
 }
 
@@ -180,6 +179,8 @@
 #pragma mark - 系统方法
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     [self setupLeftBarBtn];
     [self.view addSubview:self.scrollView];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -370,35 +371,19 @@
      *
      *  @param NSString 图片名称
      */
-    [Factory addMenuItemToVC:self withTarget:self image:(NSString *)image selectImage:(NSString *)image andAction:@selector(leftBarBtnClick)];
+    [Factory addMenuItemToVC:self withTarget:self image:(NSString *)image selectImage:(NSString *)image andAction:@selector(leftBarButtonItemClick)];
 }
 
-/**
- *  导航栏左边按钮点击事件
- */
-- (void)leftBarBtnClick{
-    NSLog(@"点击了导航栏左边的按钮");
-    // 1.请求管理者
-//    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-//    
-//    NSDictionary *params = nil;
-    // 3.发送请求
-//    [mgr GET:@"http://10.0.0.3:8080/zp/frontapi/rotatePics" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, NSDictionary *  _Nonnull responseObject) {
-//        NSLog(@"responseObject%@",responseObject);
-//       NSArray *array = [AdvertisementModel mj_objectArrayWithKeyValuesArray:responseObject];
-//        AdvertisementModel *model = array[0];
-//        NSLog(@"string%@",array);
-//        NSLog(@"model.ane%@",model.name);
-//    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-//        
-//    }];
-    
-    [HomeNetWork getAdcertisementWithBlock:^(NSArray *array, NSError *error) {
-        AdvertisementModel *model = array[0];
-        NSLog(@"name%@",model.name);
-    }];
-}
 
+- (void)leftBarButtonItemClick{
+    [HomeNetWork getAdcertisementWithBlock:^(NSMutableArray *array, NSError *error) {
+                    for (AdvertisementModel *model in array) {
+        
+        
+                        NSLog(@"thumb%@",model.thumb);
+                    }
+                }];
+}
 
 
 
@@ -540,9 +525,20 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    __block NSMutableArray *models = [[NSMutableArray alloc]init];
+    [HomeNetWork getAdcertisementWithBlock:^(NSArray *array, NSError *error) {
+        for (AdvertisementModel *model in array) {
+            
+            [models addObject:model.thumb];
+        }
+    }];
+    NSArray *arr = [[NSArray alloc]init];
+    arr = models;
     NSString *imageName = self.images[indexPath.item];
-    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:imageName]];
+  
+    UIImageView *imageView = [[UIImageView alloc]init];
+    imageView.image = [UIImage imageNamed:imageName];
+//    [imageView sd_setImageWithURL:[NSURL URLWithString:imageName]];
     imageView.frame = CGRectMake(0, 0 , JPScreenW, JPScreenH/3);
     [cell.contentView addSubview:imageView];
     

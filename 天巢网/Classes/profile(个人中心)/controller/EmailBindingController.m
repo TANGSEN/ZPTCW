@@ -19,7 +19,7 @@
     UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 30, ApplicationframeValue.width-100, 45)];
     [self.view addSubview:textField];
     textField.backgroundColor = [UIColor whiteColor];
-    textField.placeholder = @"输入邮箱号";
+    textField.placeholder = @"  输入邮箱号";
     textField.font = AppFont(text_size_little_2);
     textField.layer.borderWidth = 0.4f;
     textField.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
@@ -49,7 +49,7 @@
     UITextField *text = [[UITextField alloc] initWithFrame:CGRectMake(0, button.origin.y+45+15, ApplicationframeValue.width, 45)];
     [self.view addSubview:text];
     text.backgroundColor = [UIColor whiteColor];
-    text.placeholder = @"输入邮箱验证码";
+    text.placeholder = @"  输入邮箱验证码";
     text.font = AppFont(text_size_little_2);
     text.layer.borderWidth = 0.4f;
     text.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;

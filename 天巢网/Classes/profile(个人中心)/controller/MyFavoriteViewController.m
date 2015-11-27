@@ -42,6 +42,7 @@
     cell.ImageView.image = [UIImage imageNamed:@"placehyolder"];
     
     cell.PriceLabel.text = @"￥9000";
+    cell.PriceLabel.adjustsFontSizeToFitWidth = YES;
     cell.PriceLabel.textColor = [UIColor orangeColor];
     cell.PriceLabel.font = AppFont(text_size_middle_1);
     

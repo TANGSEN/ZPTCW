@@ -12,15 +12,13 @@
 - (IBAction)BuyNowButton:(id)sender {
     
 }
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    return self;
 
-
-}
 - (void)awakeFromNib {
-    // Initialization code
+//    if (self.pay == YES) {
+//        [self.BuyNowButton setTitle:@"立即评价" forState:UIControlStateNormal];
+//    }else {
+//        [self.BuyNowButton setTitle:@"立即购买" forState:UIControlStateNormal];
+//    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -28,5 +26,7 @@
 
     // Configure the view for the selected state
 }
+
+
 
 @end

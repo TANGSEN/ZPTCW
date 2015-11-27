@@ -101,7 +101,7 @@
 
 
 #import "MBProgressHUD.h"       //实现安卓toast风格提示，弹出提示框架
-
+#import "UIImageView+WebCache.h"
 
 //#import <SVProgressHUD.h>     //与MBProgressHUD功能相似，虽然Github排名靠前，但是个人偏爱上者
 //#import <UIImageView+WebCache.h>  //让UIKit框架拥有网络功能，功能与UIKit+AFNetwork一致，效率快0.02秒(据说)。 个人喜欢用AF提供的

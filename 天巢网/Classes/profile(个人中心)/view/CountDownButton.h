@@ -12,6 +12,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CountDownButton : UIButton
+/**开始倒计时*/
 -(void)beginCountDown;
 
 @end

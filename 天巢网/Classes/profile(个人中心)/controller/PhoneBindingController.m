@@ -23,14 +23,21 @@
 }
 -(void)addTextView
 {
-    TCTextView *oldPhoneText = [[TCTextView alloc] initWithFrame:CGRectMake(0, 20, ApplicationframeValue.width,40)];
-    oldPhoneText.placeholder = @"输入旧手机号";
-    
+    UITextField *oldPhoneText = [[UITextField alloc] initWithFrame:CGRectMake(0, 20, ApplicationframeValue.width,45)];
+    oldPhoneText.backgroundColor = [UIColor whiteColor];
+    oldPhoneText.placeholder = @"  输入旧手机号";
+    oldPhoneText.font = AppFont(text_size_little_2);
+    oldPhoneText.layer.borderWidth = 0.4f;
+    oldPhoneText.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
     [self.view addSubview:oldPhoneText];
     
 
-    TCTextView *newPhoneText = [[TCTextView alloc] initWithFrame:CGRectMake(0, 80, ApplicationframeValue.width,40 )];
-    newPhoneText.placeholder = @"输入新手机号";
+    UITextField *newPhoneText = [[UITextField alloc] initWithFrame:CGRectMake(0, 80, ApplicationframeValue.width,45 )];
+    newPhoneText.backgroundColor = [UIColor whiteColor];
+    newPhoneText.placeholder = @"  输入新手机号";
+    newPhoneText.font = AppFont(text_size_little_2);
+    newPhoneText.layer.borderWidth = 0.4f;
+    newPhoneText.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
     [self.view addSubview:newPhoneText];
     
     

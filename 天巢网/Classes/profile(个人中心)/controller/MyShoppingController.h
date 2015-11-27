@@ -10,6 +10,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyShoppingController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface MyShoppingController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *PreSumLabel;
+@property (weak, nonatomic) IBOutlet UIButton *CountButton;
+/**全选按钮*/
+@property (weak, nonatomic) IBOutlet UIButton *BottomButton;
 
 @end

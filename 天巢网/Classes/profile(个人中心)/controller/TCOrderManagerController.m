@@ -32,17 +32,13 @@
     self.tableView2.showsHorizontalScrollIndicator = NO;
     self.tableView2.showsVerticalScrollIndicator = NO;
     self.tableView1 = [[TCOrderTable alloc] initWithFrame:CGRectMake(0, 47, ApplicationframeValue.width, ApplicationframeValue.height-47-64)];
-    [self.tableView1.cell.BuyNowButton setTitle:@"立即购买" forState:UIControlStateNormal];
     self.tableView1.TC_delegate = self;
     
+    [self.view addSubview:self.tableView1];
     self.tableView2 = [[TCOrderTable alloc] initWithFrame:CGRectMake(0, 47, ApplicationframeValue.width, ApplicationframeValue.height-47-64)];
-    [self.tableView2.cell.BuyNowButton setTitle:@"立即评价" forState:UIControlStateNormal];
-
-    self.tableView1.backgroundColor = View_BgColor;
+    
     self.tableView2.TC_delegate = self;
 
-    self.tableView2.backgroundColor = View_BgColor;
-    [self.view addSubview:self.tableView1];
    
     
 }
@@ -58,18 +54,13 @@
     switch (customerTag) {
         case 1:
             [self.tableView2 removeFromSuperview];
-            [self.tableView1.cell.BuyNowButton setTitle:@"立即购买" forState:UIControlStateNormal];
             [self.view addSubview:self.tableView1];
-            [self.view bringSubviewToFront:self.tableView1];
             
             [self.tableView1 reloadData];
             break;
         case 2:
             [self.tableView1 removeFromSuperview];
             [self.view addSubview:self.tableView2];
-            [self.tableView2.cell.BuyNowButton setTitle:@"立即评价" forState:UIControlStateNormal];
-            [self.view bringSubviewToFront:self.tableView2];
-            
             [self.tableView2 reloadData];
         default:
             break;
