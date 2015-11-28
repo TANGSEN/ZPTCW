@@ -15,7 +15,8 @@
 #import "TCNavigationController.h"
 #import "InformationManagerController.h"
 #import "MyShoppingController.h"
-
+#import "LoginViewController.h"
+#import "TCNavigationController.h"
 @interface TCProfileController ()
 /**分区文字*/
 @property (nonatomic,strong)NSArray *sectionsTitles;
@@ -25,12 +26,26 @@
 
 @implementation TCProfileController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人中心";
     
     self.tableView.showsHorizontalScrollIndicator = NO;
     self.tableView.showsVerticalScrollIndicator = NO;
+    
+    
+    if ([SharedInstance sharedInstance].alreadyLanded ) {
+        TCProfileController *profileVC = [[TCProfileController alloc]init];
+        
+        
+    }else{
+        LoginViewController *profileVC = [[LoginViewController alloc]init];
+     
+        [self.navigationController pushViewController:profileVC animated:YES];
+    }
 }
 
 

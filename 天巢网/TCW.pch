@@ -40,7 +40,9 @@
 //1104982656    41DCB280（网页）
 
 #define QQAppKEY @"97ZPixmld9P8N4EB"//QQAppKey
-
+ //短信验证*/
+#define SMSAppKey @"cc385203ac0a"
+#define SMSAppSecret @"21fc8f851674ccf6091fb078d850a751"
 
 //YeZhERCRGkkZABhh
 //97ZPixmld9P8N4EB（网页）
@@ -170,6 +172,6 @@ CG_INLINE void AlertLog (NSString *titleStr,NSString *message,NSString *button1,
     [alertView show];
     
 }
-
-
+#import <SMS_SDK/SMSSDK.h>//短信验证
+#import "SharedInstance.h"
 #endif /* TCW_pch */

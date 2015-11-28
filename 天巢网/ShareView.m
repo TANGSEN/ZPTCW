@@ -85,7 +85,7 @@
         }
         
         UIButton *cancleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        cancleBtn.frame = CGRectMake(ApplicationframeValue.width-25, 10, 20, 20);
+        cancleBtn.frame = CGRectMake(ApplicationframeValue.width-25, 10, 15, 15);
         [cancleBtn setBackgroundImage:[UIImage imageNamed:@"share_btn_cancel"] forState:UIControlStateNormal];
         cancleBtn.backgroundColor = [UIColor whiteColor];
         [cancleBtn addTarget:self action:@selector(onCancleBtn) forControlEvents:UIControlEventTouchUpInside];

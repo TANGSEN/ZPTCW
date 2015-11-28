@@ -35,7 +35,7 @@
     for (MyShoppingCell *cell in [self.tableView visibleCells])
     {
         
-        NSString *price = [NSString stringWithFormat:@"%ld",[cell.PriceLabel.text integerValue]*[cell.Count.text integerValue]];
+        NSString *price = [NSString stringWithFormat:@"%d",[cell.PriceLabel.text integerValue]*[cell.Count.text integerValue]];
         
         NSLog(@"price%@",price);
         [presum addObject: price];

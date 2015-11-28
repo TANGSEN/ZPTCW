@@ -23,6 +23,7 @@
     /**设置导航栏主题*/
     [self setupNavigationBarTheme];
 
+    [self setupNavigationItem];
 
 }
 
@@ -30,6 +31,20 @@
     [super viewDidLoad];
     self.navigationBar.barTintColor = [UIColor whiteColor];
     
+    
+    
+}
+
++(void)setupNavigationItem{
+    
+    UIBarButtonItem *appearance = [UIBarButtonItem appearance];
+    
+    
+    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
+    textAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    
+    
+    [appearance setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     
     
 }
@@ -62,19 +77,12 @@
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"nav_icon_left(1)"] forState:UIControlStateNormal];
-    [button setTitle:@"返回" forState:UIControlStateNormal];
-    button.frame = CGRectMake(-20, 0, 100, 44);
-    [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+  
     
     if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
         
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithBg:@"nav_icon_left(1)" title:@"返回" size:CGSizeMake(55, 23) target:self action:@selector(back)];
-//        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
-        
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithBg:@"注册-1_03" title:@"返回" target:self action:@selector(back)];
     }
     
     [super pushViewController:viewController animated:YES];

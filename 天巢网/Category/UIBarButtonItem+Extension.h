@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIBarButtonItem (Extension)
-+ (UIBarButtonItem *)barButtonItemWithBg:(NSString *)bg title:(NSString *)title size:(CGSize)size target:(id)target action:(SEL)action;
++ (UIBarButtonItem *)barButtonItemWithBg:(NSString *)bg title:(NSString *)title target:(id)target action:(SEL)action;
 @end

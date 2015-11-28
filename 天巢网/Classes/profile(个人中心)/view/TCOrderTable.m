@@ -13,6 +13,7 @@
 @implementation TCOrderTable
 
 
+
 -(id)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
     self = [super initWithFrame:frame style:style];
     self.delegate = self;
@@ -69,6 +70,8 @@
     cell.ProductNameLabel.textColor = Color_LightGray;
     cell.ProductNameLabel.font = AppFont(text_size_little_1);
     
+    
+
     cell.pay = rand()%2;
     if (cell.pay == YES) {
         [cell.BuyNowButton setTitle:@"立即评价" forState:UIControlStateNormal];
@@ -77,10 +80,10 @@
         [cell.BuyNowButton setTitle:@"立即购买" forState:UIControlStateNormal];
         [cell.BuyNowButton addTarget:self action:@selector(BuyNow:) forControlEvents:UIControlEventTouchUpInside];
     }
-    
+
     [cell.BuyNowButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     cell.BuyNowButton.titleLabel.font = AppFont(text_size_little_2);
-    
+    [cell.BuyNowButton addTarget:self action:@selector(BuyNow:) forControlEvents:UIControlEventTouchUpInside];
     cell.BuyNowButton.tag = indexPath.section*100+indexPath.row;
     self.cell = cell;
     [self getRounderCorner:cell.BuyNowButton];
@@ -91,10 +94,10 @@
 /**点击事件*/
 -(void)BuyNow:(UIButton *)button
 {
-
     
-
-
+    
+    
+    
 }
 
 /**点击事件*/
@@ -104,7 +107,6 @@
     
     [view show];
 }
-
 /**圆角按钮*/
 -(UIView *)getRounderCorner:(UIView *)vView
 {

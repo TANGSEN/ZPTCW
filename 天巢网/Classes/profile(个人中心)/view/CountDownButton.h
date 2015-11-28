@@ -15,4 +15,6 @@
 /**开始倒计时*/
 -(void)beginCountDown;
 
+/**停止计时*/
+-(void)stop;
 @end

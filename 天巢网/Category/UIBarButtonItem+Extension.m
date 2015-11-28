@@ -9,23 +9,26 @@
 #import "UIBarButtonItem+Extension.h"
 
 @implementation UIBarButtonItem (Extension)
-+ (UIBarButtonItem *)barButtonItemWithBg:(NSString *)bg title:(NSString *)title size:(CGSize)size target:(id)target action:(SEL)action
++ (UIBarButtonItem *)barButtonItemWithBg:(NSString *)bg title:(NSString *)title target:(id)target action:(SEL)action
 {
-    // 创建按钮
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    // 按钮文字
-    [btn setTitle:title forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:text_size_other];
-    [btn setTitleColor:nil forState:UIControlStateNormal];
     
-    [btn setImage:[UIImage imageNamed:bg] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:bg] forState:UIControlStateHighlighted];
-    btn.imageEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0);
-    btn.titleEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);;
-    // 按钮边框
-    btn.bounds =  (CGRect){CGPointZero, size};
-    // 监听器
+    
+    UIButton *btn = [[UIButton alloc]init];
+    [btn setTitle:title forState:UIControlStateNormal];
+    
+    btn.titleLabel.font = [UIFont systemFontOfSize:16];
+    UIButton *imageBtn = [[UIButton alloc]init];
+    [imageBtn setImage:[UIImage imageNamed:bg] forState:UIControlStateNormal];
+    imageBtn.frame = CGRectMake(-3, 0, 10, 20);
+    btn.frame = CGRectMake(9, 0, 35, 20);
+    UIView *view = [[UIView alloc]init];
+    view.frame = CGRectMake(0, 0, 60, 20);
+    
+    [view addSubview:imageBtn];
+    [view addSubview:btn];
+    
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    return [[UIBarButtonItem alloc] initWithCustomView:btn];
+    [imageBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:view];
 }
 @end

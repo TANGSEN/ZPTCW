@@ -52,7 +52,7 @@
         self.enabled = YES;
         
         [self.countTime invalidate];
-       [self setTitle:@"再次获取" forState:UIControlStateNormal];
+       [self setTitle:@"重新获取" forState:UIControlStateNormal];
    
     }
     else{
@@ -66,6 +66,15 @@
     
     
 }
-
+-(void)stop{
+    [self.countTime invalidate];
+    
+    [self setTitle:@"重新获取" forState:UIControlStateNormal];
+    self.enabled = YES;
+    self.selected = NO;
+    
+    
+    
+}
 
 @end

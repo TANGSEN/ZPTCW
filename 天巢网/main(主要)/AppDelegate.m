@@ -13,6 +13,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
+#import <SMS_SDK/SMSSDK.h>
 @interface AppDelegate ()
 
 @end
@@ -40,9 +41,13 @@
     //微信朋友圈
     [ShareSDK connectWeChatTimelineWithAppId:WXAppID appSecret:WXAppSecret wechatCls:[WXApi class]];
     
+    //QQ
+    [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
     
-   [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
-
+    //短信验证
+#warning 有bug 先注掉  等我回头再研究 
+//    [SMSSDK registerApp:SMSAppKey withSecret:SMSAppSecret];
+    
     
     return YES;
     
@@ -50,23 +55,23 @@
     
 }
 
-- (BOOL)application:(UIApplication *)application
-      handleOpenURL:(NSURL *)url
-{
-    return [ShareSDK handleOpenURL:url
-                        wxDelegate:self];
-}
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    return [ShareSDK handleOpenURL:url
-                 sourceApplication:sourceApplication
-                        annotation:annotation
-                        wxDelegate:self];
-}
+//- (BOOL)application:(UIApplication *)application
+//      handleOpenURL:(NSURL *)url
+//{
+//    return [ShareSDK handleOpenURL:url
+//                        wxDelegate:self];
+//}
+//
+//- (BOOL)application:(UIApplication *)application
+//            openURL:(NSURL *)url
+//  sourceApplication:(NSString *)sourceApplication
+//         annotation:(id)annotation
+//{
+//    return [ShareSDK handleOpenURL:url
+//                 sourceApplication:sourceApplication
+//                        annotation:annotation
+//                        wxDelegate:self];
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

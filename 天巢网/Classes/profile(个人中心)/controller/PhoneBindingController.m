@@ -27,6 +27,9 @@
     oldPhoneText.backgroundColor = [UIColor whiteColor];
     oldPhoneText.placeholder = @"  输入旧手机号";
     oldPhoneText.font = AppFont(text_size_little_2);
+    UIImageView *image  = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon"]];
+    image.frame = CGRectMake(0, 0, 20, 20);
+    [oldPhoneText addSubview:image];
     oldPhoneText.layer.borderWidth = 0.4f;
     oldPhoneText.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
     [self.view addSubview:oldPhoneText];

@@ -22,4 +22,5 @@
 /**立即购买*/
 @property (strong, nonatomic) IBOutlet UIButton *BuyNowButton;
 @property (nonatomic ,assign,getter = isPay) BOOL pay;
+
 @end
