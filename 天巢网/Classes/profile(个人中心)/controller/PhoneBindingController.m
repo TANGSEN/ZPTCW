@@ -52,7 +52,35 @@
     
     [self.view addSubview:button];
 
-[button bk_addEventHandler:^(id sender) {
+    [button bk_addEventHandler:^(id sender) {
+    
+        if (!oldPhoneText.text.length) {
+            AlertLog(nil, @"请输入旧的手机号码", @"确定", nil);
+            return ;
+        }
+        
+        
+        
+        NSString *phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"userName"];
+        
+        if (![oldPhoneText.text isEqualToString:phoneNumber]) {
+            AlertLog(nil, @"您输入的号码不存在", @"确定", nil);
+            return ;
+        }
+        
+        
+        if (!newPhoneText.text.length) {
+            AlertLog(nil, @"请输入新的手机号码", @"确定", nil);
+            return ;
+        }
+        
+        
+#warning 到时候打开 
+//        if ([oldPhoneText.text isEqualToString:newPhoneText.text]) {
+//            AlertLog(nil, @"两次输入的号码相同", @"确认", nil);
+//            return;
+//        }
+    
     PhoneVerificationController *verification = [[PhoneVerificationController alloc] init];
     verification.phoneNumber = newPhoneText.text;
     [self.navigationController pushViewController:verification animated:YES];

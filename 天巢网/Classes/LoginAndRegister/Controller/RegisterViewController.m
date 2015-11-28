@@ -89,8 +89,9 @@
             [SharedInstance sharedInstance].alreadyLanded = YES;
                 
         
-            TCProfileController *profile = [[TCProfileController alloc] init];
-            [self presentViewController:profile animated:YES completion:nil];
+//            TCProfileController *profile = [[TCProfileController alloc] init];
+//            [self presentViewController:profile animated:YES completion:nil];
+                [self.navigationController popToRootViewControllerAnimated:YES];
                 
          
             }

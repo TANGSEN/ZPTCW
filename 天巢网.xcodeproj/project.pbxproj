@@ -28,7 +28,6 @@
 		87E14A161C09E30200933ED5 /* WeChatConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E14A011C09E30200933ED5 /* WeChatConnection.framework */; };
 		87E14A171C09E30200933ED5 /* AGCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E14A031C09E30200933ED5 /* AGCommon.framework */; };
 		87E14A181C09E30200933ED5 /* ShareSDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87E14A041C09E30200933ED5 /* ShareSDKLocalizable.strings */; };
-		87E14A191C09E30200933ED5 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E14A071C09E30200933ED5 /* MOBFoundation.framework */; };
 		87E14A1A1C09E30200933ED5 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87E14A081C09E30200933ED5 /* Resource.bundle */; };
 		87E14A1B1C09E30200933ED5 /* ShareSDKCoreService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E14A091C09E30200933ED5 /* ShareSDKCoreService.framework */; };
 		87E14A1C1C09E30200933ED5 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E14A0E1C09E30200933ED5 /* TencentOpenAPI.framework */; };
@@ -253,7 +252,6 @@
 		87E14A031C09E30200933ED5 /* AGCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AGCommon.framework; sourceTree = "<group>"; };
 		87E14A051C09E30200933ED5 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/ShareSDKLocalizable.strings"; sourceTree = "<group>"; };
 		87E14A061C09E30200933ED5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ShareSDKLocalizable.strings; sourceTree = "<group>"; };
-		87E14A071C09E30200933ED5 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		87E14A081C09E30200933ED5 /* Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resource.bundle; sourceTree = "<group>"; };
 		87E14A091C09E30200933ED5 /* ShareSDKCoreService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKCoreService.framework; sourceTree = "<group>"; };
 		87E14A0A1C09E30200933ED5 /* zh-Hans-CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans-CN"; path = "zh-Hans-CN.lproj/ShareSDKLocalizable.strings"; sourceTree = "<group>"; };
@@ -616,7 +614,6 @@
 				878D6AC41C033CC300206CDA /* libz.tbd in Frameworks */,
 				878D6AC21C033CBB00206CDA /* libicucore.tbd in Frameworks */,
 				87E14A161C09E30200933ED5 /* WeChatConnection.framework in Frameworks */,
-				87E14A191C09E30200933ED5 /* MOBFoundation.framework in Frameworks */,
 				87E14A1E1C09E30200933ED5 /* libWeChatSDK.a in Frameworks */,
 				87E14A1F1C09E30200933ED5 /* ShareSDK.framework in Frameworks */,
 				878D6ACA1C033CE200206CDA /* libsqlite3.tbd in Frameworks */,
@@ -746,7 +743,6 @@
 			children = (
 				87E14A031C09E30200933ED5 /* AGCommon.framework */,
 				87E14A041C09E30200933ED5 /* ShareSDKLocalizable.strings */,
-				87E14A071C09E30200933ED5 /* MOBFoundation.framework */,
 				87E14A081C09E30200933ED5 /* Resource.bundle */,
 				87E14A091C09E30200933ED5 /* ShareSDKCoreService.framework */,
 			);

@@ -45,8 +45,11 @@
     [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
     
     //短信验证
-#warning 有bug 先注掉  等我回头再研究 
-//    [SMSSDK registerApp:SMSAppKey withSecret:SMSAppSecret];
+
+    
+    
+    
+    [SMSSDK registerApp:SMSAppKey withSecret:SMSAppSecret];
     
     
     return YES;

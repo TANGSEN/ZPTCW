@@ -57,7 +57,15 @@
     cell.textLabel.text  = self.titles[indexPath.section];
     cell.textLabel.textColor = Color_Common;
     cell.textLabel.font = AppFont(text_size_middle_3);
-    cell.detailTextLabel.text = self.titles[indexPath.section];
+    
+    
+    if (indexPath.section == 1) {
+        NSString *phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"userName"];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+
+        cell.detailTextLabel.text = phoneNumber;
+    }
+//    cell.detailTextLabel.text = self.titles[indexPath.section];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.detailTextLabel.font = AppFont(text_size_little_2);

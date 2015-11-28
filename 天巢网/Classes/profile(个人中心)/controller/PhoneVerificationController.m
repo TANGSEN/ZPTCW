@@ -7,9 +7,10 @@
 //
 
 #import "PhoneVerificationController.h"
-
+#import "CountDownButton.h"
 @interface PhoneVerificationController ()
-
+/**计数器*/
+@property (nonatomic,strong)CountDownButton *CountDownBtn;
 @end
 
 @implementation PhoneVerificationController
@@ -23,30 +24,36 @@
     UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 40, ApplicationframeValue.width-100, 40)];
     [self.view addSubview:textField];
     textField.backgroundColor = [UIColor whiteColor];
-    textField.placeholder = @"输入手机验证码";
+    textField.placeholder = @"  输入手机验证码";
     textField.font = AppFont(text_size_little_2);
     textField.layer.borderWidth = 0.4f;
     textField.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
     
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(ApplicationframeValue.width-100, 40, 100, 40)];
     
-    [self.view addSubview:button];
     
-    [button setTitle:@"获取验证码" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor whiteColor];
-    button.layer.borderWidth = 0.4f;
-    button.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
-    button.titleLabel.font = AppFont(text_size_little_2);
-    [button bk_addEventHandler:^(id sender) {
+    self.CountDownBtn = [[CountDownButton alloc] initWithFrame:CGRectMake(ApplicationframeValue.width-100, 40, 100, 40)];
+    [self.view addSubview:self.CountDownBtn];
+    
+    
+    [self.CountDownBtn bk_addEventHandler:^(id sender) {
         
-        NSLog(@"PhoneVerificationController正在获取验证码");
-        
+            [self.CountDownBtn beginCountDown];
+            /**发送验证码*/
+            [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNumber zone:@"86" customIdentifier:nil result:^(NSError *error) {
+                if (error) {
+                    NSLog(@"error %@", error);
+                }else{
+                    NSLog(@"验证码发送成功");
+                }
+            }];
     } forControlEvents:UIControlEventTouchUpInside];
     
+
     
-    UIButton *complishBtn = [[UIButton alloc]initWithFrame:CGRectMake(10, button.origin.y+40+50, ApplicationframeValue.width - 20, 45)];
+   
+    
+    UIButton *complishBtn = [[UIButton alloc]initWithFrame:CGRectMake(10, self.CountDownBtn.origin.y+40+50, ApplicationframeValue.width - 20, 45)];
     [complishBtn setTitle:@"完成" forState:UIControlStateNormal];
     [complishBtn setBackgroundImage:[UIImage imageNamed:@"navigationbar_background"] forState:UIControlStateNormal];
     [complishBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -54,13 +61,37 @@
     [self.view addSubview:complishBtn];
     
     [complishBtn bk_addEventHandler:^(id sender) {
+        
         if (!textField.text.length) {
             AlertLog(@"", @"请输入手机验证码", @"确定", nil);
         }
         else{
-            NSString *message = [NSString stringWithFormat:@"已为您重新绑定手机号\n%@",self.phoneNumber];
-        AlertLog(@"温馨提示", message, @"好", nil);
-        
+            
+        [SMSSDK commitVerificationCode:textField.text phoneNumber:self.phoneNumber zone:@"86" result:^(NSError *error) {
+                if (error) {
+                    NSLog(@"验证码不正确 %@", error);
+                    AlertLog(nil, @"验证码不正确", @"确定", nil);
+                    /**倒计时停止，重新发送*/
+                    [self.CountDownBtn stop];
+                    
+                }else{
+                    NSLog(@"验证码正确");
+                    [self.CountDownBtn stop];
+                    /**
+                     在此存储手机号和密码，进入个人中心*/
+                    [[NSUserDefaults standardUserDefaults]setObject:self.phoneNumber forKey:@"userName"];
+                    
+                    [[NSUserDefaults standardUserDefaults]synchronize];
+                    
+                    /**标记已经登录*/
+                    NSString *message = [NSString stringWithFormat:@"已为您重新绑定手机号\n%@",self.phoneNumber];
+                    AlertLog(@"温馨提示", message, @"好", nil);
+    
+                    
+                    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+                }
+            }];
         }
     } forControlEvents:UIControlEventTouchUpInside];
     

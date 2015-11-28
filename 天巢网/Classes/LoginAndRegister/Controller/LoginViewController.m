@@ -33,27 +33,26 @@
     [LoginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     [LoginBtn bk_addEventHandler:^(id sender) {
-//        if (!self.phoneText.text.length) {
-//            AlertLog(nil, @"请输入手机号码", @"确定", nil);
-//            return ;
-//        }
-//        if (!self.password.text.length) {
-//            AlertLog(nil, @"请输入密码", @"确定", nil);
-//            return ;
-//        }
-//        
-//       NSString *phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"userName"];
-//       NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:@"password"];
-//       [[NSUserDefaults standardUserDefaults]synchronize];
-//
-//        if (![phoneNumber isEqualToString:self.phoneText.text]||![password isEqualToString:self.password.text]) {
-//            AlertLog(nil, @"输入的手机号或者密码不正确", @"确认", nil);
-//            return;
-//        }
+        if (!self.phoneText.text.length) {
+            AlertLog(nil, @"请输入手机号码", @"确定", nil);
+            return ;
+        }
+        if (!self.password.text.length) {
+            AlertLog(nil, @"请输入密码", @"确定", nil);
+            return ;
+        }
+        
+       NSString *phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"userName"];
+       NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:@"password"];
+       [[NSUserDefaults standardUserDefaults]synchronize];
+
+        if (![phoneNumber isEqualToString:self.phoneText.text]||![password isEqualToString:self.password.text]) {
+            AlertLog(nil, @"输入的手机号或者密码不正确", @"确认", nil);
+            return;
+        }
         [SharedInstance sharedInstance].alreadyLanded = YES;
-//        TCProfileController *profile = [[TCProfileController alloc] init];
-//        
-//        [self presentViewController:self.tabBarController animated:YES completion:nil];
+        TCProfileController *profile = [[TCProfileController alloc] init];
+        
         
         
         [self.navigationController popToRootViewControllerAnimated:YES];
