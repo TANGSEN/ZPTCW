@@ -9,7 +9,7 @@
 #import "SharedInstance.h"
 static SharedInstance *shared = nil;
 @implementation SharedInstance
-
+/**单例*/
 +(SharedInstance *)sharedInstance{
     
     static dispatch_once_t onceToken;
@@ -20,4 +20,42 @@ static SharedInstance *shared = nil;
     
     return shared;
 }
-@end
+
+
+
+/**设置密码*/
+-(void)setPassword:(NSString *)password{
+
+    [[NSUserDefaults standardUserDefaults]setObject:password forKey:@"password"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+
+
+
+}
+/**获取密码*/
+-(NSString *)getPassword{
+
+    NSString *apppassword=[[NSUserDefaults standardUserDefaults]objectForKey:@"password"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    return apppassword;
+
+}
+/**设置用户账号*/
+-(void)setUserName:(NSString *)userName{
+
+    [[NSUserDefaults standardUserDefaults]setObject:userName forKey:@"userName"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+
+
+}
+/**获取用户账号*/
+-(NSString *)getUserName{
+
+
+    NSString *username=[[NSUserDefaults standardUserDefaults]objectForKey:@"userName"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    return username;
+
+
+
+}@end

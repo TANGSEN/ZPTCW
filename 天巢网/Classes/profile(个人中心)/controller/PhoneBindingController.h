@@ -10,6 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhoneBindingController : UIViewController
+@interface PhoneBindingController : UIViewController<UITextFieldDelegate>
 
 @end

@@ -8,12 +8,22 @@
 
 #import "MyFavoriteViewController.h"
 #import "TCOrderCell.h"
+#import "ShoppingModel.h"
 @interface MyFavoriteViewController ()
-
+@property (nonatomic,strong)ShoppingModel *shopModel;
+@property (nonatomic,strong)NSMutableArray *arr;
 @end
 
-@implementation MyFavoriteViewController
 
+@implementation MyFavoriteViewController
+-(NSMutableArray *)arr
+{
+    if (!_arr) {
+        _arr = [ShoppingModel demoData];
+    }
+    return _arr;
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -28,11 +38,14 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 10;
+    return self.arr.count;
 
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
+    ShoppingModel *model = self.arr[indexPath.section];
     static NSString *ID = @"cell";
     TCOrderCell *cell  = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
@@ -41,16 +54,16 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.ImageView.image = [UIImage imageNamed:@"placehyolder"];
     
-    cell.PriceLabel.text = @"￥9000";
+    cell.PriceLabel.text = model.Price;
     cell.PriceLabel.adjustsFontSizeToFitWidth = YES;
     cell.PriceLabel.textColor = [UIColor orangeColor];
     cell.PriceLabel.font = AppFont(text_size_middle_1);
     
-    cell.Count.text = [NSString stringWithFormat:@"数量：%d",10];
+    cell.Count.text = [NSString stringWithFormat:@"数量：%@",model.Count];
     cell.Count.textColor = Color_LightGray;
     cell.Count.font = AppFont(text_size_little_3);
     
-    cell.ProductNameLabel.text = @"这是我的收藏 我的收藏 我的收藏 你信不信你信不信";
+    cell.ProductNameLabel.text = model.ProductName;
     cell.ProductNameLabel.textColor = Color_LightGray;
     cell.ProductNameLabel.font = AppFont(text_size_little_1);
     
@@ -59,8 +72,13 @@
     [cell.BuyNowButton setTitle:@"取消收藏" forState:UIControlStateNormal];
     [cell.BuyNowButton setTitleColor:Color_LightGray forState:UIControlStateNormal];
     cell.BuyNowButton.titleLabel.font = AppFont(text_size_little_3);
-    [cell.BuyNowButton addTarget:self action:@selector(CancelFavorite:) forControlEvents:UIControlEventTouchUpInside];
-    cell.BuyNowButton.tag = indexPath.section*100+indexPath.row;
+    /**取消收藏*/
+    [cell.BuyNowButton bk_addEventHandler:^(id sender) {
+    
+        [self.arr removeObjectAtIndex:indexPath.section];
+        [self.tableView reloadData];
+    } forControlEvents:UIControlEventTouchUpInside];
+    
     
     [self getRounderCorner:cell.BuyNowButton];
     return cell;
@@ -78,11 +96,7 @@
     return nil;
 
 }
--(void)CancelFavorite:(UIButton *)sender
-{
-    NSLog(@"取消收藏");
-    
-}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 15.0f;

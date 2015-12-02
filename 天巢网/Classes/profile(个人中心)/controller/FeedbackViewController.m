@@ -10,6 +10,7 @@
 #import "TCTextView.h"
 @interface FeedbackViewController ()<UITextFieldDelegate,UITextViewDelegate>
 @property (nonatomic,strong)TCTextView *textView;
+@property (nonatomic,strong)UITextField *phoneText;
 @end
 
 @implementation FeedbackViewController
@@ -41,9 +42,11 @@
     adviceText.tag = 0;
     [self.view addSubview:adviceText];
     
-    
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapdown)];
+    [self.view addGestureRecognizer:tapGR];
     /**手机号*/
     UITextField *phoneText = [[UITextField alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(adviceText.frame)+20, ApplicationframeValue.width - 20, 45)];
+    self.phoneText = phoneText;
     phoneText.delegate = self;
     phoneText.layer.borderColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3].CGColor;
     phoneText.font = AppFont(text_size_little_2);
@@ -63,6 +66,11 @@
    
 }
 
+-(void)tapdown{
+    [self.phoneText resignFirstResponder];
+    [self.textView resignFirstResponder];
+    
+}
 #pragma mark - textField Delegate
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

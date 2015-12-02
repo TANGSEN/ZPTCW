@@ -23,9 +23,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.backgroundColor = View_BgColor;
-//    self.title = @"登录";
     self.navigationItem.title = @"登录";
     self.tableView.frame = CGRectMake(0, 0, ApplicationframeValue.width, 140);
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGR)];
+    
+    
+    [self.view addGestureRecognizer:tap];
+    
+    
+    
     /**登录按钮*/
     UIButton *LoginBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.tableView.frame)+30, ApplicationframeValue.width , 40)];
     [LoginBtn setTitle:@"登录" forState:UIControlStateNormal];
@@ -42,8 +49,8 @@
             return ;
         }
         
-       NSString *phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"userName"];
-       NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:@"password"];
+        NSString *phoneNumber = [[SharedInstance sharedInstance]getUserName];
+        NSString *password = [[SharedInstance sharedInstance]getPassword];
        [[NSUserDefaults standardUserDefaults]synchronize];
 
         if (![phoneNumber isEqualToString:self.phoneText.text]||![password isEqualToString:self.password.text]) {
@@ -51,13 +58,9 @@
             return;
         }
         [SharedInstance sharedInstance].alreadyLanded = YES;
-        TCProfileController *profile = [[TCProfileController alloc] init];
-        
-        
-        
+    
         [self.navigationController popToRootViewControllerAnimated:YES];
 
-//        [self.navigationController pushViewController:profile animated:YES];
         
         
     } forControlEvents:UIControlEventTouchUpInside];
@@ -89,6 +92,13 @@
      [self.view addSubview:forgetBtn];
 
 }
+-(void)tapGR{
+    [self.phoneText resignFirstResponder];
+    [self.password resignFirstResponder];
+    
+}
+
+
 -(NSArray *)imageArr
 {
     if (!_imageArr) {

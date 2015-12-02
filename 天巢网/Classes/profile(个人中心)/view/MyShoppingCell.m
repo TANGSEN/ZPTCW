@@ -21,5 +21,9 @@
 
     // Configure the view for the selected state
 }
+-(void)setChecked:(BOOL)checked
+{
+   [self setChecked:checked];
 
+}
 @end

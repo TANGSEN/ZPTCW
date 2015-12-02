@@ -8,23 +8,22 @@
 
 #import "TCShoppingTable.h"
 #import "MyShoppingCell.h"
-
+#import "ShoppingModel.h"
 @interface TCShoppingTable ()
-@property (nonatomic,strong)UIButton *chooseButton;
+//@property (nonatomic,strong)UIButton *chooseButton;
 @property (nonatomic,strong)MyShoppingCell *cell;
-@property (nonatomic,strong)NSMutableArray *status;
+@property (nonatomic,strong)NSArray *arr;
 @end
 @implementation TCShoppingTable
 
 
 
--(NSMutableArray *)status
+-(NSArray *)arr
 {
-
-    if (!_status) {
-        _status = [NSMutableArray arrayWithObjects:@(NO),@(NO),@(NO),@(NO),@(NO),@(NO),@(NO),@(NO), nil];
+    if (!_arr) {
+        _arr = [ShoppingModel demoData];
     }
-    return _status;
+    return _arr;
 }
 
 -(id)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
@@ -65,56 +64,40 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    ShoppingModel *model = self.arr[indexPath.section];
     static NSString *ID  = @"cell";
     MyShoppingCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     NSInteger thisTag  = 100 *indexPath.section + indexPath.row;
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"MyShoppingCell" owner:self options:nil] lastObject];
-        
+    }
         UIButton *ChooseButton = [UIButton buttonWithType:UIButtonTypeCustom];
          ChooseButton.frame = CGRectMake(8, 15, 25, 25);
         [ChooseButton setBackgroundImage:[UIImage imageNamed:@"购物车_11"] forState:UIControlStateNormal];
         [ChooseButton setBackgroundImage:[UIImage imageNamed:@"购物车_03"] forState:UIControlStateSelected];
         ChooseButton.tag = indexPath.section;
-        ChooseButton.selected = (BOOL)self.status[indexPath.section];
 //        ChooseButton.tag = 100 *indexPath.section + indexPath.row;
-        [self.buttons addObject:ChooseButton];
-        
-        [ChooseButton bk_addEventHandler:^(id sender) {
-            UIButton *button = (UIButton *)sender;
+//        [self.buttons addObject:ChooseButton];
+        [cell.contentView addSubview:ChooseButton];
 
+        [ChooseButton bk_addEventHandler:^(id sender) {
             
-            
-            
-//            NSArray *visibleCells = [self visibleCells];
-//            for(UITableViewCell *cell in visibleCells) {
-//                if(cell.tag == button.tag) {
-//                    button.selected = YES;
-//                    break;
-//                }
-//            }
+            model.Selected = !model.Selected;
+            [self reloadData];
             
            
             
         } forControlEvents:UIControlEventTouchUpInside];
-        [cell.contentView addSubview:ChooseButton];
-    }
-    
-    
-    cell.tag = thisTag;
-    NSArray *subviews = [cell.contentView subviews];
-    for(id view in subviews)
-        if([view isKindOfClass:[UIButton class]]) {
-            [view setTag:thisTag];
-            [cell.contentView bringSubviewToFront:view];
-        }
-    cell.Count.text = @"1";
-    cell.PriceLabel.text = @"100";
+
+    cell.Count.text = model.Count;
+    cell.PriceLabel.text = model.Price;
+    cell.ProductDetailLabel.text = model.ProductName;
+    ChooseButton.selected = model.Selected;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [self getRoundCorner:cell.StepperView];
     cell.Imageline1.backgroundColor = [UIColor lightGrayColor];
     cell.Imageline2.backgroundColor = [UIColor lightGrayColor];
+    
     
     self.cell = cell;
 //    全选
@@ -129,17 +112,13 @@
 }
 
 
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//
-//    NSLog(@"点击了第%ld区,第%ld行",(long)indexPath.section,(long)indexPath.row);
-//    self.chooseButton = (UIButton *)[self.cell viewWithTag:100*indexPath.section + indexPath.row];
-//    NSLog(@"tag%ld",(long)self.chooseButton.tag);
-//       self.chooseButton.selected = !self.chooseButton.selected;
-//
-//
-//
-//}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+
+
+}
 -(UIView *)getRoundCorner:(UIView *)vView
 {
     

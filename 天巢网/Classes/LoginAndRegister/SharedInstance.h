@@ -10,7 +10,15 @@
 
 @interface SharedInstance : NSObject
 +(SharedInstance *)sharedInstance;
-//**标记用户是否已经登陆
-@property (nonatomic,assign)  BOOL alreadyLanded;
 
+/**设置密码*/
+-(void)setPassword:(NSString *)password;
+/**获取密码*/
+-(NSString *)getPassword;
+/**设置用户账号*/
+-(void)setUserName:(NSString *)userName;
+/**获取用户账号*/
+-(NSString *)getUserName;
+/**标记用户是否已经登陆*/
+@property (nonatomic,assign)  BOOL alreadyLanded;
 @end

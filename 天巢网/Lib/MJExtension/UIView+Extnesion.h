@@ -17,4 +17,11 @@
 @property (nonatomic,assign) CGFloat height;
 @property (nonatomic,assign) CGSize size;
 @property (nonatomic,assign) CGPoint origin;
+
+
+@end
+@interface UIView (FindFirstResponder)
+
+- (UIView *)findFirstResponder;
+
 @end

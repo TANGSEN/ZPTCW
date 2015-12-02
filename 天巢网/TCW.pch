@@ -174,4 +174,10 @@ CG_INLINE void AlertLog (NSString *titleStr,NSString *message,NSString *button1,
 }
 #import <SMS_SDK/SMSSDK.h>//短信验证
 #import "SharedInstance.h"
+
+#import "Utils.h"//正则表达式
+
+
+
+
 #endif /* TCW_pch */

@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		7860908704E879C4782B21E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB47D8B14A5E3D3C6DA61B6 /* libPods.a */; };
+		863FCE181C0BF7B500FFFB74 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 863FCE171C0BF7B500FFFB74 /* Utils.m */; };
+		863FCE1B1C0C193900FFFB74 /* ShoppingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 863FCE1A1C0C193900FFFB74 /* ShoppingModel.m */; };
+		863FCE1D1C0C3BA100FFFB74 /* 76-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 863FCE1C1C0C3BA100FFFB74 /* 76-76.png */; };
+		86D54CA71C0EC1E300629CC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D54CA61C0EC1E300629CC1 /* CFNetwork.framework */; };
+		86D54CA91C0EC1F600629CC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D54CA81C0EC1F600629CC1 /* SystemConfiguration.framework */; };
+		86D54CAB1C0EC1FE00629CC1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D54CAA1C0EC1FE00629CC1 /* Security.framework */; };
+		86D54CAD1C0EC20800629CC1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D54CAC1C0EC20800629CC1 /* libc++.tbd */; };
+		86D54CAF1C0EC20E00629CC1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D54CAE1C0EC20E00629CC1 /* QuartzCore.framework */; };
+		872DAB471C0F203F00DD8669 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 872DAB401C0F203F00DD8669 /* AlipaySDK.bundle */; };
+		872DAB481C0F203F00DD8669 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DAB411C0F203F00DD8669 /* AlipaySDK.framework */; };
+		872DAB491C0F203F00DD8669 /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DAB421C0F203F00DD8669 /* libUPPayPlugin.a */; };
+		872DAB4A1C0F203F00DD8669 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DAB431C0F203F00DD8669 /* libWeChatSDK.a */; };
+		872DAB4B1C0F203F00DD8669 /* libpingpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DAB441C0F203F00DD8669 /* libpingpp.a */; };
+		872DAB4C1C0F203F00DD8669 /* Pingpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 872DAB451C0F203F00DD8669 /* Pingpp.bundle */; };
 		8774FC661BFB78FD001EEF0B /* Color_Process.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC621BFB78FD001EEF0B /* Color_Process.m */; };
 		8774FC671BFB78FD001EEF0B /* CustomerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC641BFB78FD001EEF0B /* CustomerView.m */; };
 		8774FCA11BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8774FC9D1BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m */; };
@@ -188,7 +202,6 @@
 		AAAD3EEE1BF2DD8300082CBC /* TCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAD3EEC1BF2DD8300082CBC /* TCTabBarController.m */; };
 		AAB2806B1BFAC81F000A6CA2 /* libBlocksKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2806A1BFAC81F000A6CA2 /* libBlocksKit.a */; };
 		AAB2806E1BFACF7C000A6CA2 /* TCDetailTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB2806D1BFACF7C000A6CA2 /* TCDetailTableController.m */; };
-		AAB2B7E01C0418FB007B6073 /* w_xueren.png in Resources */ = {isa = PBXBuildFile; fileRef = AAB2B7DF1C0418FB007B6073 /* w_xueren.png */; };
 		AAC21CB41BFEBDFF005A9BFF /* StoryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC21CB31BFEBDFF005A9BFF /* StoryList.plist */; };
 		AAC21CC01BFEE27C005A9BFF /* TCStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC21CBE1BFEE27C005A9BFF /* TCStoryCell.m */; };
 		AAC21CC11BFEE27C005A9BFF /* TCStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC21CBF1BFEE27C005A9BFF /* TCStoryCell.xib */; };
@@ -222,6 +235,23 @@
 
 /* Begin PBXFileReference section */
 		82D20F8980E8FC5CE83CC6EB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		863FCE161C0BF7B500FFFB74 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		863FCE171C0BF7B500FFFB74 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		863FCE191C0C193900FFFB74 /* ShoppingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShoppingModel.h; path = "天巢网/Lib/other(其它)/正则表达式/ShoppingModel.h"; sourceTree = SOURCE_ROOT; };
+		863FCE1A1C0C193900FFFB74 /* ShoppingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShoppingModel.m; path = "天巢网/Lib/other(其它)/正则表达式/ShoppingModel.m"; sourceTree = SOURCE_ROOT; };
+		863FCE1C1C0C3BA100FFFB74 /* 76-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "76-76.png"; path = "Classes/home(首页)/viewModel/76-76.png"; sourceTree = "<group>"; };
+		86D54CA61C0EC1E300629CC1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		86D54CA81C0EC1F600629CC1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		86D54CAA1C0EC1FE00629CC1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		86D54CAC1C0EC20800629CC1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		86D54CAE1C0EC20E00629CC1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		872DAB401C0F203F00DD8669 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		872DAB411C0F203F00DD8669 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		872DAB421C0F203F00DD8669 /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUPPayPlugin.a; sourceTree = "<group>"; };
+		872DAB431C0F203F00DD8669 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		872DAB441C0F203F00DD8669 /* libpingpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpingpp.a; sourceTree = "<group>"; };
+		872DAB451C0F203F00DD8669 /* Pingpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Pingpp.bundle; sourceTree = "<group>"; };
+		872DAB461C0F203F00DD8669 /* Pingpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pingpp.h; sourceTree = "<group>"; };
 		8774FC611BFB78FD001EEF0B /* Color_Process.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color_Process.h; sourceTree = "<group>"; };
 		8774FC621BFB78FD001EEF0B /* Color_Process.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color_Process.m; sourceTree = "<group>"; };
 		8774FC631BFB78FD001EEF0B /* CustomerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerView.h; sourceTree = "<group>"; };
@@ -574,7 +604,6 @@
 		AAB2806A1BFAC81F000A6CA2 /* libBlocksKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBlocksKit.a; path = "Pods/../build/Debug-iphoneos/libBlocksKit.a"; sourceTree = "<group>"; };
 		AAB2806C1BFACF7C000A6CA2 /* TCDetailTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDetailTableController.h; sourceTree = "<group>"; };
 		AAB2806D1BFACF7C000A6CA2 /* TCDetailTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDetailTableController.m; sourceTree = "<group>"; };
-		AAB2B7DF1C0418FB007B6073 /* w_xueren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w_xueren.png; sourceTree = "<group>"; };
 		AAC21CB31BFEBDFF005A9BFF /* StoryList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoryList.plist; sourceTree = "<group>"; };
 		AAC21CBD1BFEE27C005A9BFF /* TCStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCStoryCell.h; sourceTree = "<group>"; };
 		AAC21CBE1BFEE27C005A9BFF /* TCStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCStoryCell.m; sourceTree = "<group>"; };
@@ -607,6 +636,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D54CAF1C0EC20E00629CC1 /* QuartzCore.framework in Frameworks */,
+				86D54CAD1C0EC20800629CC1 /* libc++.tbd in Frameworks */,
+				872DAB481C0F203F00DD8669 /* AlipaySDK.framework in Frameworks */,
+				86D54CAB1C0EC1FE00629CC1 /* Security.framework in Frameworks */,
+				872DAB491C0F203F00DD8669 /* libUPPayPlugin.a in Frameworks */,
+				86D54CA91C0EC1F600629CC1 /* SystemConfiguration.framework in Frameworks */,
+				86D54CA71C0EC1E300629CC1 /* CFNetwork.framework in Frameworks */,
 				87E149FC1C09E2E400933ED5 /* MOBFoundation.framework in Frameworks */,
 				878D6AC61C033CD000206CDA /* libstdc++.tbd in Frameworks */,
 				878D6AC81C033CD700206CDA /* JavaScriptCore.framework in Frameworks */,
@@ -617,8 +653,10 @@
 				87E14A1E1C09E30200933ED5 /* libWeChatSDK.a in Frameworks */,
 				87E14A1F1C09E30200933ED5 /* ShareSDK.framework in Frameworks */,
 				878D6ACA1C033CE200206CDA /* libsqlite3.tbd in Frameworks */,
+				872DAB4B1C0F203F00DD8669 /* libpingpp.a in Frameworks */,
 				87E14A171C09E30200933ED5 /* AGCommon.framework in Frameworks */,
 				87E14A151C09E30200933ED5 /* QQConnection.framework in Frameworks */,
+				872DAB4A1C0F203F00DD8669 /* libWeChatSDK.a in Frameworks */,
 				87E149FD1C09E2E400933ED5 /* SMS_SDK.framework in Frameworks */,
 				87E14A1B1C09E30200933ED5 /* ShareSDKCoreService.framework in Frameworks */,
 				87E14A1C1C09E30200933ED5 /* TencentOpenAPI.framework in Frameworks */,
@@ -644,9 +682,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		863FCE151C0BF7B500FFFB74 /* 正则表达式 */ = {
+			isa = PBXGroup;
+			children = (
+				863FCE161C0BF7B500FFFB74 /* Utils.h */,
+				863FCE171C0BF7B500FFFB74 /* Utils.m */,
+			);
+			path = "正则表达式";
+			sourceTree = "<group>";
+		};
+		872DAB3E1C0F203F00DD8669 /* ping++ */ = {
+			isa = PBXGroup;
+			children = (
+				872DAB3F1C0F203F00DD8669 /* Channels */,
+				872DAB441C0F203F00DD8669 /* libpingpp.a */,
+				872DAB451C0F203F00DD8669 /* Pingpp.bundle */,
+				872DAB461C0F203F00DD8669 /* Pingpp.h */,
+			);
+			path = "ping++";
+			sourceTree = "<group>";
+		};
+		872DAB3F1C0F203F00DD8669 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				872DAB401C0F203F00DD8669 /* AlipaySDK.bundle */,
+				872DAB411C0F203F00DD8669 /* AlipaySDK.framework */,
+				872DAB421C0F203F00DD8669 /* libUPPayPlugin.a */,
+				872DAB431C0F203F00DD8669 /* libWeChatSDK.a */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
 		8774FC5E1BFB78FD001EEF0B /* other(其它) */ = {
 			isa = PBXGroup;
 			children = (
+				863FCE151C0BF7B500FFFB74 /* 正则表达式 */,
 				8774FC611BFB78FD001EEF0B /* Color_Process.h */,
 				8774FC621BFB78FD001EEF0B /* Color_Process.m */,
 				8774FC631BFB78FD001EEF0B /* CustomerView.h */,
@@ -659,6 +729,8 @@
 		8774FC7A1BFB7AB1001EEF0B /* model */ = {
 			isa = PBXGroup;
 			children = (
+				863FCE191C0C193900FFFB74 /* ShoppingModel.h */,
+				863FCE1A1C0C193900FFFB74 /* ShoppingModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -780,6 +852,7 @@
 		AA1A52FB1BF9A88400EE98FB /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				872DAB3E1C0F203F00DD8669 /* ping++ */,
 				87E149FE1C09E30200933ED5 /* ShareSDK */,
 				87E149F51C09E2E400933ED5 /* SMS_SDK */,
 				AA1A52FC1BF9A88400EE98FB /* AFNetworking */,
@@ -1317,7 +1390,7 @@
 		AAAD31531BF2DCFE00082CBC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AAB2B7DF1C0418FB007B6073 /* w_xueren.png */,
+				863FCE1C1C0C3BA100FFFB74 /* 76-76.png */,
 				AAAD315F1BF2DCFE00082CBC /* Assets.xcassets */,
 				AAAD31611BF2DCFE00082CBC /* LaunchScreen.storyboard */,
 				AAAD31641BF2DCFE00082CBC /* Info.plist */,
@@ -1547,6 +1620,11 @@
 		BBD79B217BE503EE132F3832 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86D54CAE1C0EC20E00629CC1 /* QuartzCore.framework */,
+				86D54CAC1C0EC20800629CC1 /* libc++.tbd */,
+				86D54CAA1C0EC1FE00629CC1 /* Security.framework */,
+				86D54CA81C0EC1F600629CC1 /* SystemConfiguration.framework */,
+				86D54CA61C0EC1E300629CC1 /* CFNetwork.framework */,
 				87E14A201C09E4E400933ED5 /* MessageUI.framework */,
 				878D6AC91C033CE200206CDA /* libsqlite3.tbd */,
 				878D6AC71C033CD700206CDA /* JavaScriptCore.framework */,
@@ -1683,18 +1761,20 @@
 				AA90F9741C08369200C2A993 /* TCOrderCell.xib in Resources */,
 				AA90F96F1C08369200C2A993 /* MyShoppingCell.xib in Resources */,
 				AA1A541E1BF9A88400EE98FB /* MJPhotoBrowser.bundle in Resources */,
+				872DAB4C1C0F203F00DD8669 /* Pingpp.bundle in Resources */,
 				AAAD31631BF2DCFE00082CBC /* LaunchScreen.storyboard in Resources */,
 				87E14A181C09E30200933ED5 /* ShareSDKLocalizable.strings in Resources */,
 				AA1A53F91BF9A88400EE98FB /* MBProgressHUD.bundle in Resources */,
 				87E14A1D1C09E30200933ED5 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				872DAB471C0F203F00DD8669 /* AlipaySDK.bundle in Resources */,
 				AA90F9641C08369200C2A993 /* MyShoppingController.xib in Resources */,
 				AA90F9681C08369200C2A993 /* TCDetailOrderController.xib in Resources */,
 				87E149FB1C09E2E400933ED5 /* SMS_SDKLocalizable.strings in Resources */,
 				AAAD31601BF2DCFE00082CBC /* Assets.xcassets in Resources */,
 				AA4EC8511C05B92500695962 /* CityData.plist in Resources */,
-				AAB2B7E01C0418FB007B6073 /* w_xueren.png in Resources */,
 				AAC21CB41BFEBDFF005A9BFF /* StoryList.plist in Resources */,
 				AA90F9711C08369200C2A993 /* ProfileViewCell.xib in Resources */,
+				863FCE1D1C0C3BA100FFFB74 /* 76-76.png in Resources */,
 				87E14A1A1C09E30200933ED5 /* Resource.bundle in Resources */,
 				AA1A54181BF9A88400EE98FB /* MJRefresh.bundle in Resources */,
 				AAD487531BF96E720051E6AA /* LoadMoreFooter.xib in Resources */,
@@ -1773,6 +1853,7 @@
 				AA1A541F1BF9A88400EE98FB /* MJPhotoBrowser.m in Sources */,
 				AA1A53F31BF9A88400EE98FB /* MASViewConstraint.m in Sources */,
 				AA1A54171BF9A88400EE98FB /* MJRefreshStateHeader.m in Sources */,
+				863FCE181C0BF7B500FFFB74 /* Utils.m in Sources */,
 				AAF04FD01BFAF4FF006BEAC6 /* TWXQView.m in Sources */,
 				AA1A540F1BF9A88400EE98FB /* MJRefreshAutoGifFooter.m in Sources */,
 				AA1A54231BF9A88400EE98FB /* MJPhotoView.m in Sources */,
@@ -1879,6 +1960,7 @@
 				AA90F9651C08369200C2A993 /* PhoneBindingController.m in Sources */,
 				AA1A540A1BF9A88400EE98FB /* MJRefreshAutoFooter.m in Sources */,
 				AAAD36C81BF2DD5300082CBC /* TCCategoryController.m in Sources */,
+				863FCE1B1C0C193900FFFB74 /* ShoppingModel.m in Sources */,
 				AA1A53FE1BF9A88400EE98FB /* MJProperty.m in Sources */,
 				AAF04FCA1BFAF3B9006BEAC6 /* DetailScrollView.m in Sources */,
 				AA1A54271BF9A88400EE98FB /* UIViewController+RESideMenu.m in Sources */,
@@ -2094,6 +2176,8 @@
 					"$(PROJECT_DIR)/天巢网/Lib/ShareSDK",
 					"$(PROJECT_DIR)/天巢网/Lib/ShareSDK/UI",
 					"$(PROJECT_DIR)/天巢网/Lib/SMS_SDK",
+					"$(PROJECT_DIR)/天巢网/Lib/ping++/Channels",
+					"$(PROJECT_DIR)/天巢网/Lib/lib/Channels",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "天巢网/TCW.pch";
@@ -2110,6 +2194,10 @@
 					"$(PROJECT_DIR)/天巢网/Lib/ARSDK/iOS/libWatchhhhAR",
 					"$(PROJECT_DIR)/天巢网/Lib/ARSDK/iOS/SLAMdemo/SLAMdemo/WatchhhhAR",
 					"$(PROJECT_DIR)/天巢网/Lib/libWatchhhhAR",
+					"$(PROJECT_DIR)/天巢网/Lib/ping++/Channels",
+					"$(PROJECT_DIR)/天巢网/Lib/ping++",
+					"$(PROJECT_DIR)/天巢网/Lib/lib/Channels",
+					"$(PROJECT_DIR)/天巢网/Lib/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyhives;
@@ -2136,6 +2224,8 @@
 					"$(PROJECT_DIR)/天巢网/Lib/ShareSDK",
 					"$(PROJECT_DIR)/天巢网/Lib/ShareSDK/UI",
 					"$(PROJECT_DIR)/天巢网/Lib/SMS_SDK",
+					"$(PROJECT_DIR)/天巢网/Lib/ping++/Channels",
+					"$(PROJECT_DIR)/天巢网/Lib/lib/Channels",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "天巢网/TCW.pch";
@@ -2152,6 +2242,10 @@
 					"$(PROJECT_DIR)/天巢网/Lib/ARSDK/iOS/libWatchhhhAR",
 					"$(PROJECT_DIR)/天巢网/Lib/ARSDK/iOS/SLAMdemo/SLAMdemo/WatchhhhAR",
 					"$(PROJECT_DIR)/天巢网/Lib/libWatchhhhAR",
+					"$(PROJECT_DIR)/天巢网/Lib/ping++/Channels",
+					"$(PROJECT_DIR)/天巢网/Lib/ping++",
+					"$(PROJECT_DIR)/天巢网/Lib/lib/Channels",
+					"$(PROJECT_DIR)/天巢网/Lib/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyhives;

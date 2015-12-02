@@ -180,7 +180,7 @@
                                           content:self.message?self.message:INHERIT_VALUE
                                             title:self.content?self.content:INHERIT_VALUE
                                               url:self.shareUrl?self.shareUrl:INHERIT_VALUE
-                                              image:INHERIT_VALUE];
+                                              image:[ShareSDK imageWithPath:[[NSBundle mainBundle] pathForResource:self.pictureName ofType:@"png"]]];
                  
                  
                  [ShareSDK showShareViewWithType:ShareTypeQQ container:nil content:publishContent statusBarTips:NO authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {

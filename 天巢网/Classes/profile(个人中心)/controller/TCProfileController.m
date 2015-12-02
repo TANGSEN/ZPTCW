@@ -38,13 +38,12 @@
     
     
     if ([SharedInstance sharedInstance].alreadyLanded ) {
-        TCProfileController *profileVC = [[TCProfileController alloc]init];
         
         
     }else{
-        LoginViewController *profileVC = [[LoginViewController alloc]init];
+        LoginViewController *loginVC = [[LoginViewController alloc]init];
      
-        [self.navigationController pushViewController:profileVC animated:YES];
+        [self.navigationController pushViewController:loginVC animated:YES];
     }
 }
 

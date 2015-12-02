@@ -8,6 +8,8 @@
 
 #import "TCNavigationController.h"
 #import "UIBarButtonItem+Extension.h"
+#import "TCTabBarController.h"
+#import "LoginViewController.h"
 @interface TCNavigationController ()
 
 @end
@@ -94,7 +96,7 @@
 -(void)back
 {
     
-    [self popViewControllerAnimated:YES];
+        [self popViewControllerAnimated:YES];
     
 }
 

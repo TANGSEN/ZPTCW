@@ -24,6 +24,17 @@
 @end
 
 @implementation RegisterViewController
+
+
+-(NSArray *)imageArr
+{
+    if (!_imageArr) {
+        _imageArr = [NSArray arrayWithObjects:@[@"注册-1_07",@"注册-1_11"],@[@"注册-1_15",@"注册-1_18"], nil];
+    }
+    return _imageArr;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.backgroundColor = View_BgColor;
@@ -31,6 +42,11 @@
     self.tableView.frame = CGRectMake(0, 0, ApplicationframeValue.width, 280);
     
     self.tableView.showsVerticalScrollIndicator = NO;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGR)];
+    
+    
+    [self.view addGestureRecognizer:tap];
     
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.tableView.frame)+30, ApplicationframeValue.width , 40)];
     [button setTitle:@"完成注册" forState:UIControlStateNormal];
@@ -55,6 +71,13 @@
             AlertLog(nil, @"请输入密码", @"确定", nil);
             return;
         }
+        /**验证输入的密码6-18位*/
+        BOOL codeMatched  = [Utils checkPassword:self.code.text];
+        
+        if (!codeMatched) {
+            AlertLog(nil, @"请输入6-18位字母与数字组合的密码", @"确定", nil);
+            return;
+        }
         
         if (![self.code.text isEqualToString:self.vertifyCode.text]) {
             
@@ -64,35 +87,29 @@
             
         }
       
-        
-
+    
         [SMSSDK commitVerificationCode:self.phoneCode.text phoneNumber:self.phoneText.text zone:@"86" result:^(NSError *error) {
             if (error) {
                 NSLog(@"验证码不正确 %@", error);
                 AlertLog(nil, @"验证码不正确", @"确定", nil);
-                /**倒计时停止，重新发送*/
+                //倒计时停止，重新发送
                 [self.CountDownBtn stop];
            
             }else{
                 NSLog(@"验证码正确");
                 [self.CountDownBtn stop];
                 
- /**
-    在此存储手机号和密码，进入个人中心*/
-            [[NSUserDefaults standardUserDefaults]setObject:self.phoneText.text forKey:@"userName"];
-                
-             [[NSUserDefaults standardUserDefaults]setObject:self.code.text forKey:@"password"];
-                
-             [[NSUserDefaults standardUserDefaults]synchronize];
+                //在此存储手机号和密码，进入个人中心
+         
+                [[SharedInstance sharedInstance]setUserName:self.phoneText.text];
+                [[SharedInstance sharedInstance] setPassword:self.phoneCode.text];
+             
             
-            /**标记已经登录*/
+                //标记已经登录
             [SharedInstance sharedInstance].alreadyLanded = YES;
-                
-        
-//            TCProfileController *profile = [[TCProfileController alloc] init];
-//            [self presentViewController:profile animated:YES completion:nil];
+ 
                 [self.navigationController popToRootViewControllerAnimated:YES];
-                
+
          
             }
         }];
@@ -107,17 +124,16 @@
     
     [self.view addSubview:button];
 }
--(NSArray *)imageArr
-{
-    if (!_imageArr) {
-        _imageArr = [NSArray arrayWithObjects:@[@"注册-1_07",@"注册-1_11"],@[@"注册-1_15",@"注册-1_18"], nil];
-    }
-    return _imageArr;
+#pragma mark - tap手势
+-(void)tapGR{
+    [self.phoneText resignFirstResponder];
+    [self.phoneCode resignFirstResponder];
+    [self.code resignFirstResponder];
+    [self.vertifyCode resignFirstResponder];
+    
 }
 
-
-
-
+#pragma mark - tableview Datasource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     
@@ -158,11 +174,29 @@
             
             [cell.contentView addSubview:self.phoneCode];
             
+            
+            /**获取验证码*/
             [self.CountDownBtn bk_addEventHandler:^(id sender) {
                 NSLog(@"number%@",self.phoneText.text);
+                
                 if (!self.phoneText.text.length) {
                     AlertLog(nil, @"请输入您的手机号", @"确定", nil);
-                }else{
+                    return ;
+                }
+                
+                /**正则表达式验证手机格式*/
+                BOOL isMatch = [Utils checkTelNumber:self.phoneText.text];
+                if (!isMatch) {
+                    AlertLog(nil, @"您输入的手机号码格式不正确", @"确定", nil);
+                        return ;
+                    }
+                /**判断是否已经注册*/
+                NSString *userName = [[SharedInstance sharedInstance]getUserName];
+                if ([userName isEqualToString:self.phoneText.text]) {
+                    AlertLog(nil, @"您输入的手机号码已注册", @"确定", nil);
+                    return;
+                }
+                
                     [self.CountDownBtn beginCountDown];
                     /**发送验证码*/
                     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneText.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
@@ -172,7 +206,7 @@
                             NSLog(@"验证码发送成功");
                         }
                     }];
-                }
+                
             } forControlEvents:UIControlEventTouchUpInside];
   
         }
@@ -233,14 +267,6 @@
 }
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

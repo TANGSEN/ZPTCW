@@ -10,6 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmailBindingController : UIViewController
+@interface EmailBindingController : UIViewController<UITextFieldDelegate>
 
 @end
