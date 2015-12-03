@@ -341,6 +341,10 @@
                     <mask key="constraints">
                         <exclude reference="556-XL-zXV"/>
                         <exclude reference="V93-gS-0fB"/>
+                        <exclude reference="JEG-BM-BcE"/>
+                        <exclude reference="PFQ-o6-Tdh"/>
+                        <exclude reference="7su-C0-pxh"/>
+                        <exclude reference="QvK-JW-wwS"/>
                         <exclude reference="fcf-dO-6ue"/>
                         <exclude reference="gPi-20-bic"/>
                         <exclude reference="vl0-tr-vqV"/>
@@ -350,12 +354,8 @@
                         <exclude reference="w9a-Ic-kLp"/>
                         <exclude reference="LfQ-Ml-UbS"/>
                         <exclude reference="jYH-Uf-rHg"/>
-                        <exclude reference="7su-C0-pxh"/>
-                        <exclude reference="QvK-JW-wwS"/>
                         <exclude reference="9VQ-4Q-CjV"/>
                         <exclude reference="x8Q-MA-96g"/>
-                        <exclude reference="JEG-BM-BcE"/>
-                        <exclude reference="PFQ-o6-Tdh"/>
                     </mask>
                 </variation>
                 <variation key="widthClass=compact">
@@ -367,6 +367,10 @@
                     <mask key="constraints">
                         <include reference="556-XL-zXV"/>
                         <include reference="V93-gS-0fB"/>
+                        <include reference="JEG-BM-BcE"/>
+                        <include reference="PFQ-o6-Tdh"/>
+                        <include reference="7su-C0-pxh"/>
+                        <include reference="QvK-JW-wwS"/>
                         <include reference="fcf-dO-6ue"/>
                         <include reference="gPi-20-bic"/>
                         <include reference="vl0-tr-vqV"/>
@@ -376,17 +380,14 @@
                         <include reference="w9a-Ic-kLp"/>
                         <include reference="LfQ-Ml-UbS"/>
                         <include reference="jYH-Uf-rHg"/>
-                        <include reference="7su-C0-pxh"/>
-                        <include reference="QvK-JW-wwS"/>
                         <include reference="9VQ-4Q-CjV"/>
                         <include reference="x8Q-MA-96g"/>
-                        <include reference="JEG-BM-BcE"/>
-                        <include reference="PFQ-o6-Tdh"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="CancelButton" destination="yFC-eE-I6s" id="xTu-w1-j0f"/>
                 <outlet property="ChooseButton" destination="8Yz-l4-t1N" id="bNX-QO-kml"/>
                 <outlet property="Count" destination="zpH-km-xlC" id="UmS-OJ-M5R"/>
                 <outlet property="DecreaseButton" destination="ej1-al-wfl" id="5Zo-Y2-fvX"/>
