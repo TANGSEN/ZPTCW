@@ -29,29 +29,31 @@
     TCTabBarController *tctabbar = [[TCTabBarController alloc]init];
     self.window.rootViewController = tctabbar;
     
-    [ShareSDK registerApp:ShareAppKey];
+    
     
  
+   /**社会化分享*/
+    [ShareSDK registerApp:ShareAppKey];
     
-    //添加微信应用 注册网址 http://open.weixin.qq.com
-    [ShareSDK connectWeChatWithAppId:WXAppID
+        //1.添加微信应用
+        [ShareSDK connectWeChatWithAppId:WXAppID
                            appSecret:WXAppSecret
                            wechatCls:[WXApi class]];
     
-    //微信朋友圈
-    [ShareSDK connectWeChatTimelineWithAppId:WXAppID appSecret:WXAppSecret wechatCls:[WXApi class]];
+        //2.微信朋友圈
+        [ShareSDK connectWeChatTimelineWithAppId:WXAppID appSecret:WXAppSecret wechatCls:[WXApi class]];
     
-    //QQ
-    [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
-    
-    //短信验证
-
+        //3.QQ
+        [ShareSDK connectQQWithAppId:QQAppID qqApiCls:[QQApiInterface class]];
     
     
+    /**短信验证*/
     
-    [SMSSDK registerApp:SMSAppKey withSecret:SMSAppSecret];
+        [SMSSDK registerApp:SMSAppKey withSecret:SMSAppSecret];
     
-    [Pingpp enableBtn:PingppBtnWx];
+    /**ping++ 加入微信和支付宝支付*/
+    
+//        [Pingpp enableBtn:PingppBtnWx|PingppBtnAlipay];
     
     [self.window makeKeyAndVisible];
 
@@ -79,17 +81,24 @@
 //                        wxDelegate:self];
 //}
 
-
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary *)options {
+    BOOL canHandleURL = [Pingpp handleOpenURL:url withCompletion:nil];
+    return canHandleURL;
+}
 
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     BOOL canHandleURL = [Pingpp handleOpenURL:url withCompletion:nil];
-    return canHandleURL;
+    BOOL ShareSdkURL = [ShareSDK handleOpenURL:url
+                             sourceApplication:sourceApplication
+                                    annotation:annotation
+                                    wxDelegate:self];
+    
+    return canHandleURL||ShareSdkURL;
 }
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options {
-    BOOL canHandleURL = [Pingpp handleOpenURL:url withCompletion:nil];
-    return canHandleURL;
-}
+
 
 @end

@@ -25,5 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *DecreaseButton;
 /**数量*/
 @property (weak, nonatomic) IBOutlet UILabel *Count;
+@property (weak, nonatomic) IBOutlet UIButton *CancelButton;
 
 @end

@@ -6,6 +6,27 @@
 //  Copyright © 2015年 tangjp. All rights reserved.
 //
 
+/**
+ 
+ 1、cell 内
+ ·选择按钮需要即时刷新总价（改变数据源，重新reload）
+ ·stepper 加减 需要改变的是数量，（改变数据源数量）
+ ①如果此时按钮是选中状态，总价需要变化
+ ②非选择状态，则不需要
+ ·删除按钮需要改变数据源，页面即时刷新（包括总价，视图）
+ 
+ 2、全选按钮 改变的是总价  直接对数据源遍历
+ 
+ 3、结算按钮 如果总价为0，则不能点击
+ 结算之前对数据源进行遍历，传递商品详情
+ 
+ 4、有一个按钮没选择的话 下面的全选按钮的状态应该变为 未选中状态
+ 
+ */
+
+
+
+
 #import "MyShoppingController.h"
 #import "TCShoppingTable.h"
 #import "MyShoppingCell.h"
@@ -17,7 +38,9 @@ static NSString *kBackendChargeURL = @"www.skyhives.com";
 @interface MyShoppingController ()
 @property (nonatomic,strong)ShoppingModel *model;
 @property (nonatomic,strong)MyShoppingCell *cell;
-@property (nonatomic,strong)NSArray *arr;
+/**数据*/
+@property (nonatomic,strong)NSMutableArray *arr;
+/**cell视图*/
 @property (nonatomic,strong)UITableView *table;
 @property (assign, nonatomic) NSInteger PreSum;
 
@@ -27,12 +50,30 @@ static NSString *kBackendChargeURL = @"www.skyhives.com";
 
 @implementation MyShoppingController
 
--(NSArray *)arr
+#pragma mark - lazy loading
+-(NSMutableArray *)arr
 {
     if (!_arr) {
         _arr = [ShoppingModel demoData];
     }
     return _arr;
+}
+
+-(NSInteger)PreSum
+{
+    if (!_PreSum) {
+        _PreSum = 0;
+    }
+    return _PreSum;
+}
+
+
+-(NSUInteger)SelectedNumber
+{
+    if (!_SelectedNumber) {
+        _SelectedNumber = 0 ;
+    }
+    return _SelectedNumber;
 }
 
 
@@ -53,7 +94,6 @@ static NSString *kBackendChargeURL = @"www.skyhives.com";
             self.PreSum = 0;
             
             for (ShoppingModel *model in self.arr) {
-                
                 model.Selected = YES;
                 self.PreSum += [model.Price integerValue]*[model.Count integerValue];
                 self.PreSumLabel.text = [NSString stringWithFormat:@"￥%ld",(long)self.PreSum];
@@ -62,14 +102,17 @@ static NSString *kBackendChargeURL = @"www.skyhives.com";
             }
         }else
         {
+            self.SelectedNumber = 0;
             for (ShoppingModel *model in self.arr) {
-                
                 model.Selected = NO;
                 self.PreSum = 0;
                 self.PreSumLabel.text = [NSString stringWithFormat:@"￥%ld",(long)self.PreSum];
             }
             
         }
+        
+        self.PreSumLabel.text = [NSString stringWithFormat:@"￥%ld",(long)self.PreSum];
+        
         [self.table reloadData];
     } forControlEvents:UIControlEventTouchUpInside];
     
@@ -98,13 +141,16 @@ static NSString *kBackendChargeURL = @"www.skyhives.com";
     
 }
 
-
+#pragma mark - 产生随机订单号
 + (NSString *)rand_str:(int) l {
     char pool[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     char data[l];
     for (int x=0;x<l;data[x++] = (char)(pool[arc4random_uniform(62)]));
     return [[NSString alloc] initWithBytes:data length:l encoding:NSUTF8StringEncoding];
 }
+
+
+
 
 #pragma mark - Table view data source
 
