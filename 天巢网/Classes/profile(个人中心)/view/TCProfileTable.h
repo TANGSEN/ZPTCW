@@ -1,5 +1,5 @@
 //
-//  TCProfileController.h
+//  TCProfileTable.h
 //  个人中心
 //
 //  Created by 赵贺 on 15/12/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TCProfileController : UIViewController
+@interface TCProfileTable : UITableView<UITableViewDataSource,UITableViewDelegate>
 
 @end

@@ -16,6 +16,10 @@
 		86D54CAB1C0EC1FE00629CC1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D54CAA1C0EC1FE00629CC1 /* Security.framework */; };
 		86D54CAD1C0EC20800629CC1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D54CAC1C0EC20800629CC1 /* libc++.tbd */; };
 		86D54CAF1C0EC20E00629CC1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D54CAE1C0EC20E00629CC1 /* QuartzCore.framework */; };
+		86DCE4FF1C1FFEA0009BEB8F /* TCProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DCE4FE1C1FFEA0009BEB8F /* TCProfileController.m */; };
+		86DCE5021C1FFEC8009BEB8F /* TCProfileTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DCE5011C1FFEC8009BEB8F /* TCProfileTable.m */; };
+		86DCE5091C201BF1009BEB8F /* ImageTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DCE5081C201BF1009BEB8F /* ImageTitleButton.m */; };
+		86DCE50C1C2028C4009BEB8F /* TreasureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DCE50B1C2028C4009BEB8F /* TreasureView.m */; };
 		872DAB471C0F203F00DD8669 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 872DAB401C0F203F00DD8669 /* AlipaySDK.bundle */; };
 		872DAB481C0F203F00DD8669 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DAB411C0F203F00DD8669 /* AlipaySDK.framework */; };
 		872DAB491C0F203F00DD8669 /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DAB421C0F203F00DD8669 /* libUPPayPlugin.a */; };
@@ -171,7 +175,6 @@
 		AA90F9671C08369200C2A993 /* TCDetailOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA90F93E1C08369200C2A993 /* TCDetailOrderController.m */; };
 		AA90F9681C08369200C2A993 /* TCDetailOrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA90F93F1C08369200C2A993 /* TCDetailOrderController.xib */; };
 		AA90F9691C08369200C2A993 /* TCOrderManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA90F9411C08369200C2A993 /* TCOrderManagerController.m */; };
-		AA90F96A1C08369200C2A993 /* TCProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA90F9431C08369200C2A993 /* TCProfileController.m */; };
 		AA90F96B1C08369200C2A993 /* TCWealthListController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA90F9451C08369200C2A993 /* TCWealthListController.m */; };
 		AA90F96C1C08369200C2A993 /* CountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA90F9481C08369200C2A993 /* CountDownButton.m */; };
 		AA90F96D1C08369200C2A993 /* EvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA90F94A1C08369200C2A993 /* EvaluationView.m */; };
@@ -245,6 +248,14 @@
 		86D54CAA1C0EC1FE00629CC1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		86D54CAC1C0EC20800629CC1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		86D54CAE1C0EC20E00629CC1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		86DCE4FD1C1FFEA0009BEB8F /* TCProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProfileController.h; sourceTree = "<group>"; };
+		86DCE4FE1C1FFEA0009BEB8F /* TCProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProfileController.m; sourceTree = "<group>"; };
+		86DCE5001C1FFEC8009BEB8F /* TCProfileTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProfileTable.h; sourceTree = "<group>"; };
+		86DCE5011C1FFEC8009BEB8F /* TCProfileTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProfileTable.m; sourceTree = "<group>"; };
+		86DCE5071C201BF1009BEB8F /* ImageTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTitleButton.h; sourceTree = "<group>"; };
+		86DCE5081C201BF1009BEB8F /* ImageTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTitleButton.m; sourceTree = "<group>"; };
+		86DCE50A1C2028C4009BEB8F /* TreasureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreasureView.h; sourceTree = "<group>"; };
+		86DCE50B1C2028C4009BEB8F /* TreasureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreasureView.m; sourceTree = "<group>"; };
 		872DAB401C0F203F00DD8669 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
 		872DAB411C0F203F00DD8669 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		872DAB421C0F203F00DD8669 /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUPPayPlugin.a; sourceTree = "<group>"; };
@@ -545,8 +556,6 @@
 		AA90F93F1C08369200C2A993 /* TCDetailOrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCDetailOrderController.xib; sourceTree = "<group>"; };
 		AA90F9401C08369200C2A993 /* TCOrderManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCOrderManagerController.h; sourceTree = "<group>"; };
 		AA90F9411C08369200C2A993 /* TCOrderManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCOrderManagerController.m; sourceTree = "<group>"; };
-		AA90F9421C08369200C2A993 /* TCProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProfileController.h; sourceTree = "<group>"; };
-		AA90F9431C08369200C2A993 /* TCProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProfileController.m; sourceTree = "<group>"; };
 		AA90F9441C08369200C2A993 /* TCWealthListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCWealthListController.h; sourceTree = "<group>"; };
 		AA90F9451C08369200C2A993 /* TCWealthListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCWealthListController.m; sourceTree = "<group>"; };
 		AA90F9471C08369200C2A993 /* CountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButton.h; sourceTree = "<group>"; };
@@ -1224,6 +1233,10 @@
 				8774FC9D1BFB7EA7001EEF0B /* UIBarButtonItem+Extension.m */,
 				AA1A543D1BF9A8B700EE98FB /* Factory.h */,
 				AA1A543E1BF9A8B700EE98FB /* Factory.m */,
+				86DCE5071C201BF1009BEB8F /* ImageTitleButton.h */,
+				86DCE5081C201BF1009BEB8F /* ImageTitleButton.m */,
+				86DCE50A1C2028C4009BEB8F /* TreasureView.h */,
+				86DCE50B1C2028C4009BEB8F /* TreasureView.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1291,6 +1304,8 @@
 		AA90F92D1C08369200C2A993 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				86DCE4FD1C1FFEA0009BEB8F /* TCProfileController.h */,
+				86DCE4FE1C1FFEA0009BEB8F /* TCProfileController.m */,
 				AA90F92E1C08369200C2A993 /* EmailBindingController.h */,
 				AA90F92F1C08369200C2A993 /* EmailBindingController.m */,
 				AA90F9301C08369200C2A993 /* FeedbackViewController.h */,
@@ -1311,8 +1326,6 @@
 				AA90F93F1C08369200C2A993 /* TCDetailOrderController.xib */,
 				AA90F9401C08369200C2A993 /* TCOrderManagerController.h */,
 				AA90F9411C08369200C2A993 /* TCOrderManagerController.m */,
-				AA90F9421C08369200C2A993 /* TCProfileController.h */,
-				AA90F9431C08369200C2A993 /* TCProfileController.m */,
 				AA90F9441C08369200C2A993 /* TCWealthListController.h */,
 				AA90F9451C08369200C2A993 /* TCWealthListController.m */,
 			);
@@ -1322,6 +1335,8 @@
 		AA90F9461C08369200C2A993 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				86DCE5001C1FFEC8009BEB8F /* TCProfileTable.h */,
+				86DCE5011C1FFEC8009BEB8F /* TCProfileTable.m */,
 				AA90F9471C08369200C2A993 /* CountDownButton.h */,
 				AA90F9481C08369200C2A993 /* CountDownButton.m */,
 				AA90F9491C08369200C2A993 /* EvaluationView.h */,
@@ -1896,6 +1911,7 @@
 				AA1A542B1BF9A88400EE98FB /* SDWebImageDecoder.m in Sources */,
 				87E149D01C09D74300933ED5 /* LoginViewController.m in Sources */,
 				AAACD4B51BF5D58B00FC4603 /* TCJPCollectionController.m in Sources */,
+				86DCE5091C201BF1009BEB8F /* ImageTitleButton.m in Sources */,
 				AA90F9621C08369200C2A993 /* MyFavoriteViewController.m in Sources */,
 				AA1A53F41BF9A88400EE98FB /* NSArray+MASAdditions.m in Sources */,
 				AA90F96C1C08369200C2A993 /* CountDownButton.m in Sources */,
@@ -1903,6 +1919,7 @@
 				AA67D7B91C06E46B00EB05E0 /* HomeNetWork.m in Sources */,
 				AA4EC8561C05B92500695962 /* TLCityPickerSearchResultController.m in Sources */,
 				AA4EC8531C05B92500695962 /* TLCityGroupCell.m in Sources */,
+				86DCE5021C1FFEC8009BEB8F /* TCProfileTable.m in Sources */,
 				AA1A54021BF9A88400EE98FB /* NSObject+MJClass.m in Sources */,
 				AA1A54351BF9A88400EE98FB /* UIView+WebCacheOperation.m in Sources */,
 				AAD487521BF96E720051E6AA /* LoadMoreFooter.m in Sources */,
@@ -1920,7 +1937,6 @@
 				AA1A54321BF9A88400EE98FB /* UIImage+MultiFormat.m in Sources */,
 				AAC21CC01BFEE27C005A9BFF /* TCStoryCell.m in Sources */,
 				AA1A543B1BF9A88400EE98FB /* SWUtilityButtonView.m in Sources */,
-				AA90F96A1C08369200C2A993 /* TCProfileController.m in Sources */,
 				AA1A54051BF9A88400EE98FB /* NSObject+MJProperty.m in Sources */,
 				AA1A53E91BF9A88400EE98FB /* UIProgressView+AFNetworking.m in Sources */,
 				AA1A54061BF9A88400EE98FB /* NSString+Extension.m in Sources */,
@@ -1960,6 +1976,7 @@
 				AA90F9651C08369200C2A993 /* PhoneBindingController.m in Sources */,
 				AA1A540A1BF9A88400EE98FB /* MJRefreshAutoFooter.m in Sources */,
 				AAAD36C81BF2DD5300082CBC /* TCCategoryController.m in Sources */,
+				86DCE50C1C2028C4009BEB8F /* TreasureView.m in Sources */,
 				863FCE1B1C0C193900FFFB74 /* ShoppingModel.m in Sources */,
 				AA1A53FE1BF9A88400EE98FB /* MJProperty.m in Sources */,
 				AAF04FCA1BFAF3B9006BEAC6 /* DetailScrollView.m in Sources */,
@@ -1985,6 +2002,7 @@
 				AA1A541B1BF9A88400EE98FB /* UIScrollView+MJRefresh.m in Sources */,
 				AA1A54041BF9A88400EE98FB /* NSObject+MJKeyValue.m in Sources */,
 				AA90F9601C08369200C2A993 /* FeedbackViewController.m in Sources */,
+				86DCE4FF1C1FFEA0009BEB8F /* TCProfileController.m in Sources */,
 				AA90F9611C08369200C2A993 /* InformationManagerController.m in Sources */,
 				8774FC671BFB78FD001EEF0B /* CustomerView.m in Sources */,
 				AA90F96D1C08369200C2A993 /* EvaluationView.m in Sources */,

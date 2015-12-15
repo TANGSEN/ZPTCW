@@ -1,154 +1,35 @@
 //
 //  TCProfileController.m
-//  天巢网
+//  个人中心
 //
-//  Created by tangjp on 15/11/10.
-//  Copyright © 2015年 tangjp. All rights reserved.
+//  Created by 赵贺 on 15/12/15.
+//  Copyright © 2015年 赵贺. All rights reserved.
 //
 
 #import "TCProfileController.h"
-#import "ProfileViewCell.h"
-#import "TCOrderManagerController.h"
-#import "TCWealthListController.h"
-#import "FeedbackViewController.h"
-#import "MyFavoriteViewController.h"
-#import "TCNavigationController.h"
-#import "InformationManagerController.h"
-#import "MyShoppingController.h"
-#import "LoginViewController.h"
-#import "TCNavigationController.h"
+#import "TCProfileTable.h"
 @interface TCProfileController ()
-/**分区文字*/
-@property (nonatomic,strong)NSArray *sectionsTitles;
-/**分区图片*/
-@property (nonatomic,strong)NSArray *sectionsImages;
+@property (nonatomic,strong)TCProfileTable *ProfileTable;
 @end
 
 @implementation TCProfileController
 
-
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"个人中心";
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.ProfileTable = [[TCProfileTable alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.height-200-49) style:UITableViewStylePlain];
+    [self.view addSubview:self.ProfileTable];
     
-    self.tableView.showsHorizontalScrollIndicator = NO;
-    self.tableView.showsVerticalScrollIndicator = NO;
-    
-    
-    if ([SharedInstance sharedInstance].alreadyLanded ) {
-        
-        
-    }else{
-        LoginViewController *loginVC = [[LoginViewController alloc]init];
-     
-        [self.navigationController pushViewController:loginVC animated:YES];
-    }
 }
 
+/*
+#pragma mark - Navigation
 
--(NSArray *)sectionsImages
-{
-    if (!_sectionsImages) {
-        _sectionsImages = @[@"1-个人中心_03",@"1-个人中心_07",@"1-个人中心_11",@"1-个人中心_15",@"1-个人中心_19",@"1-个人中心_23"];
-    }
-    return _sectionsImages;
-
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
-
-
--(NSArray *)sectionsTitles
-{
-    if (!_sectionsTitles) {
-        _sectionsTitles = @[@"订单管理",@"财富流水",@"我的购物车",@"我的收藏",@"信息管理",@"投诉建议"];
-    }
-    return _sectionsTitles;
-
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-    return [self.sectionsImages count];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 1;
-}
-
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *identifier = @"cell";
-    ProfileViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell  = [[[NSBundle mainBundle] loadNibNamed:@"ProfileViewCell" owner:self options:nil] lastObject];
-    }
-    cell.CellLabel.text = self.sectionsTitles[indexPath.section];
-    
-    cell.CellLabel.font = AppFont(text_size_little_2);
-    cell.CellLabel.textColor = Color_Common;
-    cell.ImageView.image = [UIImage imageNamed:self.sectionsImages[indexPath.section]];
-    cell.ImageView.contentMode = UIViewContentModeScaleAspectFill;
-    
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
-
-}
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-
-    return 15.0f;
-
-}
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-
-    return 50.0f;
-
-}
-
-
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    UIViewController *obj = nil;
-    
-    switch (indexPath.section) {
-        case 0:
-            obj = [[TCOrderManagerController alloc] init];
-            break;
-        case 1:
-            obj = [[TCWealthListController alloc] init];
-            break;
-        case 2:
-            obj = [[MyShoppingController alloc] init];
-            break;
-        case 3:
-            obj = [[MyFavoriteViewController alloc] init];
-            break;
-        case 4:
-            obj = [[InformationManagerController alloc] init];
-            break;
-        case 5:
-            obj = [[FeedbackViewController alloc] init];
-            break;
-        default:
-            break;
-    }
-   
-    obj.title = self.sectionsTitles[indexPath.section];
-    obj.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:obj animated:YES];
-    NSLog(@"%@",self.sectionsTitles[indexPath.section]);
-
-}
-
+*/
 
 @end

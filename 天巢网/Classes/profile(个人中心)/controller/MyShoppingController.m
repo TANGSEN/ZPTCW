@@ -36,15 +36,15 @@
 static NSString *kBackendChargeURL = @"www.skyhives.com";
 
 @interface MyShoppingController ()
-@property (nonatomic,strong)ShoppingModel *model;
-@property (nonatomic,strong)MyShoppingCell *cell;
+@property (nonatomic,strong)   ShoppingModel *model;
+@property (nonatomic,strong)   MyShoppingCell *cell;
 /**数据*/
-@property (nonatomic,strong)NSMutableArray *arr;
+@property (nonatomic,strong)   NSMutableArray *arr;
 /**cell视图*/
-@property (nonatomic,strong)UITableView *table;
-@property (assign, nonatomic) NSInteger PreSum;
-
-@property (nonatomic, retain) NSArray *itemCounts;
+@property (nonatomic,strong)   UITableView *table;
+@property (assign, nonatomic)  NSInteger PreSum;
+@property (assign,nonatomic)   NSUInteger  SelectedNumber;
+@property (nonatomic, retain)  NSArray *itemCounts;
 
 @end
 

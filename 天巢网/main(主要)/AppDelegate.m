@@ -53,7 +53,7 @@
     
     /**ping++ 加入微信和支付宝支付*/
     
-//        [Pingpp enableBtn:PingppBtnWx|PingppBtnAlipay];
+        [Pingpp enableBtn:PingppBtnWx|PingppBtnAlipay];
     
     [self.window makeKeyAndVisible];
 
